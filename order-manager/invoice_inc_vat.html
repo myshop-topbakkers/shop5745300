@@ -38,57 +38,58 @@
 		<!-- End used for the print options. -->
 	</head>
 	<body>
+		<!-- from atom update -->
 		<div id="myshp_orders">
-			<div id="myshp_orders_invoice">	
+			<div id="myshp_orders_invoice">
 			<!-- Print options -->
 				<div class="myshp_order_controls screenonly">
 					<!--<div class="myshp_order_controls_buttons">
 						<input class="myshp_order_controls_button print" type="button" style="width:100" value="Afdrukken" onclick="window.print();return false;"/>
 						<input class="myshp_order_controls_button close" type="button" style="width:100" value="Sluiten" onclick="parent.doClose(true);"/>
 					</div>-->
-					<div class="myshp_order_invoice_header">&nbsp;<b style="myshop-resource:standard.invoice">Standaard factuur</b></div>				
+					<div class="myshp_order_invoice_header">&nbsp;<b style="myshop-resource:standard.invoice">Standaard factuur</b></div>
 				</div>
-			<!-- End of print options -->		
+			<!-- End of print options -->
 				<div class="clear"></div>
 				<br/>
 				<table class="myshp_order_invoice_customerdata_table" cellpadding="0" cellspacing="0" >
-					
+
 					<tr>
-						
+
 						<td class="myshp_order_invoice_company_container">
-							
+
 							<div class="myshp_order_invoice_company">
-							
+
 								<strong class="myshp_order_invoice_company_title"><span style="myshop-value:company-name">bedrijfsnaam</span></strong><br/>
-								
+
 								<span class="myshp_order_invoice_company_value" style="myshop-value:company-address"></span><br/>
-				
+
 								<span class="myshp_order_invoice_company_value" style="myshop-value:company-zip"></span>&nbsp;<span class="myshp_order_invoice_company_value" style="myshop-value:company-city"></span><br/>
-				
+
 								<span class="myshp_order_invoice_company_value" style="myshop-value:company-country"></span><br/>
-								
+
 								<span style="myshop-has:company-coc-number"><span class="myshp_order_invoice_company_label"><span style="myshop-resource:number.coc">KvK nr.</span></span>:&nbsp;<span style="myshop-value:company-coc-number"></span></span><br/>
-				
+
 								<span style="myshop-has:company-vat-number"><span class="myshp_order_invoice_company_label"><span style="myshop-resource:number.vat">BTW nr.</span></span>:&nbsp;<span style="myshop-value:company-vat-number"></span></span><br/>
-				
+
 								<span style="myshop-has:company-phone"> <span class="myshp_order_invoice_company_label" style="myshop-has:company-phone"><span style="myshop-resource:phone">Telephone</span>:&nbsp; </span><span class="myshp_order_invoice_company_value" style="myshop-value:company-phone"></span></span><br/>
-				
+
 								<span style="myshop-has:phone.fax"><span class="myshp_order_invoice_company_label"><span style="myshop-resource:phone.fax">Fax.:</span>:&nbsp;</span> <span class="myshp_order_invoice_company_value" style="myshop-value:company-fax"></span></span><br/>
-				
+
 								<span class="myshp_order_invoice_company_label"><span style="myshop-resource:email">E-mail:</span>:&nbsp;<span class="myshp_order_invoice_company_value" style="myshop-value:company-email"></span></span><br/>
-				
+
 								<span style="myshop-has:company-website"><span class="myshp_order_invoice_company_label"><span style="myshop-resource:website">Website</span></span>:&nbsp; <span class="myshp_order_invoice_company_value" style="myshop-value:company-website"></span></span>
-				
+
 							</div>
-						
+
 						</td>
-						
+
 						<td width="10">&nbsp;</td>
-						
+
 						<td class="myshp_order_invoice_customer_container">
-				
+
 							<div class="myshp_order_invoice_customer">
-								
+
 								<strong class="myshp_order_invoice_customer_title" style="myshop-resource:address.invoice">Factureren aan</strong>
 								<br/>
 								<span style="myshop-has:customer-field-billing-gender"><span style="myshop-value:customer-field-billing-gender">aanhef</span>&#160;</span>
@@ -123,7 +124,7 @@
 									<span class="myshp_order_invoice_data_value"><span style="myshop-value:payment-method"></span></span>
 								</div>
 							</div>
-						</td>			
+						</td>
 					</tr>
 				</table>
 				<br/>
@@ -193,7 +194,7 @@
 							</span>
 						</td>
 						<td colspan="4">&nbsp;</td>
-					</tr>						
+					</tr>
 					<tr class="myshp_basket_action" style="myshop-repeat:action-list">
 						<td class="myshp_basket_action_label" colspan="3"><span style="myshop-value:label">&nbsp;</span></td>
 						<td class="myshp_basket_action_value"><span style="myshop-value:inc-vat-price-formatted">&nbsp;</span></td>
