@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></meta>
+		<title>Labels Template</title>
+		<script type="text/javascript" src="/views/library/jquery/js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="/views/library/jquery/js/jquery-ui-1.7.2.custom.min.js"></script>
+		<script type="text/javascript" src="/skins/pic/ordermanagement/label.js"></script>
+		<link media="all" href="/skins/parma/base.css" type="text/css" rel="stylesheet"></link>
+		<link media="all" href="/skins/parma/1/theme.css" type="text/css" rel="stylesheet"></link>
+		<link href="/skins/orders_css.css" rel="stylesheet" type="text/css" />
+		<style type="text/css" media="print">
+			.screenonly {
+				display: none;
+			}
+			.myshp_order_label_tag {
+				border: none;
+			}
+			#myshp_order_label_data {
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="myshp_order_label">
+			<!--<div class="myshp_order_controls screenonly">
+	            <input class="myshp_order_controls_button print" type="button" style="width:100" value="Afdrukken" onclick="window.print();return false;"/><input class="myshp_order_controls_button close" type="button" style="width:100" value="Sluiten" onclick="parent.doClose(true);"/>
+	        </div>-->
+			<div class="clear"></div>
+			<div id="myshp_order_label_header" class="screenonly">
+				<h2>Step 1: Fill in the paper sheet configuration</h2>
+				<span class="myshp_order_label_settings_label">Paper Width:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_paperwidth" id="myshp_order_label_paperwidth" tip="0" /><span class="myshp_order_label_settings_unit"> mm</span><br/>
+				<span class="myshp_order_label_settings_label">Paper Height:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_paperhight" id="myshp_order_label_paperheight" tip="1" /><span class="myshp_order_label_settings_unit"> mm</span><br/>
+				<span class="myshp_order_label_settings_label">Top Margin Size:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_topmarginsize" id="myshp_order_label_topmarginsize" tip="2" /><span class="myshp_order_label_settings_unit"> mm</span><br/>
+				<span class="myshp_order_label_settings_label">Right Margin Size:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_rightmarginsize" id="myshp_order_label_rightmarginsize" tip="3" /><span class="myshp_order_label_settings_unit"> mm</span><br/>
+				<span class="myshp_order_label_settings_label">Bottom Margin Size:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_bottommarginsize" id="myshp_order_label_bottommarginsize" tip="4" /><span class="myshp_order_label_settings_unit"> mm</span><br/>
+				<span class="myshp_order_label_settings_label">Left Margin Size:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_leftmarginsize" id="myshp_order_label_leftmarginsize" tip="5" /><span class="myshp_order_label_settings_unit"> mm</span><br/>
+				<span class="myshp_order_label_settings_label">Number of Rows:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_numberofrows" id="myshp_order_label_numberofrows" tip="6" /><br/>
+				<span class="myshp_order_label_settings_label">Number of Columns:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_numberofcolumns" id="myshp_order_label_numberofcolumns" tip="7" /><br/>
+				<span class="myshp_order_label_settings_label">Horizontal Gap between Labels:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_hgap" id="myshp_order_label_horizontal_gap" tip="8" /><span class="myshp_order_label_settings_unit"> mm</span><br/>
+				<span class="myshp_order_label_settings_label">Vertical Gap between Labels:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_vgap" id="myshp_order_label_vertical_gap" tip="9" /><span class="myshp_order_label_settings_unit"> mm</span><br/>
+				<span class="myshp_order_label_settings_label">Label Width:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_labelwidth" id="myshp_order_label_labelwidth" tip="10" /><span class="myshp_order_label_settings_unit"> mm (leave it blank to set automatically by difference)</span><br/>
+				<span class="myshp_order_label_settings_label">Label Height:</span> <input class="myshp_order_label_settings_field" type="text" name="label_settings_labelheight" id="myshp_order_label_labelheight" tip="11" /><span class="myshp_order_label_settings_unit"> mm (leave it blank to set automatically by difference)</span><br/>
+				<button id="myshp_order_label_applysettings">Apply Settings</button>
+				
+				<div id="myshp_order_label_tips">
+					<div id="myshp_order_label_tips_image"></div>
+					<div id="myshp_order_label_tips_text"></div>
+				</div>
+			</div>
+			<div id="myshp_order_label_sheet">
+				<div id="myshp_order_label_back" class="screenonly">
+					<a id="myshp_order_label_back_link" href="javascript:void(0);">Back to Settings</a>
+				</div>
+				<h2 class="screenonly">Step 2: Drag the data to the desired label and press the print button</h2>
+				<div id="myshp_order_label_data">
+					<div class="screenonly">Drag and drop to the desired label</div>
+					<span style="myshop-has:customer-field-delivery-company"><span style="myshop-value:customer-field-delivery-company">bedrijfsnaam</span><br/></span>
+					<span style="myshop-has:customer-field-delivery-gender"><span style="myshop-value:customer-field-delivery-gender">aanhef</span>&nbsp;</span>
+					<span style="myshop-value:customer-field-delivery-name">persoonsnaam</span><br/>
+					<span style="myshop-value:customer-field-delivery-street">Straatnaam</span>&nbsp;<span style="myshop-value:customer-field-delivery-streetnr">76</span><br/>
+					<span style="myshop-value:customer-field-delivery-zip">3645 NS</span>&nbsp;<span style="myshop-value:customer-field-delivery-city">Plaats</span><br/>
+					<span style="myshop-value:customer-field-delivery-country">land</span>
+				</div>
+				<div id="myshp_order_label_body">
+					<table cellspacing="0" cellpadding="0" width="100%" id="myshp_order_label_paper">
+						<tr><td colspan="3" id="myshp_order_label_topmargin"></td></tr>
+						<tr>
+							<td id="myshp_order_label_leftmargin"></td>
+							<td id="myshp_order_label_center">
+								<table cellspacing="0" cellpadding="0" width="100%" id="myshp_order_label_container">
+									
+								</table>
+							</td>
+							<td id="myshp_order_label_rightmargin"></td>
+						</tr>
+						<tr><td colspan="3" id="myshp_order_label_bottommargin"></td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
