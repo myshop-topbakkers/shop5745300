@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="Description" content="Place your website description here" />
+		<meta name="Keywords" content="keyword1, keyword2, keyword3" />
+		<meta name="Robots" content="all" />
+		<meta http-equiv="Expires" content="0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-control" content="no-cache" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta content="author"
+			name="MijnWinkel, Checkout Basket Inc VAT, $Revision: 8085 $, $Date: 2011-02-16 13:39:24 -0300 (mié, 16 feb 2011) $" />
+
+		<link media="all" style="myshop-resource-ref:style-sheet-checkout" href="base_checkout.css"
+			type="text/css" rel="stylesheet" />
+
+		<title>Shopping Basket Template</title>
+	</head>
+
+	<body>
+		<span style="myshop-is-shop:1154200">test shop 1154200</span>
+		<span style="myshop-not-is-shop:1154200">This is NOT test shop 1154200</span> WINKELWAGEN
+			<span style="myshop-test:{customer-field-billing-name} = 'jan'"> JAN HERE </span>
+		<div id="myshp_checkout">
+			<div id="myshp_basket" class="myshp_inc_vat">
+				<!-- Begin - Checkout Header -->
+				<div class="myshp_checkout_header">
+					<div style="myshop-has:products">
+						<span style="myshop-resource:basket">Winkelwagen</span>
+					</div>
+					<div style="myshop-not-has:products">
+						<span style="myshop-resource:empty">winkelwagen is leeg</span>
+						<!-- Don't remove the next <br> tag because it avoid an IE column's layout Bug -->
+						<br />
+					</div>
+				</div>
+				<!-- End - Checkout Header -->
+				<!-- Begin - Checkout Breadcrum -->
+				<div id="myshp_checkout_breadcrumb">
+					<div class="myshp_checkout_breadcrumb_steps">
+						<span class="myshp_checkout_breadcrumb_bullet_first_preactive png"
+							>&gt;</span>
+						<div style="myshop-has:checkout-part-basket">
+							<span
+								class="myshp_checkout_breadcrumb_part myshp_checkout_breadcrumb_active"
+									><span style="myshop-resource:basket">Winkelwagen</span></span>
+							<span class="myshp_checkout_breadcrumb_bullet_postactive png"
+								>&gt;</span>
+						</div>
+						<span class="myshp_checkout_breadcrumb_part"><span
+								style="myshop-resource:title.address">Adres</span></span>
+						<span class="myshp_checkout_breadcrumb_bullet png">&gt;</span>
+						<div style="myshop-has:checkout-part-shipping">
+							<span class="myshp_checkout_breadcrumb_part"><span
+									style="myshop-resource:button.deliverymethod"
+								>Leverwijze</span></span>
+							<span class="myshp_checkout_breadcrumb_bullet png">&gt;</span>
+						</div>
+						<div style="myshop-has:checkout-part-payment-method">
+							<span class="myshp_checkout_breadcrumb_part"><span
+									style="myshop-resource:button.paymentmethod"
+								>Betaalwijze</span></span>
+							<span class="myshp_checkout_breadcrumb_bullet png">&gt;</span>
+						</div>
+						<div style="myshop-has:checkout-part-approval">
+							<span class="myshp_checkout_breadcrumb_part"><span
+									style="myshop-resource:title.approval">Overzicht</span></span>
+							<span class="myshp_checkout_breadcrumb_bullet_last png">&gt;</span>
+						</div>
+						<span class="myshp_checkout_breadcrumb_part"><span
+								style="myshop-resource:button.placeorder">Bestelling</span></span>
+					</div>
+				</div>
+				<!-- End - Checkout Breadcrum -->
+				<!-- Begin - Basket Has Products -->
+				<div id="myshp_checkout_basket" style="myshop-has:products">
+					<!-- Begin - Control Buttons -->
+					<div class="myshp_control_buttons">
+						<!--
+						<div class="myshp_button_prev" style="myshop-has:continue-shopping">					
+						<a href="#" class="myshp_button icon_align_left icon_image_arrow_left" style="myshop-action:continue-shopping"><span class="btn_bg_left">&nbsp;</span><span class="btn_bg_center"><span class="btn_icon">&nbsp;</span><span class="btn_text"><span style="myshop-resource:continueshopping">winkel verder</span></span></span><span class="btn_bg_right">&nbsp;</span></a>
+					</div>-->
+						<div class="myshp_button_next">
+							<a href="#" class="myshp_button icon_align_right icon_image_arrow_right"
+								style="myshop-action:next-page">
+								<span class="btn_bg_left">&nbsp;</span>
+								<span class="btn_bg_center">
+									<span class="btn_icon">&nbsp;</span>
+									<span class="btn_text"><span
+											style="myshop-resource:button.nextstep">volgende
+											stap</span></span>
+								</span>
+								<span class="btn_bg_right">&nbsp;</span>
+							</a>
+						</div>
+						<!-- Uncomment the line below to enable the Help Button Link -->
+						<!-- <div class="myshp_button_help">
+							<a href="#" class="myshp_button icon_align_left icon_image_help" style="myshop-action:help-basket">
+								<span class="btn_bg_left">&nbsp;</span>
+								<span class="btn_bg_center">
+									<span class="btn_icon">&nbsp;</span>
+									<span class="btn_text">help</span>
+								</span>			
+								<span class="btn_bg_right">&nbsp;</span></a>
+						</div> -->
+						<div class="clear">&nbsp;</div>
+					</div>
+					<!-- End - Control Buttons -->
+					<!-- Begin - Basket Products -->
+					<div id="myshp_basket_products_container"> ----<div
+							style="myshop-value:monthly-costs-formatted;"></div><br /> -- <table
+							id="myshp_basket_products" cellpadding="0" cellspacing="0">
+							<tr class="myshp_basket_products_header">
+								<th class="myshp_basket_product_name"><span
+										style="myshop-resource:article">Artikel</span></th>
+								<th class="myshp_basket_product_description" colspan="2"><span
+										style="myshop-resource:desc">Omschrijving</span></th>
+								<th class="myshp_basket_product_quantity"><span
+										style="myshop-resource:nr">Aantal</span></th>
+								<th class="myshp_basket_product_unitprice"><span
+										style="myshop-resource:price">Prijs</span></th>
+								<th class="myshp_basket_product_totalprice"><span
+										style="myshop-resource:total">Totaal</span></th>
+								<th class="myshp_basket_product_controls">&nbsp;</th>
+							</tr>
+							<tr class="myshp_basket_product" style="myshop-repeat:basket;">
+								<td class="myshp_basket_product_name"><span
+										style="myshop-value:product-id"></span></td>
+								<!-- Uncomment the line below to enable the image in the basket, and replace "AfbeeldingVeldNaam" by your own field name added in the order data on the productlist tab on the editor, don't forthet to comment the line up -->
+								<!--<td class="myshp_basket_product_name"><img src="myshop-value:extra-AfbeeldingVeldNaam" style="margin-left:4px;margin-right:8px;" title="afbeelding" alt="afbeelding" /></td>-->
+								<td class="myshp_basket_product_description"
+									style="myshop-value:description;" colspan="2"></td>
+								<td class="myshp_basket_product_quantity"><span
+										style="myshop-value:quantity;"></span>
+									<a style="myshop-action:decrement-product"
+										href="javascript:void(0);">&lt;</a>
+									<span style="myshop-value:quantity;"></span>
+									<a style="myshop-action:increment-product"
+										href="javascript:void(0);">&gt;</a>
+								</td>
+								<td class="myshp_basket_product_unitprice">
+									<span style="myshop-value:extra-PrijsExcl"></span>PRODUCT: <span
+										style="myshop-calculate:format-number((0.5*{quantity}), '###.##0,00','decimal-comma');"
+									></span> :END <span
+										style="myshop-value:inc-vat-price-formatted;"></span></td>
+								<td class="myshp_basket_product_totalprice"><span
+										style="myshop-value:inc-vat-price-line-total-formatted;white-space:nowrap"
+									></span></td>
+								<td class="myshp_basket_product_controls">
+									<span class="myshp_basket_product_update">
+										<a style="myshop-action:change-product"
+											href="javascript:void(0);"><span
+												style="myshop-resource:change">wijzig</span></a>
+									</span>
+									<span class="myshp_basket_product_delete">
+										<a style="myshop-action:remove-product"
+											href="javascript:void(0);"><span
+												style="myshop-resource:remove">verwijder</span></a>
+									</span>
+								</td>
+							</tr>
+							<!-- myshp_basket_action Block-->
+							<tr class="myshp_basket_action" style="myshop-repeat:action-list">
+								<td class="myshp_basket_action_label" colspan="5"><span
+										style="myshop-value:label">&nbsp;</span></td>
+								<td class="myshp_basket_action_value"><span
+										style="myshop-value:price-formatted gratis"
+									>&nbsp;</span></td>
+								<td>&nbsp;</td>
+							</tr>
+							<!-- myshp_basket_shipping Block-->
+							<tr class="myshp_basket_shipping" style="myshop-has:shipping-selection">
+								<td class="myshp_basket_shipping_selector" colspan="5" align="right">
+									<div class="myshp_basket_shipping_selector_container">
+										<span style="myshop-action:shipping-selection">&nbsp;</span>
+									</div>
+								</td>
+								<td class="myshp_basket_shipping_value"><span
+										style="myshop-value:inc-vat-price-shipping-formatted"
+										>&nbsp;</span></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+								<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+								<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+								<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+								<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+								<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+								<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+							</tr>
+							<tr valign="bottom">
+								<td colspan="2" rowspan="4" valign="bottom" class="myshp_basket_vat">
+									<div style="myshop-has:vat-list">
+										<table cellpadding="0" cellspacing="0" border="0"
+											class="myshp_basket_vat_table">
+											<tr style="myshop-repeat:vat-list;">
+												<td class="myshp_basket_vat_label">
+												<p style="white-space:nowrap"> VAT::<span
+												style="myshop-is-vat-percentage:0">NULLLL</span>
+												<span style="myshop-value:vat-percentage"
+												>19</span>&nbsp; <span
+												style="myshop-resource:label.vatpercentage"> BTW
+												van</span>&nbsp; <span
+												style="myshop-value:inc-vat-vat-from-price-formatted"
+												>1000000</span>
+												</p>
+												</td>
+												<td class="myshp_basket_vat_value">
+												<span style="myshop-value:price-vat-formatted"
+												>100</span>
+												</td>
+											</tr>
+											<tr class="myshp_basket_vat_total_divider">
+												<td height="1" colspan="2"></td>
+											</tr>
+											<tr>
+												<td class="myshp_basket_vat_label">
+												<span style="myshop-resource:total"
+												>Total</span>&nbsp;<span
+												style="myshop-resource:vat">BTW</span>
+												</td>
+												<td class="myshp_basket_vat_value">
+												<span style="myshop-value:vat-total-formatted"
+												>100</span>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</td>
+								<td colspan="5" style="myshop-not-has:action-coupon-code;"
+									>&nbsp;</td>
+							</tr>
+							<tr style="myshop-not-has:action-coupon-code;">
+								<td colspan="5">&nbsp;</td>
+							</tr>
+							<tr>
+								<td id="myshp_basket_total_label" colspan="3" valign="bottom"><span
+										style="myshop-resource:total">Totaal</span></td>
+								<td id="myshp_basket_total_value" valign="bottom"><span
+										style="myshop-value:price-total-formatted"
+									>&nbsp;</span></td>
+								<td valign="bottom">&nbsp;</td>
+							</tr>
+							<tr style="myshop-has:action-coupon-code">
+								<td colspan="4" align="right" valign="bottom"
+									class="myshp_basket_coupon_container">
+									<table id="myshp_basket_coupon">
+										<tr>
+											<td id="myshp_basket_coupon_label"><span
+												style="myshop-label:coupon-code">code</span>:</td>
+											<td id="myshp_basket_coupon_field"><input
+												style="myshop-control:coupon-code" size="15"
+												title="" /></td>
+										</tr>
+									</table>
+								</td>
+								<td>&nbsp;</td>
+							</tr>
+						</table> 
+						
+						<div style="myshop-is-customer:signature-required">
+						<div class="myshp_upload_choice">
+							<div style="myshop-not-has:signature-document">
+								<div class="myshp_upload_file_input" style="display: block;">
+									<button type="button" onclick="$(&#39;#myshp_upload_file_order_input&#39;).trigger(&#39;click&#39;)">Kies bestand</button>
+									<label>Geen bestand geselecteerd</label>
+								</div>
+								<div class="myshp_upload_file_remove" style="display: none;">
+									<button type="button" onclick="myshopUtil().removeFile(event, this)">Verwijder&#160;<i class="fa fa-times"><!--icon--></i></button>
+									<label class="myshp_upload_file_name" style="display: none;">&#160;</label>
+								</div>
+							</div>
+							<div style="myshop-has:signature-document">
+								<div class="myshp_upload_file_input" style="display: none;">
+									<button type="button" onclick="$(&#39;#myshp_upload_file_order_input&#39;).trigger(&#39;click&#39;)">Kies bestand</button>
+									<label>Geen bestand geselecteerd</label>
+								</div>
+								<div class="myshp_upload_file_remove" style="display: block;">
+									<button type="button" onclick="myshopUtil().removeFile(event, this)">Verwijder&#160;<i class="fa fa-times"><!--icon--></i></button>
+									<label class="myshp_upload_file_name" style="display: block;">&#160;<div style="myshop-value:signature-document"/></label>
+								</div>
+							</div>
+							<span class="myshp_upload_file_order" style="myshop-value:signature-document;display:none"/>
+							<input name="upload" id="myshp_upload_file_order_input" onchange="myshopUtil().uploadFile(this)" style="display: none;" data-com.agilebits.onepassword.user-edited="yes" type="file"><!-- input --></input> 
+							
+							 
+							<div class="myshp_upload_progress" style="display: none;">&#160;</div>
+						</div>
+						<script type="text/javascript" src="https://myshop.s3-external-3.amazonaws.com/shop1154200.images.upload.js">&#160;</script>
+						</div>
+						
+						UPLOAD END </div>
+					<!-- End - Basket Products -->
+				</div>
+				<!-- End - Basket Has Products  -->
+				<!-- Begin - Basket Empty -->
+				<div id="myshp_checkout_basket_empty" style="myshop-not-has:products">
+					<div class="myshp_checkout_info">
+						<div class="myshp_checkout_info_block">
+							<span style="myshop-resource:isempty">Uw winkelwagen is nog leeg. Ga
+								terug naar de winkel om producten te bestellen</span><br />
+							<span style="myshop-resource:isempty2">Als u al producten had
+								toegevoegd, kan de reden hiervoor zijn dat uw sessie verlopen
+								is</span><br />
+							<span style="myshop-resource:isempty3">Dit gebeurt 60 minuten na de
+								laatste wijziging of wanneer u uw browser tussendoor afsluit</span>
+						</div>
+					</div>
+				</div>
+				<!-- End - Basket Empty -->
+				<!-- Begin - Control Buttons -->
+				<div class="myshp_control_buttons">
+					<div class="myshp_button_prev" style="myshop-has:continue-shopping">
+						<a href="#" class="myshp_button icon_align_left icon_image_arrow_left"
+							style="myshop-action:continue-shopping"><span class="btn_bg_left"
+								>&nbsp;</span><span class="btn_bg_center"><span class="btn_icon"
+									>&nbsp;</span><span class="btn_text"><span
+										style="myshop-resource:continueshopping">winkel
+										verder</span></span></span><span class="btn_bg_right"
+								>&nbsp;</span></a>
+					</div>
+					
+					<div style="myshop-is-customer:signature-required">
+						<div style="myshop-has:signature-document">
+							<div class="myshp_upload_choice_next" style="display:block">
+								<div class="myshp_button_next" style="myshop-has:products">
+									<a href="#" class="myshp_button icon_align_right icon_image_arrow_right"
+										style="myshop-action:next-page"><span class="btn_bg_left"
+											>&nbsp;</span><span class="btn_bg_center"><span class="btn_icon"
+												>&nbsp;</span><span class="btn_text"><span
+													style="myshop-resource:button.nextstep">volgende
+													stap</span></span></span><span class="btn_bg_right"
+														>&nbsp;</span></a>
+								</div>
+							</div>
+						</div>
+						<div style="myshop-not-has:signature-document">
+							<div class="myshp_upload_choice_next" style="display:none">
+								<div class="myshp_button_next" style="myshop-has:products">
+									<a href="#" class="myshp_button icon_align_right icon_image_arrow_right"
+										style="myshop-action:next-page"><span class="btn_bg_left"
+											>&nbsp;</span><span class="btn_bg_center"><span class="btn_icon"
+												>&nbsp;</span><span class="btn_text"><span
+													style="myshop-resource:button.nextstep">volgende
+													stap</span></span></span><span class="btn_bg_right"
+														>&nbsp;</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="myshop-not-is-customer:signature-required">
+					<div class="myshp_button_next" style="myshop-has:products">
+						<a href="#" class="myshp_button icon_align_right icon_image_arrow_right"
+							style="myshop-action:next-page"><span class="btn_bg_left"
+								>&nbsp;</span><span class="btn_bg_center"><span class="btn_icon"
+									>&nbsp;</span><span class="btn_text"><span
+										style="myshop-resource:button.nextstep">volgende
+									stap</span></span></span><span class="btn_bg_right"
+								>&nbsp;</span></a>
+					</div>
+					</div>
+					
+					<div class="myshp_button_help">
+						<a href="#" class="myshp_button icon_align_left icon_image_help"
+							style="myshop-action:help-basket"><span class="btn_bg_left"
+								>&nbsp;</span><span class="btn_bg_center"><span class="btn_icon"
+									>&nbsp;</span><span class="btn_text"><span
+										style="myshop-resource:schelp"
+								>help</span></span></span><span class="btn_bg_right"
+							>&nbsp;</span></a>
+					</div>
+					<div class="clear">&nbsp;</div>
+				</div>
+				<!-- End - Control Buttons -->
+				<!-- Begin - Terms and Conditions -->
+				<span class="myshp_basket_info" style="myshop-has:terms-conditions">
+					<a style="myshop-action:terms-conditions" class="myshp_basket_info_link">
+						<span style="myshop-resource:policies">Klik hier voor de
+							leveringsvoorwaarden</span>
+					</a>
+					<br />
+				</span>
+				<div class="myshp_basket_info_block" style="myshop-value:remarks">
+					<!-- Don't remove the next <br> tag because it avoid an IE column's layout Bug -->
+					<br />
+				</div>
+				<!-- End - Terms and Conditions -->
+				<!-- Begin - Related Products -->
+				<div id="myshp_basket_related" style="myshop-block:related-products">
+					<div id="myshp_basket_related_header">
+						<h4 class="myshp_basket_related_title"
+							style="myshop-style-color:{$color(3)};"><span
+								style="myshop-resource:related.title">Bijpassende
+							artikelen</span></h4>
+					</div>
+					<table border="0" cellspacing="0" cellpadding="0" width="100%"
+						style="myshop-block:productlist">
+						<tr style="myshop-block:product">
+							<td valign="top" class="myshp_basket_related_product_row">
+								<div class="myshp_basket_related_product_image">
+									<!--<img src="myshop-product:image;" height="myshop-product:image-height" width="myshop-product:image-width" title="myshop-product:title" alt="myshop-product:title"/>-->
+									<img src="myshop-product:image;" title="myshop-product:title"
+										alt="myshop-product:title" />
+								</div>
+								<div class="myshp_basket_related_product_details">
+									<div class="myshp_basket_related_product_title"
+										style="myshop-product:title;">&nbsp;</div>
+									<div class="myshp_basket_related_product_description"
+										style="myshop-product:description-short;">&nbsp;</div>
+								</div>
+								<div class="myshp_basket_related_features">
+									<div style="myshop-repeat:product-features">
+										<span class="myshp_basket_related_label"
+											style="myshop-feature:label;">&nbsp;</span>
+										<div style="myshop-not-is:feature-price">
+											<span class="myshp_basket_related_field"
+												style="myshop-feature:value;">&nbsp;</span>
+										</div>
+										<div style="myshop-is:feature-price">
+											<b>
+												<span class="myshp_basket_related_field"
+												style="myshop-feature:value;">&nbsp;</span>
+											</b>
+										</div>
+									</div>
+									<div class="myshp_control_buttons">
+										<div style="myshop-is:in-stock">
+											<div style="myshop-has:control-quantity">
+												<span class="myshp_basket_related_label"
+												style="myshop-control-label:quantity"
+												>&nbsp;</span>
+												<div class="myshp_basket_related_field">
+												<input style="myshop-control:quantity" size="10"
+												class="myshp_basket_related_field" />&nbsp; <span
+												style="myshop-control-label:quantity-metric"
+												>&nbsp</span>
+												</div>
+											</div>
+										</div>
+										<a href="#"
+											class="myshp_button icon_align_left icon_image_arrow_left"
+											style="myshop-action:moreinfo;">
+											<span class="btn_bg_left">&nbsp;</span>
+											<span class="btn_bg_center">
+												<span class="btn_icon">&nbsp;</span>
+												<span class="btn_text">
+												<span style="myshop-resource:moreinfo">Meer
+												info</span>
+												</span>
+											</span>
+											<span class="btn_bg_right">&nbsp;</span>
+										</a>
+										<div style="myshop-is:in-stock">
+											<a href="#"
+												class="myshp_button icon_align_right icon_image_shopping_cart"
+												style="myshop-action:order">
+												<span class="btn_bg_left">&nbsp;</span>
+												<span class="btn_bg_center">
+												<span class="btn_icon">&nbsp;</span>
+												<span class="btn_text">
+												<span style="myshop-resource:button.placeorder"
+												>bestel</span>
+												</span>
+												</span>
+												<span class="btn_bg_right">&nbsp;</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- End - Related Products -->
+				<div id="myshp_checkout_footer" style="myshop-default:powered-by">&nbsp;</div>
+			</div>
+		</div>
+	</body>
+</html>
