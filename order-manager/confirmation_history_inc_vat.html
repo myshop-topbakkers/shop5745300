@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Copyright 1999-2005 MijnWinkel B.V. All Rights Reserved - Version 0.1.0 	--><!-- User manual http://www.mijnwinkel.nl/homepage/nl/default/ --><!-- Versie: 060201 --><!--
+        Changelog:
+        20-02-06 Sem van der Wal
+        Verbetering omvattende tabel (bestond nog niet)
+        Verbetering kleuren (Nog geen shop-colors, gebruikt vaste kleur waarden)
+        Verbetering uitlijning (Breedte tabellen 98%)
+        Verbetering uitlijning (Algehele omzetting naar origineel)
+        23-11-06 Sem van der Wal
+        myshop-value:order-date_time vervangen door myshop-value:order-mail-date (myshop-value:order-mail-time)
+        -->
+        <meta http-equiv="Expires" content="0" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-control" content="no-cache" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link media="all" href="/skins/parma/base.css" type="text/css" rel="stylesheet"></link>
+		<link media="all" href="/skins/parma/1/theme.css" type="text/css" rel="stylesheet"></link>
+        <link href="/skins/orders_css.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            body {
+                font-size: 12px;
+                font-family: Verdana, Arial, Helvetica, sans-serif
+            }
+            
+            td {
+                font-size: 12px;
+                font-family: Verdana, Arial, Helvetica, sans-serif
+            } .bold {
+                font-weight: bold
+            }
+        </style>
+        <!-- Used for the print options, do not remove. -->
+        <style media="screen" type="text/css">
+            .screenonly {
+                display: block
+            }
+        </style>
+        <style media="print" type="text/css">
+            .screenonly {
+                display: none
+            }
+        </style>
+        <!-- End used for the print options. --><title>Archive Order Page Template</title>
+    </head>
+    <body>
+        <div id="myshp_orders">
+            <div id="myshp_orders_confirmation_history">
+                <!--<div class="myshp_order_controls screenonly">
+                    <input class="myshp_order_controls_button print" type="button" style="width:100" value="Afdrukken" onclick="window.print();return false;"/><input class="myshp_order_controls_button close" type="button" style="width:100" value="Sluiten" onclick="parent.doClose(true);"/>
+                </div>-->
+                <div class="clear">
+                </div>
+                <div class="myshp_confirmation_history_header" style="myshop-resource:title.confirmation">
+                    Bestelbevestiging
+                </div>
+                <div class="myshp_confirmation_history_type">
+                    <span class="label" style="myshop-resource:label.order.placed">Bestelling geplaatst op </span>&#32;
+                    <span class="value" style="myshop-value:order-mail-date"/> (<span style="myshop-value:order-mail-time"/>),&nbsp;<span style="myshop-resource:label.by">door</span>&nbsp;<span style="myshop-has:customer-field-billing-gender"><span style="myshop-value:customer-field-billing-gender">aanhef</span>&nbsp;</span><span style="myshop-value:customer-field-billing-name"/>.
+                    <br/>
+                    <span class="label" style="myshop-resource:label.order.number">bestelnummer :</span>
+                    <span class="value" style="myshop-value:order-number">1234567</span>
+                </div>
+                <div id="myshp_basket">
+                    <div id="myshp_basket_confirmation">
+                        <div class="myshp_basket_products_container">
+                            <table class="myshp_basket_products" cellpadding="0" cellspacing="0">
+                                <tr class="myshp_basket_products_header">
+                                    <td class="myshp_basket_product_name"><span style="myshop-resource:table.article">Artikel</span></td>
+                                    <td class="myshp_basket_product_description" colspan="2"><span style="myshop-resource:table.description">Omschrijving</span></td>
+                                    <td class="myshp_basket_product_quantity"><span style="myshop-resource:table.quantity">Aantal</span></td>
+                                    <td class="myshp_basket_product_unitprice"><span style="myshop-resource:table.price">Prijs</span></td>
+                                    <td class="myshp_basket_product_totalprice"><span style="myshop-resource:table.total">Totaal</span></td>
+                                </tr>
+                                <tr class="myshp_basket_product" style="myshop-repeat:basket;">
+                                    <td class="myshp_basket_product_name" style="myshop-value:product-id"></td>
+                                    <td class="myshp_basket_product_description" colspan="2"><span style="myshop-value:description;"></span></td>
+                                    <td class="myshp_basket_product_quantity"><span style="myshop-value:quantity;"></span></td>
+                                    <td class="myshp_basket_product_unitprice"><span style="myshop-value:inc-vat-price-formatted;"></span></td>
+                                    <td class="myshp_basket_product_totalprice"><span style="myshop-value:inc-vat-price-line-total-formatted;"></span></td>
+                                </tr>
+								<tr>
+									<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+									<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+									<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+									<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+									<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+									<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+								</tr>
+								<tr>
+									<td colspan="2" rowspan="20" class="myshp_basket_vat">
+										<span style="myshop-has:vat-list">
+											<span style="myshop-not-is:tax-free">
+												<table cellpadding="0" cellspacing="0" border="0">
+													<tr style="myshop-repeat:vat-list;">
+														<td class="myshp_basket_vat_label">
+															<span style="myshop-value:vat-percentage">19</span>&#37;&nbsp;<span style="myshop-resource:table.vat">BTW</span>&#160;<span style="myshop-resource:table.of">van</span>&nbsp;<span style="myshop-value:inc-vat-vat-from-price-formatted">&nbsp;</span>
+														</td>
+														<td class="myshp_basket_vat_value">
+															<span style="myshop-value:price-vat-formatted">100</span>
+														</td>
+													</tr>
+													<tr style="myshop-is:tax-free">
+														<td colspan="2" class="myshp_basket_vat_label">
+															<span style="myshop-resource:label.vatfree">Geen BTW</span>
+														</td>
+													</tr>
+													<tr class="myshp_basket_vat_total_divider" >
+														<td height="1" colspan="2"></td>
+													</tr>
+													<tr>
+														<td class="myshp_basket_vat_label">
+															<span style="myshop-resource:totalvat">Total BTW</span>
+														</td>
+														<td class="myshp_basket_vat_value">
+															<span style="myshop-value:vat-total-formatted">100</span>
+														</td>
+													</tr>
+												</table>
+											</span>
+										</span>
+										<span style="myshop-is:tax-free">
+											<table cellpadding="0" cellspacing="0" border="0">
+												<tr>
+													<td colspan="2" class="myshp_basket_vat_label">
+														<span style="myshop-resource:label.vatfree">Geen BTW</span>
+													</td>
+												</tr>
+											</table>
+										</span>
+									</td>
+								</tr>
+								<tr class="myshp_basket_action" style="myshop-repeat:action-list">
+									<td class="myshp_basket_action_label" colspan="3"><span style="myshop-value:label">&nbsp;</span></td>
+									<td class="myshp_basket_action_value"><span style="myshop-value:inc-vat-price-formatted">&nbsp;</span></td>
+								</tr>
+								<tr class="myshp_basket_shipping" style="myshop-has:shipping-costs">
+									<td class="myshp_basket_shipping_label" colspan="3"><span style="myshop-resource:shippingcost">Shippingcost</span>&nbsp;(<span style="myshop-value:country">Holland</span>)</td>
+									<td class="myshp_basket_shipping_value"><span style="myshop-value:inc-vat-price-shipping-formatted">&nbsp;</span></td>
+								</tr>
+								<tr class="myshp_basket_payment" style="myshop-has:payment-method-costs">
+									<td class="myshp_basket_payment_label" colspan="3"><span style="myshop-resource:paymethod">Betaalmethode</span>(<span style="myshop-value:payment-method">&nbsp;</span>)</td>
+									<td class="myshp_basket_payment_value"><span style="myshop-value:inc-vat-price-payment-method-formatted">&nbsp;</span></td>
+								</tr>
+								<tr id="myshp_basket_total">
+									<td id="myshp_basket_total_label" colspan="3"><span style="myshop-resource:table.total">Totaal</span></td>
+									<td id="myshp_basket_total_value"><span style="font-weight:bold;myshop-value:price-total-formatted">&nbsp;</span></td>
+								</tr>
+                            </table>
+                        </div>
+                        <div class="myshp_checkout_customerdata_table_container">
+                            <table border="0" cellpadding="0" cellspacing="0" id="myshp_checkout_customerdata_table">
+                                <tr>
+                                    <td class="myshp_checkout_customerdata">
+                                        <h3><span style="myshop-resource:address.delivery">Afleveradres</span></h3>
+                                        <div class="myshp_checkout_customerdata_item" style="myshop-repeat:customer-fields-delivery-exclude(email,remark);display:inline;">
+                                            <div style="myshop-is:on-same-line">
+                                                <div class="myshp_checkout_customerdata_row_same_line">
+                                                    <span style="myshop-has:label">
+                                                        <label class="myshp_checkout_customerdata_label" style="myshop-value:label">
+                                                            &nbsp;
+                                                        </label>
+                                                    </span>
+                                                    <span style="myshop-has:value">
+                                                        <label class="myshp_checkout_customerdata_field" style="myshop-value:value">
+                                                            &nbsp;
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div style="myshop-not-is:on-same-line">
+                                            	<div class="clear" style="height:0;clear:both;width:100%;visibility:hidden;">&nbsp;
+												</div>
+                                                <div class="myshp_checkout_customerdata_row">
+                                                    <span style="myshop-has:label">
+                                                        <label class="myshp_checkout_customerdata_label" style="myshop-value:label">
+                                                            &nbsp;
+                                                        </label>
+                                                    </span>
+                                                    <span style="myshop-has:value">
+                                                        <label class="myshp_checkout_customerdata_field" style="myshop-value:value">
+                                                            &nbsp;
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="myshp_checkout_customerdata_hspacer">
+                                    </td>
+                                    <td class="myshp_checkout_customerdata">
+                                        <h3><span style="myshop-resource:address.invoice">Factureren aan</span></h3>
+                                        <div class="myshp_checkout_customerdata_item" style="myshop-repeat:customer-fields-exclude(email,remark);display:inline;">
+                                            <div style="myshop-is:on-same-line">
+                                                <div class="myshp_checkout_customerdata_row_same_line">
+                                                    <span style="myshop-has:label">
+                                                        <label class="myshp_checkout_customerdata_label" style="myshop-value:label">
+                                                            &nbsp;
+                                                        </label>
+                                                    </span>
+                                                    <span style="myshop-has:value">
+                                                        <label class="myshp_checkout_customerdata_field" style="myshop-value:value">
+                                                            &nbsp;
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div style="myshop-not-is:on-same-line">
+                                            	<div class="clear" style="height:0;clear:both;width:100%;visibility:hidden;">&nbsp;
+												</div>
+                                                <div class="myshp_checkout_customerdata_row">
+                                                    <span style="myshop-has:label">
+                                                        <label class="myshp_checkout_customerdata_label" style="myshop-value:label">
+                                                            &nbsp;
+                                                        </label>
+                                                    </span>
+                                                    <span style="myshop-has:value">
+                                                        <label class="myshp_checkout_customerdata_field" style="myshop-value:value">
+                                                            &nbsp;
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="myshp_checkout_customerdata_vspacer">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="myshp_checkout_customerdata">
+                                        <h3><span style="myshop-resource:shippingmethod.capital">Leverwijze</span></h3>
+                                        <div class="myshp_checkout_customerdata_row">
+                                            <!--<label class="myshp_checkout_customerdata_label"><span style="myshop-value:label">&nbsp;</span></label>--><span class="myshp_checkout_customerdata_field"><span style="myshop-value:shipping">&nbsp;</span></span>
+                                            <span style="myshop-has:myshop-has-value-plugin-postnl_checkout:date">
+												<br/>
+												<span class="myshp_checkout_customerdata_field">
+					                        		<span style="myshop-resource:deliverydate"/>: <span style="myshop-value-plugin-postnl_checkout:date"/>
+					                        	</span>
+					                        </span>
+                                        </div>
+                                    </td>
+                                    <td class="myshp_checkout_customerdata_hspacer">
+                                    </td>
+                                    <td class="myshp_checkout_customerdata">
+                                        <h3><span style="myshop-resource:email">E-mail</span></h3>
+                                        <div class="myshp_checkout_customerdata_row">
+                                            <!--<label class="myshp_checkout_customerdata_label"><span style="myshop-value:label">&nbsp;</span></label>--><span class="myshp_checkout_customerdata_field"><span style="myshop-value:customer-field-email">&nbsp;</span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="myshp_checkout_customerdata_vspacer">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="myshp_checkout_customerdata">
+                                        <h3><span style="myshop-resource:paymethod">Betaalwijze</span></h3>
+                                        <div class="myshp_checkout_customerdata_row">
+                                            <!--<label class="myshp_checkout_customerdata_label"><span style="myshop-value:label">&nbsp;</span></label>-->
+											<span style="myshop-not-has:payment-confirmation-description">
+												<span style="myshop-value:payment-method" class="myshp_checkout_customerdata_field">&nbsp;</span>
+											</span>
+											<span style="myshop-has:payment-confirmation-description">
+												<span style="myshop-value:payment-confirmation-description" class="myshp_checkout_customerdata_field">extra text</span>
+											</span>
+                                        </div>
+                                    </td>
+                                    <td class="myshp_checkout_customerdata_hspacer">
+                                    </td>
+                                    <td class="myshp_checkout_customerdata">
+                                        <h3><span style="myshop-resource:remark">Opmerking</span></h3>
+                                        <div class="myshp_checkout_customerdata_row">
+                                            <!--<label class="myshp_checkout_customerdata_label"><span style="myshop-value:label">&nbsp;</span></label>--><span class="myshp_checkout_customerdata_field"><span style="myshop-value:customer-field-remark">&nbsp;</span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="myshp_checkout_info">
+                            <p style="myshop-has:terms-conditions" class="myshp_checkout_info_conditions">
+                                <a style="myshop-action:terms-conditions"><span style="myshop-resource:terms.delivery">Klik hier voor de leveringsvoorwaarden</span></a>
+                            </p>
+                            <p style="myshop-has:payment-provider" class="myshp_checkout_info_payment_provider">
+                                <a style="myshop-action:payment-provider"><span style="myshop-resource:label.payment.method">betaal dienst</span></a>
+                                <br/>
+                                <span style="myshop-resource:label.order.status">Betaalstatus</span>:&nbsp;<span style="myshop-value:payment-cluster-process"/>
+                                <br/>
+                                <label title="Last partial payment method" style="myshop-resource:label.lppm">
+                                    LPPM
+                                </label>:&nbsp;<span style="myshop-value:last-partial-payment-method"></span>
+                            </p>
+                            <p>
+                                <span class="myshp_checkout_info_remote_label" style="myshop-resource:label.remote.host">Remote host:</span>&nbsp;<span class="myshp_checkout_info_remote_value" style="myshop-value:remote-host"/>
+                                <br/>
+                                <span class="myshp_checkout_info_remote_label" style="myshop-resource:label.remote.address">Remote adres:</span>&nbsp;<span class="myshp_checkout_info_remote_value" style="myshop-value:remote-address"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
