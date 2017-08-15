@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- Copyright 1999-2005 MijnWinkel B.V. All Rights Reserved - Version 0.1.0 	-->
+		<!-- User manual http://www.mijnwinkel.nl/ -->
+
+		<!-- Versie: 060201 -->
+		<!--
+				Changelog:
+				13-02-06 Sem van der Wal
+					Verbetering rand bovenste tabel (nog niet zichtbaar wegens beperkingen mijnwinkel.nl
+					Verbetering kleuren (Nog geen shop-colors, ook niet aanwezig in origineel)
+					Verbetering uitlijning (Breedte tabellen 60%)
+		-->
+
+		<meta http-equiv="Expires" content="0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-control" content="no-cache" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<link media="all" href="/skins/parma/base.css" type="text/css" rel="stylesheet"></link>
+		<link media="all" href="/skins/parma/1/theme.css" type="text/css" rel="stylesheet"></link>
+		<link href="/skins/orders_css.css" rel="stylesheet" type="text/css" />
+		<title>Invoice page Template</title>
+		<style type="text/css">
+			body {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt;}
+			td   {border: 0; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt;}
+		</style>
+
+		<!-- Used for the print options, do not remove. -->
+		<style media="screen" type="text/css">
+   		.screenonly { display: block }
+		</style>
+		<style media="print" type="text/css">
+   		.screenonly { display: none }
+		</style>
+		<!-- End used for the print options. -->
+	</head>
+	<body>
+		<div id="myshp_orders">
+			<div id="myshp_orders_invoice">	
+			<!-- Print options -->
+				<div class="myshp_order_controls screenonly">
+					<!--<div class="myshp_order_controls_buttons">
+						<input class="myshp_order_controls_button print" type="button" style="width:100" value="Afdrukken" onclick="window.print();return false;"/>
+						<input class="myshp_order_controls_button close" type="button" style="width:100" value="Sluiten" onclick="parent.doClose(true);"/>
+					</div>-->
+					<div class="myshp_order_invoice_header">&nbsp;<b style="myshop-resource:standard.invoice">Standaard factuur</b></div>				
+				</div>
+			<!-- End of print options -->		
+				<div class="clear"></div>
+				<br/>
+				<table class="myshp_order_invoice_customerdata_table" cellpadding="0" cellspacing="0" >
+					
+					<tr>
+						
+						<td class="myshp_order_invoice_company_container">
+							
+							<div class="myshp_order_invoice_company">
+							
+								<strong class="myshp_order_invoice_company_title"><span style="myshop-value:company-name">bedrijfsnaam</span></strong><br/>
+								
+								<span class="myshp_order_invoice_company_value" style="myshop-value:company-address"></span><br/>
+				
+								<span class="myshp_order_invoice_company_value" style="myshop-value:company-zip"></span>&nbsp;<span class="myshp_order_invoice_company_value" style="myshop-value:company-city"></span><br/>
+				
+								<span class="myshp_order_invoice_company_value" style="myshop-value:company-country"></span><br/>
+								
+								<span style="myshop-has:company-coc-number"><span class="myshp_order_invoice_company_label"><span style="myshop-resource:number.coc">KvK nr.</span></span>:&nbsp;<span style="myshop-value:company-coc-number"></span></span><br/>
+				
+								<span style="myshop-has:company-vat-number"><span class="myshp_order_invoice_company_label"><span style="myshop-resource:number.vat">BTW nr.</span></span>:&nbsp;<span style="myshop-value:company-vat-number"></span></span><br/>
+				
+								<span style="myshop-has:company-phone"> <span class="myshp_order_invoice_company_label" style="myshop-has:company-phone"><span style="myshop-resource:phone">Telephone</span>:&nbsp; </span><span class="myshp_order_invoice_company_value" style="myshop-value:company-phone"></span></span><br/>
+				
+								<span style="myshop-has:phone.fax"><span class="myshp_order_invoice_company_label"><span style="myshop-resource:phone.fax">Fax.:</span>:&nbsp;</span> <span class="myshp_order_invoice_company_value" style="myshop-value:company-fax"></span></span><br/>
+				
+								<span class="myshp_order_invoice_company_label"><span style="myshop-resource:email">E-mail:</span>:&nbsp;<span class="myshp_order_invoice_company_value" style="myshop-value:company-email"></span></span><br/>
+				
+								<span style="myshop-has:company-website"><span class="myshp_order_invoice_company_label"><span style="myshop-resource:website">Website</span></span>:&nbsp; <span class="myshp_order_invoice_company_value" style="myshop-value:company-website"></span></span>
+				
+							</div>
+						
+						</td>
+						
+						<td width="10">&nbsp;</td>
+						
+						<td class="myshp_order_invoice_customer_container">
+				
+							<div class="myshp_order_invoice_customer">
+								
+								<strong class="myshp_order_invoice_customer_title" style="myshop-resource:address.invoice">Factureren aan</strong>
+								<br/>
+								<span style="myshop-has:customer-field-billing-gender"><span style="myshop-value:customer-field-billing-gender">aanhef</span>&#160;</span>
+								<span class="myshp_checkout_customerdata_field" style="myshop-value:customer-field-billing-name"></span><br />
+								<span class="myshp_checkout_customerdata_field" style="myshop-value:customer-field-billing-street"></span>
+								<span class="myshp_checkout_customerdata_field" style="myshop-value:customer-field-billing-streetnr"></span><br />
+								<span class="myshp_checkout_customerdata_field" style="myshop-value:customer-field-billing-zip"></span>
+								<span class="myshp_checkout_customerdata_field" style="myshop-value:customer-field-billing-city"></span><br />
+								<span class="myshp_checkout_customerdata_field" style="myshop-value:customer-field-billing-country"></span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="myshp_invoice_data_container" colspan="3">
+							<div class="myshp_invoice_data">
+								<div class="myshp_invoice_data_labels">
+									<span class="myshp_order_invoice_data_label"><span style="myshop-resource:ref.order">bestelnummer</span>:&nbsp;</span>
+									<br/>
+                                    <span class="myshp_order_receipt_data_label"><span style="myshop-resource:ref.date">Besteldatum</span>:&nbsp;</span>
+                                    <br/>
+                                    <span class="myshp_order_receipt_data_label"><span style="myshop-resource:ref.ship">Verzenddatum</span>:&nbsp;</span>
+									<br/>
+									<span class="myshp_order_invoice_data_label"><span style="myshop-resource:paymethod">Betaalmethode</span>:&nbsp;</span>
+								</div>
+								<div class="myshp_invoice_data_values">
+									<span class="myshp_order_invoice_data_value"><span  style="myshop-value:order-number"></span></span><br/>
+									<span class="myshp_order_invoice_data_value"><span  style="myshop-value:order-mail-date"></span>&#160;<span style="myshop-value:order-mail-time"></span></span><br/>
+									<span class="myshp_order_invoice_data_value"><span  style="myshop-value:order-invoice-date"></span></span><br/>
+									<span class="myshp_order_invoice_data_value"><span style="myshop-value:payment-method"></span></span>
+								</div>
+							</div>
+						</td>			
+					</tr>
+				</table>
+				<br/>
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" class="myshp_basket_products">
+					<tr class="myshp_basket_products_header">
+						<td class="myshp_basket_product_name"><span style="myshop-resource:table.article">Artikel</span></td>
+						<td class="myshp_basket_product_description" colspan="2"><span style="myshop-resource:table.description">Omschrijving</span></td>
+						<td class="myshp_basket_product_quantity"><span style="myshop-resource:table.quantity">Aantal</span></td>
+						<td class="myshp_basket_product_unitprice"><span style="myshop-resource:table.price">Prijs</span></td>
+						<td class="myshp_basket_product_totalprice"><span style="myshop-resource:table.total">Totaal</span></td>
+					</tr>
+					<tr class="myshp_basket_product" style="myshop-repeat:basket">
+						<td class="myshp_basket_product_name"><span style="myshop-value:product-id">product number</span></td>
+						<td class="myshp_basket_product_description" colspan="2"><span style="myshop-value:description">description</span></td>
+						<td class="myshp_basket_product_quantity"><span style="myshop-value:quantity">quantity</span></td>
+						<td class="myshp_basket_product_unitprice"><span style="myshop-value:inc-vat-price-formatted">price</span></td>
+						<td class="myshp_basket_product_totalprice"><span style="myshop-value:inc-vat-price-line-total-formatted">price</span></td>
+					</tr>
+					<tr>
+						<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+						<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+						<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+						<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+						<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+						<td height="1"><div class="myshp_basket_spacer">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td colspan="2" rowspan="20" class="myshp_basket_vat">
+							<span style="myshop-has:vat-list">
+								<span style="myshop-not-is:tax-free">
+									<table cellpadding="0" cellspacing="0" border="0">
+										<tr style="myshop-repeat:vat-list;">
+											<td class="myshp_basket_vat_label" nowrap="nowrap">
+												<span style="myshop-value:vat-percentage">19</span>&#37;&nbsp;<span style="myshop-resource:table.vat">BTW</span>&#160;<span style="myshop-resource:table.of">van</span>&nbsp;<span style="myshop-value:inc-vat-vat-from-price-formatted">&nbsp;</span>
+											</td>
+											<td class="myshp_basket_vat_value" nowrap="nowrap">
+												<span style="myshop-value:price-vat-formatted">100</span>
+											</td>
+										</tr>
+										<tr style="myshop-is:tax-free">
+											<td colspan="2" class="myshp_basket_vat_label">
+												<span style="myshop-resource:label.vatfree">Geen BTW</span>
+											</td>
+										</tr>
+										<tr class="myshp_basket_vat_total_divider" >
+											<td height="1" colspan="2"></td>
+										</tr>
+										<tr>
+											<td class="myshp_basket_vat_label" nowrap="nowrap">
+												<span style="myshop-resource:totalvat">Total BTW</span>
+											</td>
+											<td class="myshp_basket_vat_value" nowrap="nowrap">
+												<span style="myshop-value:vat-total-formatted">100</span>
+											</td>
+										</tr>
+									</table>
+								</span>
+							</span>
+							<span style="myshop-is:tax-free">
+								<table cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td colspan="2" class="myshp_basket_vat_label">
+											<span style="myshop-resource:label.vatfree">Geen BTW</span>
+										</td>
+									</tr>
+								</table>
+							</span>
+						</td>
+						<td colspan="4">&nbsp;</td>
+					</tr>						
+					<tr class="myshp_basket_action" style="myshop-repeat:action-list">
+						<td class="myshp_basket_action_label" colspan="3"><span style="myshop-value:label">&nbsp;</span></td>
+						<td class="myshp_basket_action_value"><span style="myshop-value:inc-vat-price-formatted">&nbsp;</span></td>
+					</tr>
+					<tr class="myshp_basket_shipping" style="myshop-has:shipping-costs">
+						<td class="myshp_basket_shipping_label" colspan="3"><span style="myshop-resource:shippingcost">Shippingcost</span>&nbsp;(<span style="myshop-value:country">Holland</span>)</td>
+						<td class="myshp_basket_shipping_value"><span style="myshop-value:inc-vat-price-shipping-formatted">&nbsp;</span></td>
+					</tr>
+					<tr class="myshp_basket_payment" style="myshop-has:payment-method-costs">
+						<td class="myshp_basket_payment_label" colspan="3"><span style="myshop-resource:paymethod">Betaalmethode</span> (<span style="myshop-value:payment-method">&nbsp;</span>)</td>
+						<td class="myshp_basket_payment_value"><span style="myshop-value:inc-vat-price-payment-method-formatted">&nbsp;</span></td>
+					</tr>
+					<tr id="myshp_basket_total">
+						<td id="myshp_basket_total_label" colspan="3"><span style="myshop-resource:table.total">Totaal</span></td>
+						<td id="myshp_basket_total_value"><span style="font-weight:bold;myshop-value:price-total-formatted">&nbsp;</span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
