@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title>Custom orderpage page example</title>
+        <meta content="myshop-meta:keywords" name="keywords"/>
+        <meta content="myshop-meta:description" name="description"/>
+        <meta content="author" name="MijnWinkel, Checkout Order Page Inc VAT, $Revision: 5778 $, $Date: 2010-07-21 07:47:06 -0300 (Wed, 21 Jul 2010) $"/>
+    </head>
+    <body>
+        <div class="myshp_checkout myshp_checkout_orderpage">
+            
+			<div class="myshp_checkout_container">
+				
+				<!-- Begin - Checkout Info -->            	
+                <div class="myshp_checkout_info">
+                    <div class="myshp_checkout_info_block myshp_block" style="myshop-has:group-reduction">
+                    	<div class="myshp_pad">
+	                        <table class="myshp_checkout_orderpage_reductions" border="0" cellspacing="0" cellpadding="1" width="100%">
+	                            <tr>
+	                                <td valign="top">
+	                                    <span style="myshop-resource:label.min">
+	                                        min
+	                                    </span>
+	                                </td>
+	                                <td valign="top">
+	                                    <span style="myshop-resource:label.max">
+	                                        max
+	                                    </span>
+	                                </td>
+	                                <td valign="top">
+	                                    <span style="myshop-resource:price">
+	                                        prijs
+	                                    </span>
+	                                </td>
+	                            </tr>
+	                            <tr style="myshop-repeat:group-reduction-list">
+	                                <td valign="top">
+	                                    <span style="myshop-value:start-range">
+	                                        &nbsp;
+	                                    </span>
+	                                </td>
+	                                <td valign="top">
+	                                    &nbsp;- &nbsp;
+	                                    <span style="myshop-value:end-range">
+	                                        &nbsp;
+	                                    </span>
+	                                </td>
+	                                <td valign="top">
+	                                    <span style="myshop-value:inc-vat-price-formatted">
+	                                        &nbsp;
+	                                    </span>
+	                                </td>
+	                            </tr>
+	                        </table>
+						</div>
+                    </div>
+                    <div class="myshp_checkout_info_block">
+                        <div class="myshp_checkout_orderdata">
+                            <div class="myshp_checkout_orderpage" style="myshop-has:selections">
+                                <div class="myshp_checkout_orderdata_row" style="myshop-repeat:selections-list">
+                                    <label>
+                                        <span style="myshop-value:label">
+                                            label
+                                        </span>
+                                    </label>
+                                    <span class="myshp_checkout_orderdata_field" style="myshop-value:control">
+                                        control
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="myshp_checkout_orderpage">
+                                <div class="myshp_checkout_orderdata_row">
+                                    <label>
+                                        <span style="myshop-resource:quantity">
+                                            aantal
+                                        </span>
+                                    </label>
+                                    <span class="myshp_checkout_orderdata_field" style="myshop-value:quantity-control">
+                                        &nbsp;
+                                    </span>
+                                </div>
+                                <div class="myshp_checkout_orderdata_row">
+                                    <span>
+                                        <span style="myshop-resource:description">
+                                            omschrijving
+                                        </span>
+                                    </span>
+                                    <span class="myshp_checkout_orderdata_field" style="myshop-value:description">
+                                        &nbsp;
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<!-- End - Checkout Info -->
+				
+				<!-- Begin - Control Buttons -->
+                <div class="myshp_control_buttons">
+                    <div class="" style="myshop-has:continue-shopping">
+                        <a href="#" class="myshp_button myshp_button_prev" style="myshop-action:cancel-page" data-role="button" data-icon="arrow-l">
+                            <span>
+                            	<span class="myshp_button_icon">&laquo;</span>
+								<span style="myshop-resource:cancel">
+	                                annuleren
+	                            </span>
+							</span>
+                        </a>
+                    </div>
+                    <a href="#" class="myshp_button myshp_button_next" style="myshop-action:next-page" data-role="button" data-icon="arrow-r" data-iconpos="right">
+                        <span>
+							<span style="myshop-resource:title.orderpopup">
+	                            plaats in winkelwagen
+	                        </span>
+							<span class="myshp_button_icon">&raquo;</span>
+						</span>
+                    </a>
+                    <div class="clear">&nbsp;</div>
+                </div>
+				<!-- End - Control Buttons -->
+				
+            </div>
+        </div>
+    </body>
+</html>
