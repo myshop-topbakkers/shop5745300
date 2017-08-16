@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title style="myshop-value:page-title">Order Confirmation Template</title>
+        <meta content="myshop-meta:keywords" name="keywords"/>
+        <meta content="myshop-meta:description" name="description"/>
+        <meta content="author" name="MijnWinkel, Checkout Approval, $Revision: 1 $, $Date: 2015-03-17 "/>
+    </head>
+
+	<body>
+
+		<div class="approval_content_ms">
+		<!-- active and passed breadcrumbs -->
+		<div style="myshop-has:checkout-part-basket">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:basket">
+				Shopping cart
+			</p>
+		</div>
+		<div>
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.address">
+				Address
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-shipping">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:button.deliverymethod">
+				Shipping
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-payment-method">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:button.paymentmethod">
+				betaalmethode
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-approval">
+			<p class="msresp_cobreadcrumb active" style="myshop-resource:title.approval">
+				Approval
+			</p>
+		</div>
+
+		<p style=";margin-top: 2%;">
+			<span style="myshop-resource:check.approval">Controleer in het onderstaande overzicht of uw gegevens juist zijn.</span>
+		</p>
+
+		<div class="msresp_basket_header hidden-xs">
+			<div class="msresp_basket_header__article">
+				<span style="myshop-resource:article">Artikel</span>
+			</div>
+			<div class="msresp_basket_header__desc">
+				<span style="myshop-resource:desc">Omschrijving</span>
+			</div>
+			<div class="msresp_basket_header__qty">
+				<span style="myshop-resource:nr">Aantal</span>
+			</div>
+			<div class="msresp_basket_header__total">
+				<span style="myshop-resource:total">Totaal</span>
+			</div>
+		</div>
+
+		<div class="msresp_colist" style="myshop-repeat:basket;">
+			<div class="msresp_colist__article" style="myshop-has-value:product-image">
+				<img src="myshop-value:product-image"/>
+				<br/>
+			</div>
+			<div class="msresp_colist__article" style="myshop-not-has-value:product-image">
+				<span style="myshop-value:product-id"></span>
+			</div>
+			<div class="msresp_colist__description">
+				<div class="msresp_colist__description-info">
+					<span style="myshop-value:description;"></span>
+					<h4 style="myshop-value:inc-vat-price-formatted;"></h4>
+				</div>
+				<div class="msresp_colist__description-qty">
+					<span style="myshop-resource:nr" class="hidden-lg hidden-md">Aantal</span><span class="hidden-lg hidden-md">:&nbsp;</span>
+					<span class="" style="myshop-value:quantity"></span>
+				</div>
+			</div>
+			<div class="msresp_colist__total">
+				<span style="myshop-value:inc-vat-price-line-total-formatted;"></span>
+			</div>
+		</div>
+
+		<div class="msresp_actions" style="myshop-repeat:action-list">
+			<div class="msresp_actions__label">
+				<span style="myshop-value:label"></span>
+			</div>
+			<div class="msresp_actions__value">
+				<span style="myshop-value:inc-vat-price-formatted"></span>
+			</div>
+		</div>
+
+		<div class="msresp_shipping" style="myshop-repeat:shipping-selection">
+			<div class="msresp_shipping__label">
+				<span style="myshop-resource:shippingcost">Shippingcost</span>&nbsp;(<span style="myshop-value:country">Holland</span>)
+			</div>
+			<div class="msresp_shipping__value">
+				<span style="myshop-value:inc-vat-price-shipping-formatted"></span>
+			</div>
+		</div>
+
+		<div class="msresp_payment" style="myshop-has:payment-method-costs">
+			<div class="msresp_payment__label">
+				<span style="myshop-resource:paymethod">Betaalmethode</span> (<span style="myshop-value:payment-method">&nbsp;</span>)
+			</div>
+			<div class="msresp_payment__value">
+				<span style="myshop-value:inc-vat-price-payment-method-formatted">&nbsp;</span>
+			</div>
+		</div>
+
+		<div class="msresp_total">
+			<div class="msresp_total__label">
+				<strong><span style="myshop-resource:total"></span></strong>
+			</div>
+			<div class="msresp_total__value">
+				<span style="myshop-value:price-total-formatted"></span>
+			</div>
+		</div>
+
+		<span style="myshop-has:vat-list">
+			<div class="msresp_vat" style="myshop-repeat:vat-list">
+				<div class="msresp_vat__label">
+					<span class="myshp_basket_action_label" colspan="5"><span style="myshop-value:vat-percentage">19</span>&nbsp;&#37;&nbsp;<span style="myshop-resource:vat">BTW</span>&nbsp;<span style="myshop-resource:over">over</span>&nbsp;&nbsp;<span style="myshop-value:vat-from-price-formatted">1000000</span></span>
+				</div>
+				<div class="msresp_vat__value">
+					<span style="myshop-value:price-vat-formatted">100</span>
+				</div>
+			</div>
+
+			<div class="msresp_vat_total">
+				<div class="msresp_vat__label">
+					<span style="myshop-resource:total">Total</span>
+					&nbsp;
+					<span style="myshop-resource:vat">BTW</span>
+				</div>
+				<div class="msresp_vat__value">
+					<span style="myshop-value:vat-total-formatted;white-space:nowrap;">100</span>
+				</div>
+			</div>
+		</span>
+		<div class="msresp_btns">
+			<a class="btn btn-default" style="myshop-action:previous-page"><span style="myshop-resource:button.previous.step">vorige stap</span></a>
+			
+					
+			<a class="btn btn-primary" style="myshop-action:next-page">
+				<span style="myshop-not-is-payment-method:default*,after pay">
+					<span style="myshop-resource:paynow">ga naar betallen</span>
+				</span>
+				<span style="myshop-is-payment-method:after pay">
+					<span style="myshop-resource:button.nextstep">volgende stap</span>
+				</span>
+				<span style="myshop-is-payment-method:default*">
+					<span style="myshop-resource:ordernow">nu bestellen</span>
+				</span>
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+
+		<div class="msresp_customer_data1">
+			<div class="msresp_customer_data__block panel panel-default">
+				<div class="panel-heading">
+					<h3><span style="myshop-resource:lblBillA">Afleveradres</span></h3>
+				</div>
+				<div class="panel-body">
+					<span style="myshop-repeat:customer-fields-delivery-exclude(email,remark);display:inline;">
+						<div style="myshop-not-is:on-same-line">
+							<div class="clear"></div>
+						</div> <span style="myshop-has:label"><strong class="" style="myshop-value:label">&nbsp;</strong>&nbsp;</span> <span style="myshop-has:value"> <span class="" style="myshop-value:value">&nbsp;</span>&nbsp; </span>&nbsp; </span>
+				</div>
+			</div>
+
+			<div class="msresp_customer_data__block panel panel-default">
+				<div class="panel-heading">
+					<h3><span style="myshop-resource:address.invoice">Factuuradres</span></h3>
+				</div>
+				<div class="panel-body">
+					<span style="myshop-repeat:customer-fields-exclude(email,remark);display:inline;">
+						<div style="myshop-not-is:on-same-line">
+							<div class="clear"></div>
+						</div> <span style="myshop-has:label"><strong class="" style="myshop-value:label">&nbsp;</strong>&nbsp;</span> <span style="myshop-has:value"> <span class="" style="myshop-value:value"> &nbsp; </span> &nbsp;</span>&nbsp; </span>
+				</div>
+			</div>
+		</div>
+
+		<div class="msresp_customer_data2">
+			<div class="msresp_customer_data__block panel panel-default">
+				<div class="panel-heading">
+					<h3><span style="myshop-resource:shippingmethod.capital">Leverwijze</span></h3>
+				</div>
+				<div class="panel-body">
+					<span style="myshop-value:shipping" class="">&nbsp;</span>
+					<p style="myshop-has-value-plugin-postnl_checkout:date">
+						<span style="myshop-resource:deliverydate"></span>: <span style="myshop-value-plugin-postnl_checkout:date"></span>
+					</p>
+					<p style="myshop-has:shipping-confirmation-description">
+						<span style="myshop-value:shipping-confirmation-description" class="">extra text</span>
+					</p>                             
+                    <div style="myshop-has-plugin:mypacel">
+                        <p style="myshop-has:mypacel">
+                            <span style="myshop-value:shipping-myparcel-description" class="myshp_checkout_customerdata_field">
+                                extra text
+                            </span>
+                        </p>
+                    </div>
+                    <p style="myshop-has:shipping-delivery-date">
+                        <span style="myshop-value:shipping-delivery-description" class="myshp_checkout_customerdata_field">
+                            extra text
+                        </span>
+                    </p>
+				</div>
+			</div>
+
+			<div class="msresp_customer_data__block panel panel-default">
+				<div class="panel-heading">
+					<h3><span style="myshop-resource:paymethod.capital">Betaalwijze</span></h3>
+				</div>
+				<div class="panel-body">
+					<span style="myshop-not-has:payment-confirmation-description"> <span style="myshop-value:payment-method" class="">&nbsp;</span> </span>
+					<span style="myshop-has:payment-confirmation-description"> <span style="myshop-value:payment-confirmation-description" class="">extra text</span> </span>
+				</div>
+			</div>
+		</div>
+
+		<div class="msresp_customer_data3">
+			<div class="msresp_customer_data__block panel panel-default">
+				<div class="panel-heading">
+					<h3><span style="myshop-resource:email">E-mail</span></h3>
+				</div>
+				<div class="panel-body">
+					<span class="" style="myshop-value:customer-field-email">&nbsp;</span>
+				</div>
+			</div>
+			<div class="msresp_customer_data__block panel panel-default">
+				<div class="panel-heading">
+					<h3><span style="myshop-resource:remark">Opmerking</span></h3>
+				</div>
+				<div class="panel-body">
+					<p class="" style="myshop-value:customer-field-remark">
+						&nbsp;
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Begin - Terms and Conditions -->
+		<div class="myshp_checkout_info" style="myshop-has:terms-conditions">
+			<a style="myshop-action:terms-conditions" class="myshp_checkout_info_link" data-role="button" data-icon="info" data-inline="true" data-mini="true">
+				<span style="myshop-resource:policies">
+					Klik hier voor de leveringsvoorwaarden
+				</span>
+			</a>
+		</div>
+		<!-- End - Terms and Conditions -->
+
+		<!-- inactive breadcrumbs -->
+		<div style="float:left;width:100%;">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.order">
+				bestelbevestiging
+			</p>
+		</div>
+		<!-- Begin - MijnWinkel PoweredBy Block -->
+		<div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+			&nbsp;
+		</div>
+		<!-- End - MijnWinkel PoweredBy Block -->		
+		</div>
+		<script>
+			
+		$(function() {
+			var currentTallest = 0;
+			$(".msresp_customer_data1 .panel-default").each(function(){
+				if ($(this).height() > currentTallest) {
+					currentTallest = $(this).height();
+				}	
+			});
+			$(".msresp_customer_data1 .panel-default").css({
+				'min-height' : currentTallest
+			});	
+			var currentTallest2 = 0;
+			$(".msresp_customer_data2 .panel-default").each(function(){
+				if ($(this).height() > currentTallest2) {
+					currentTallest2 = $(this).height();
+				}	
+			});
+			$(".msresp_customer_data2 .panel-default").css({
+				'min-height' : currentTallest2
+			});	
+			var currentTallest3 = 0;
+			$(".msresp_customer_data3 .panel-default").each(function(){
+				if ($(this).height() > currentTallest3) {
+					currentTallest3 = $(this).height();
+				}	
+			});
+			$(".msresp_customer_data3 .panel-default").css({
+				'min-height' : currentTallest3
+			});	
+				
+		});
+		
+		</script>
+	</body>
+</html>
