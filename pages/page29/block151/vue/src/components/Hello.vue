@@ -26,7 +26,7 @@ export default {
   name: 'hello',
   data: function () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Top Bakkers Order List App'
     }
   }
 }
