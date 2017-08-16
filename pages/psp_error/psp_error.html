@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title>PSP error</title>
+        <meta content="myshop-meta:keywords" name="keywords"/>
+        <meta content="myshop-meta:description" name="description"/>
+        <meta content="author" name="MijnWinkel, Checkout PSP error, $Revision: 2866 $, $Date: 2009-11-09 10:43:59 +0100 (Mon, 09 Nov 2009) $"/>
+    </head>
+    <body>
+        <div class="myshp_checkout myshp_psp_error">
+            
+			<div class="myshp_checkout_container">
+				
+				<!-- Begin - Checkout Header -->
+				<h2>
+	                <span style="myshop-resource:paymethod.forbidden">
+	                    Betaal methode niet toegestaan
+	                </span>
+	            </h2>
+				<br/>
+				<!-- End - Checkout Header -->
+				
+				<!-- Begin - Checkout Info -->
+				<div class="myshp_checkout_info">
+		            <div style="myshop-is-payment-method:afterpay*">
+		                <div style="myshop-is:order-rejected">
+		                    <p style="myshop-resource:paymethod.rejected">
+								Het spijt ons u te moeten mededelen dat uw aanvraag om uw bestelling achteraf te betalen op dit moment niet door AfterPay wordt geaccepteerd. 
+								Dit kan om diverse (tijdelijke) redenen zijn. Voor vragen over uw afwijzing kunt u contact opnemen met de Klantenservice van AfterPay. 
+								Wij adviseren u voor een andere betaalmethode te kiezen om alsnog de betaling van uw bestelling af te ronden.
+		                    </p>
+		                	<div style="myshop-is-payment-method:afterpay be">
+		                		<a href="https://www.afterpay.be/be/consumenten/vraag-en-antwoord/" target="_blank"><span style="myshop-resource:afterpay.information">Afterpay informatie</span></a>
+		                	</div>
+		                	<div style="myshop-not-is-payment-method:afterpay be">
+		                		<a href="https://www.afterpay.nl/nl/consumenten/vraag-en-antwoord/" target="_blank"><span style="myshop-resource:afterpay.information">Afterpay informatie</span></a>
+		                	</div>
+		                	
+		                </div>
+		                <div style="myshop-not-is:order-rejected">
+		                    <div style="myshop-has:error-exception">
+		                        <p style="myshop-resource:error.exception">
+		                            Uitzondering:
+		                            Fout bij het uitvoeren van de
+		                            controle, probeer later weer
+		                        </p>
+		                    </div>
+		                    <div style="myshop-has:error-validation">
+		                        <p style="myshop-resource:error.validation">
+		                            Validatie:
+		                            Fout bij het verwerken van de
+		                            gegevens. Controleer of alle noodzakelijk velden voor afterpay wel zijn
+		                            geactiveerd voor de winkel. Raadpleeg de help voor een overzicht van de
+		                            verplichte instellingen
+		                        </p>
+		                    </div>
+		                    <div style="myshop-has:error-authentication">
+		                        <p style="myshop-resource:error.authenticatie">
+		                            Verificatie:
+		                            Aanmelden bij afterpay is niet
+		                            mogelijk controleer de inlog gegevens.
+		                        </p>
+		                    </div>
+		                </div>
+		            </div>
+					
+					<!-- Begin - Klarna Payment -->
+		            <div style="myshop-is-payment-method:klarna*">
+		                <p style="myshop-error:psp-message"></p>
+		            </div>
+					<!-- End- Klarna Payment -->
+					<!-- Begin - Afterpay Payment -->
+					<div style="myshop-is-payment-method:afterpay*">
+						<p style="myshop-error:psp-message"></p>
+					</div>
+					<!-- End - Afterpay Payment -->
+					
+					
+					<!-- Begin - Billink Payment -->
+					<div style="myshop-is-payment-method:billink*">
+		                <div style="myshop-is:order-rejected">
+		                    <p style="myshop-resource:paymethod.rejected.billink">
+								Het spijt ons u te moeten mededelen dat uw aanvraag om uw bestelling achteraf te betalen op dit moment niet door de achteraf betaaldienst wordt geaccepteerd. 
+								Dit kan om diverse (tijdelijke) redenen zijn. Voor vragen over uw afwijzing kunt u contact opnemen met de Klantenservice van achteraf betaaldienst. 
+								Wij adviseren u voor een andere betaalmethode te kiezen om alsnog de betaling van uw bestelling af te ronden.
+		                    </p>
+		                	
+		                </div>
+		                <div style="myshop-not-is:order-rejected">
+		                    <div style="myshop-has:error-exception">
+		                        <p style="myshop-resource:error.exception">
+		                            Uitzondering:
+		                            Fout bij het uitvoeren van de
+		                            controle, probeer later weer
+		                        </p>
+		                    </div>
+		                    <div style="myshop-has:error-validation">
+		                        <p style="myshop-resource:error.validation">
+		                            Validatie:
+		                            Fout bij het verwerken van de
+		                            gegevens. Controleer of alle noodzakelijk velden voor de achteraf betaaldienst wel zijn
+		                            geactiveerd voor de winkel. Raadpleeg de help voor een overzicht van de
+		                            verplichte instellingen
+		                        </p>
+		                    </div>
+		                    <div style="myshop-has:error-authentication">
+		                        <p style="myshop-resource:error.authenticatie">
+		                            Verificatie:
+		                            Aanmelden bij achteraf betaaldienst is niet
+		                            mogelijk controleer de inlog gegevens.
+		                        </p>
+		                    </div>
+		                </div>
+					</div>
+					<!-- End - Billink Payment -->
+				
+				</div>
+				<!-- End - Checkout Info -->
+				
+				<!-- Begin - Control Buttons -->
+	            <div class="myshp_control_buttons">
+	                <a href="#" class="myshp_button myshp_button_nextstep" style="myshop-action: to-basket" data-role="button">
+	                    Naar de winkelwagen
+	                </a>
+	                <div class="clear">&nbsp;</div>
+	            </div>
+				<!-- End - Control Buttons -->
+				
+			</div>
+				
+            <!-- Begin - MijnWinkel PoweredBy Block -->
+            <div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+                &nbsp;
+            </div>
+            <!-- End - MijnWinkel PoweredBy Block -->
+			
+        </div>
+    </body>
+</html>
