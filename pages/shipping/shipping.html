@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title style="myshop-value:page-title">Shopping Method Template</title>
+        <meta content="myshop-meta:keywords" name="keywords"/>
+        <meta content="myshop-meta:description" name="description"/>
+        <meta content="author" name="MijnWinkel, Checkout Shopping, $Revision: 1 $, $Date: 2015-03-17 "/>
+    </head>
+
+	<body>
+
+		<div class="shipping_content_ms">
+		<!-- active and passed breadcrumbs -->
+		<div style="myshop-has:checkout-part-basket">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:basket">
+				Shopping cart
+			</p>
+		</div>
+		<div>
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.address">
+				Address
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-shipping">
+			<p class="msresp_cobreadcrumb active" style="myshop-resource:button.deliverymethod">
+				Shipping
+			</p>
+		</div>
+		<br/>
+		<!-- Begin - Control Buttons 
+		<div class="msresp_btns">
+			<a class="btn btn-default" style="myshop-action:previous-page"><span style="myshop-resource:button.previous.step">verder winkelen</span></a>
+			<a class="btn btn-primary" style="myshop-action:next-page"><span style="myshop-resource:button.nextstep">volgende stap</span> <span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+		 End - Control Buttons -->
+
+		<!-- Begin - Checkout Shipping Data -->
+		<div class="msresp_shipping">
+			<div class="msresp_shipping__choose">
+				<strong><span style="myshop-resource:shipping">Kies hier uw verzendmethode</span></strong>
+			</div>
+			<div class="msresp_shipping__cost hidden-xs">
+				<strong><span style="myshop-resource:shippingcost">Verzendkosten</span></strong>
+			</div>
+		</div>
+
+		<div style="myshop-repeat:shipping-cost-list" class="msresp_shipping well well-sm">
+			<div class="msresp_shipping__control">
+				<span style="myshop-value:control">o</span>
+			</div>
+			<div class="msresp_shipping__description">
+				<label style="myshop-value:label;">&nbsp;</label>
+				<p style="myshop-value:memo">
+					&nbsp;
+				</p>
+			</div>
+			<div class="msresp_shipping__cost">
+				<span class="visible-xs"><span style="myshop-resource:shippingcost">Verzendkosten</span>: <span style="myshop-value:inc-vat-price-formatted">&nbsp;</span></span>
+				<span class="hidden-xs"><span style="myshop-value:inc-vat-price-formatted">&nbsp;</span></span>
+			</div>
+		</div>
+		<!-- End - Checkout Shipping Data -->
+
+		<!-- Begin - Checkout Shipping Memo -->
+		<div class="">
+			<p style="myshop-value:memo">
+				&nbsp;
+			</p>
+		</div>
+		<!-- End - Checkout Shipping Memo -->
+
+		<!-- Begin - Control Buttons -->
+		<div class="msresp_btns">
+			<a class="btn btn-default" style="myshop-action:previous-page"><span style="myshop-resource:button.previous.step">verder winkelen</span></a>
+			<a class="btn btn-primary" style="myshop-action:next-page"><span style="myshop-resource:button.nextstep">volgende stap</span> <span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+		<!-- End - Control Buttons -->
+
+		<!-- inactive breadcrumbs -->
+		<div style="myshop-has:checkout-part-payment-method">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:button.paymentmethod">
+				Payment
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-approval">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.approval">
+				Approval
+			</p>
+		</div>
+		<div>
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.order">
+				Confirmation
+			</p>
+		</div>
+		<!-- Begin - MijnWinkel PoweredBy Block -->
+		<div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+			&nbsp;
+		</div>
+		<!-- End - MijnWinkel PoweredBy Block -->
+		</div>
+	</body>
+</html>
