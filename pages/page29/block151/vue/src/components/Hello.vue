@@ -57,7 +57,7 @@
             </tr>
           </table>
         </div>
-
+        <button v-on:click="reloadList">Reload list</button>
   </div>
 </template>
 
@@ -73,8 +73,14 @@ export default {
     return {
       msg: 'Top Bakkers Order List App'
     }
+  },
+  methods: {
+    reloadList: function(){
+        if(-1 == this.msg.indexOf("reload"))
+        this.msg = this.msg + " reload"
+      }
+    }
   }
-}
 </script>
 
 <style scoped>
