@@ -1,0 +1,768 @@
+/* general before */
+
+
+/* V 1.9 */
+
+* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+*:selected {border:none;outline:none;}
+
+
+		body {
+background-color:transparent;
+background-image:none;
+background-position:0 0;
+background-repeat:repeat;
+		}
+		
+		
+			.myshp_container {
+				margin: 0 auto;
+				position: relative;
+width:100%;
+			}
+		
+			.myshp_container {
+background-color:transparent;
+background-image:none;
+background-position:0 0;
+background-repeat:repeat;
+			}
+		
+			h1, h2, h3, h4, h5, h6 {
+color:#000000;
+			}
+
+			body {
+color:#000000;
+			}
+
+			a, a:link, a:visited, a:active, a:hover {
+color:#000000;
+			}
+		
+			a:hover {
+color:#000000;
+			}
+		
+		body.myshp_block_inner {
+			background:none;
+		}
+		
+	
+			body, input, select, textarea, button, li, p, div{
+				font-weight:normal;
+font-family:Helvetica, Arial, sans-serif;
+font-size:12px;
+			}		
+			h1, h2, h3, h4, h5, h6{
+font-family:Helvetica, Arial, sans-serif;
+			}
+	
+	
+			a.myshp_button, 
+			button, 
+			button.myshp_button, 
+			.myshp_block_inner_button,
+			a.myshp_button:link, 
+			a.myshp_button:visited, 
+			a.myshp_button:active, 
+			a.myshp_button:hover{
+				border-radius:3px 3px 3px 3px;
+				cursor:pointer;
+				float:left;
+border-width:1px;
+border-style:solid;
+border-color:#707070;
+background-image:url("/skins/noskin_v3/pic/button-slice.jpg");
+background-repeat:repeat;
+background-position:0 0;
+color:#000;
+				position:relative;
+font-size:10pt;
+				behavior:url(/skins/master/pie/PIE.htc);
+				padding:0;
+				text-decoration:none;
+			}
+				a.myshp_button span, .myshp_button span, button span, body.myshp_block_inner .myshp_block_inner_button span {
+					display:block;
+					padding:1px 10px;
+				}
+
+
+			.myshp_button:hover, a.myshp_button:hover, button:hover, body.myshp_block_inner .myshp_block_inner_button:hover {
+background-color:transparent;
+background-image:url("/skins/noskin_v3/pic/button-slice-hover.jpg");
+background-repeat:repeat;
+background-position:0 0;
+color:#000;
+			}
+
+	
+	
+		input, textarea, select {
+			border-style:inset;
+			border-width:2px;
+border-color:#cccccc;
+		}
+	
+	input, textarea {
+		text-indent:3px;
+	}
+	input[type="radio"], input[type="checkbox"] {
+		border:none;
+		height:auto;
+		line-height:normal;
+	}
+	select {
+		padding:3px 3px 3px 0;
+		text-indent:0;
+	}
+	
+		fieldset label {
+			margin-right:5px;
+		}
+		input{
+			height:20px;
+		}
+		
+		@media \0screen {
+		  input {line-height:20px;}
+		}
+		
+	
+		header {
+background-color:transparent;
+background-image:none;
+background-position:0 0;
+background-repeat:repeat;
+			margin-bottom:8px;
+		}
+	
+		.myshp_logo {
+			float:left;
+		}
+			.myshp_logo a, .myshp_logo a:link, .myshp_logo a:visited, .myshp_logo a:active, .myshp_logo a:hover {
+background-color:transparent;
+background-image:none;
+background-position:0 0;
+background-repeat:repeat;
+			}
+
+	
+		.myshp_slogan {
+			margin:15px 0;
+			float:left;
+			clear:left;
+			width:100%;
+background-color:transparent;
+background-image:none;
+background-position:0 0;
+background-repeat:repeat;
+		}
+	
+		.myshp_top_menu {
+			float:right;
+			margin-top:10px;
+		}
+			.myshp_top_menu ul {
+				float:left;
+				clear:right;
+			}
+				.myshp_top_menu ul li {
+					float:left;
+					clear:right;
+				}
+				
+					.myshp_top_menu ul li a, .myshp_top_menu ul li a:link, .myshp_top_menu ul li a:visited, .myshp_top_menu ul li a:active {
+						padding-left:10px;
+						margin-left:10px;
+color:#000;
+font-size:11px;
+border-left-color:#000;
+						border-left-width:1px;
+						border-left-style:solid;
+					}
+						.myshp_top_menu ul li:first-child a {
+							border-left:0;
+							padding-left:0;
+							margin-left:0;
+						}
+				
+					.myshp_top_menu ul li a:hover {
+color:#000;
+text-decoration:none;
+					}
+
+	
+	
+
+		nav {
+			float:left;
+			width:100%;
+background-color:transparent;
+background-image:none;
+background-position:0 0;
+background-repeat:repeat;
+		}
+	
+	.navbar-toggle.menu-button {
+		background-image:none;
+	}
+	
+	nav ul {
+		float:left;
+		width:100%;
+	}
+		nav ul li {
+			float:left;
+		}
+		
+	
+			nav ul li a, nav ul li a:link, nav ul li a:visited, nav ul li a:active, nav ul li a:hover {
+				margin-right:10px;
+				padding-right:10px;
+				display:block;
+color:#000;
+font-size:11px;
+border-right:1px solid #000;
+			}
+		
+		@media (max-width: 768px){
+			nav ul li a, nav ul li a:link, nav ul li a:visited, nav ul li a:active, nav ul li a:hover {
+				border-right:none;
+			}
+		}
+		
+			nav ul li:last-child a {
+				border-right:0;
+			}
+					nav ul li a:hover, nav ul li a.myshp_tabOn {
+color:#000;
+text-decoration:none;
+					}
+				
+					
+					nav ul li a.myshp_tabOn {
+						font-weight:bold;
+					}
+					
+
+	
+	.myshp_main {
+		float:left;
+		width:100%;
+	}
+	/* Start of Column CSS */
+	/* Start of Column CSS */
+	.myshp_container3 {
+		clear: left;
+	    float: left;
+	    width: 100%;
+	    overflow: hidden;
+		
+	}
+	
+		.myshp_container2 {
+			clear: left;
+		    float: left;
+		    width: 100%;
+		    position: relative;
+			
+		}
+		
+			.myshp_container1 {
+				float: left;
+			    width: 100%;
+			    position: relative;
+				
+			}
+				
+				.myshp_col1, .myshp_col2, .myshp_col3{
+					min-height:300px;
+				}
+				
+				.myshp_col1 .myshp_pad, .myshp_col2 .myshp_pad, .myshp_col3 .myshp_pad{
+					padding:10px;
+					-webkit-box-sizing:content-box
+				}
+				
+				.myshp_col1 {
+					float: left;
+				    width: 21%;
+				    position: relative;
+				    overflow: hidden;
+				}
+					.myshp_col1 .myshp_pad{
+						margin-right: 10px;
+						border-radius:5px;
+					    position: relative;
+						
+						behavior: url(/skins/master/pie/PIE.htc);
+					}
+					
+				.myshp_col2 {
+					float: left;
+				    width: 58%;
+				    position: relative;
+				    overflow: hidden;	
+					border-radius:5px;
+				    position: relative;
+					
+					behavior: url(/skins/master/pie/PIE.htc);
+				}
+				
+				.myshp_column_count_1 .myshp_col2{
+					width:100%;
+				}
+				.myshp_column_count_2 .myshp_col2{
+					width:79%;
+				}
+				.myshp_column_count_3 .myshp_col2{
+					width:58%;
+				}
+				
+					.myshp_col2 .myshp_pad{
+						padding:10px;
+
+					}
+				
+				.myshp_col3 {
+					float: left;
+				    width: 21%;
+				    position: relative;
+				    overflow: hidden;
+					
+				}
+					.myshp_col3 .myshp_pad{
+						margin-left: 10px;
+						border-radius:5px;
+					    position: relative;
+						
+						behavior: url(/skins/master/pie/PIE.htc);
+					}	
+	
+		
+				.myshp_block {
+					margin-bottom:13px;
+					padding:3px 0 3px;
+					box-sizing:content-box;
+background-color:transparent;
+				}
+			.myshp_block fieldset {
+				width:100%;
+			}
+				h3, .myshp_box_title {
+					margin:0 0 8px 0;
+font-weight:normal;
+font-size:12px;
+background-color:transparent;
+					box-sizing:content-box;
+				}				
+			
+				.myshp_block a, .myshp_block a:link, .myshp_block a:visited, .myshp_block a:active, .myshp_block a:hover {
+					text-decoration:none;
+				}
+		
+		
+			.myshp_box .jcarousel-container .jcarousel-prev, .myshp_box .jcarousel-container .jcarousel-next{
+border-top-color:transparent;
+border-right-color:#222222;
+border-bottom-color:transparent;
+border-left-color:#222222;
+			}
+	
+		/*set=menu-block;sequence=1;*/
+		.myshp_menu {
+			background-color:#C0C0C0;
+			background-image:none;
+			background-position:0 0;
+			background-repeat:repeat;
+		}
+			.myshp_menu ul ul {
+				margin-left:10px;
+			}
+				.myshp_menu ul li {
+					padding-bottom:1px;
+					margin:0;
+					font-size:12px;
+				}
+					.myshp_menu .myshp_menu_item_active {
+						font-weight:bold
+					}
+		/**/
+		
+			.myshp_block.myshp_breadcrumb {
+			
+			}
+			.myshp_block.myshp_breadcrumb .myshp_breadcrumb_inner {
+			
+			}
+		
+		/*set=shopping-cart-block;sequence=1;*/
+			.myshp_side_basket p {
+				margin-bottom:5px;
+				margin-top:0;
+			}
+		/**/
+		
+			.myshp_side_search {
+background-color:#C0C0C0;
+background-image:none;
+background-position:0 0;
+background-repeat:repeat;
+			}
+		
+		.myshp_side_search .myshp_box {
+			padding-bottom:8px;
+			padding-top:3px;
+		}
+		.myshp_side_search .myshp_button, .myshp_side_search input {
+			float:left;
+		}
+		.myshp_side_search .myshp_button {
+			margin:0 0 0 10px;
+		}
+		.myshp_side_search input {
+			width:63%;
+		}
+		
+		@media (max-width: 780px) {
+			.myshp_side_search .myshp_button {
+				background-color: #ccc;
+				margin: 0;
+			}
+		}
+		/**/
+		
+		/*set=login;sequence=1;*/
+		.myshp_side_login input, .myshp_side_logout input {
+			width:100%;
+		}
+		.myshp_side_login label, .myshp_side_logout label {
+			float:left;
+		}
+		.myshp_side_login .myshp_myaccount_login_info, .myshp_side_logout .myshp_myaccount_login_info {
+			clear:left;
+			float:left;
+			cursor:pointer;
+		}
+		/**/
+		
+	/*set=price-slider;sequence=1;*/
+	.myshp_price_slider a.myshp_button {
+		float:right;
+	}
+	
+		.myshp_slide_filter .jslider-value input {
+			-moz-box-sizing:content-box;
+			-webkit-box-sizing:content-box;
+			box-sizing:content-box;
+		}		
+	/**/
+	
+	
+	
+		footer {
+			float:left;
+			width:100%;
+			padding:10px 0;
+background-color:transparent;
+background-image:none;
+background-position:0 0;
+background-repeat:repeat;
+		}
+		
+	footer ul {
+		float:right;
+	}
+	footer ul li {
+		display:inline-block;
+	}
+	
+	
+			footer ul li a, footer ul li a:link, footer ul li a:visited, footer ul li a:active, footer ul li a:hover {
+				display:inline-block;
+font-size:11px;
+color:#000;
+text-decoration:none;
+				padding-left:0.5em;
+				margin-left:0.5em;
+				border-left-color:#000;
+				border-left-width:1px;
+				border-left-style:solid;
+			}
+	
+		footer ul li a:hover {
+color:#000;
+text-decoration:underline;
+		}
+	
+	
+	footer ul li:first-child a {
+		border-left:0;
+		padding-left:0;
+		margin-left:0;
+	}
+	footer div.myshp_footer_text {
+color:#000;
+font-size:11px;
+	}
+
+
+/*Productlist and Moreinfo*/
+.myshp_list .myshp_list_product h3 {
+	padding-top:5px;
+}
+/*ContactForm*/
+#myshp_contact_form fieldset {
+	border:none
+}
+/*PoweredBy*/
+/*Moreinfo*/
+#myshp_info_footer {
+	text-align:center;
+	display:block !important;
+	padding:10px 0;
+}
+.myshp_list_navigation #myshp_info_footer, #myshp_checkout_powered-by #myshp_info_footer {
+	padding:0;
+}
+/*Extended Search*/
+.myshp_info_search_block select {
+	width:100%;
+}
+/*Form Contact*/
+#myshp_contact_form label {
+	font-weight:normal
+}
+#myshp_contact_form .myshp_block_inner #myshp-body {
+	padding-left:10px;
+	padding-top:10px;
+	float:left;
+}
+#myshp_contact_form .myshp_contact_legend {
+	text-align:left;
+}
+/*Forms*/
+.myshp_block_inner h3 {
+	margin:0;
+}
+
+.myshp_checkout_orderpage .myshp_button_next {
+	float:right;
+}
+
+
+
+/* Responsive modifications */
+
+@media (max-width: 768px) {
+	.myshp_container, .myshp_logo, .myshp_logo img, .myshp_logo a{
+		width: 100%;
+	}
+	.myshp_logo a{
+		height: auto !important;
+		width: 100% !important;
+	}
+	
+	.myshp_col2.myshp_col, 
+	.myshp_col1.myshp_col,
+	.myshp_col3.myshp_col {
+		width:100%;
+		margin:0;
+		border-radius: 0;
+	}
+	
+	.myshp_col .myshp_pad {
+		margin:0 ;
+		border-radius: 0;
+	}
+	
+	body .myshp_list_product {
+		width: 100% !important;
+		margin-bottom: 10px;
+	}
+	
+	footer ul {
+	  float: right;
+	  width: 100%;
+	  margin: 10px 0;
+	}  
+	
+	footer div.myshp_footer_text {
+	  float: left;
+	  width: 100%;
+	  margin: 10px 0;
+	  text-align: center;
+	}	
+	
+	.myshp_side_search input {
+		width:100%;
+		margin:10px 0;
+	}
+	
+	.myshp_info_image{
+		width:100% !important;
+	}
+	
+	.myshp_info_features{
+		width:100%;
+	}
+	
+	.myshp_cookies_warning div{
+		width: 100%;
+		text-align: center;
+	}
+	
+	.myshp_cookies_warning{
+	  opacity: 0.9;
+	 }
+	 
+	 .myshp_container .myshp_container_wrapper {
+		padding: 0 10px;
+		float: left;
+	 }
+	 
+	.myshop_level1 { 
+	   padding: 10px;
+	 }
+	 
+	 .customer__fileds1 {
+		margin:0 !important;
+	 }
+	 
+	 .msresp_payment__control, .msresp_shipping__control{
+		  margin: 0 6px;
+	 }
+	 
+	 .msresp_payment__description, .msresp_shipping__description {
+		width: 80%;
+	 }
+	 
+	 .msresp_shipping__cost {
+		float: left;
+		margin-left: 9%;
+	 }
+	 
+	 .panel-default{
+		height: auto !important;
+		min-height: initial !important;
+	 }
+	 .panel-default p{  
+		margin:0;
+	 }
+	 .help_btn {
+		display:none !important;
+	 }
+	 
+	 .myshp_list_row{
+		margin-bottom:0;
+	 }
+}
+
+.myshp_cookies_warning{
+	left:0;
+}
+
+
+@media (min-width :768px) {
+	.msresp_address_form label{
+		display:inline-block;
+		width:25%;
+	}
+	
+	.msresp_address_form__control {
+		width: 73%;
+		display: inline-block;
+		float: none !important;
+	}
+	 .flexnav .touch-button .navicon{
+		display:none;
+	 }
+}
+
+
+@media (min-width :800px) {
+	.flexnav {
+	  max-height: inherit !important;
+	 }
+}
+	 
+.customer__fileds1 {
+	margin: 10px;
+}
+	
+.title_adress_h3 {
+	padding:10px;
+}	
+
+.msresp_address_form__control label {
+  width: auto;
+  float: none;
+}
+
+.msresp_cobreadcrumb {
+	  display: block;
+	  font-size: 14px;
+	  font-weight: bold;
+	  margin: 0 0 7px 0;
+}
+
+
+.flexnav li ul {
+  width: auto !important;
+  background-color: #CCC;
+}
+
+@media (max-width: 768px) {
+	.flexnav li ul {
+		width:100% !important;
+	}
+
+	.flexnav li a {
+		border-left: none !important;
+	}
+}
+
+.flexnav li {
+	margin-right:0 !important;
+}
+
+.flexnav.sm-screen li {
+	float:none;
+}
+
+.flexnav li ul li a {
+	margin-bottom: 0;
+	font-size: 11px !important;
+	border: 0;
+}
+
+.flexnav li ul li{
+	padding-top:0 !important;
+}
+
+.menu-button{
+	height:auto;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+.navbar-toggle.menu-button {
+	background-color: #a3a3a3;
+}
+
+.navbar-toggle.menu-button.active {
+	background-color: #575757;
+}
+/* gerneral after */
+
