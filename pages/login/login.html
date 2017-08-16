@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title>Login</title>
+        <meta content="myshop-meta:keywords" name="keywords"/>
+        <meta content="myshop-meta:description" name="description"/>
+        <meta content="author" name="MijnWinkel, Checkout Login, $Revision: 8756 $, $Date: 2011-05-05 15:22:27 -0300 (Thu, 05 May 2011) $"/>
+    </head>
+    <body>
+        <div class="myshp_checkout myshp_checkout_login">
+        	
+            <div class="myshp_checkout_container" style="myshop-block:login">
+                    
+				<!-- Begin - Logout Header -->
+				<h2>
+	                <span style="myshop-resource:login.header">
+	                    Login
+	                </span>
+	            </h2>
+	            <!-- End - Logout Header -->
+
+				<!-- Begin - My Checkout Info -->
+                <div class="myshp_checkout_info">
+                    <p style="myshop-resource:login.intro">
+                        Hier kunt u inloggen door uw gebruikersnaam en uw wachtwoord, die u toegestuurd zijn, in te vullen. Zodra u ingelogd bent kunt u producten raadplegen en bestellen.
+                    </p>
+                </div>
+				<!-- End - My Checkout Info -->
+				
+				
+				<!-- Begin - My Checkout Login -->
+                <div id="myshp_checkout_login_only" class="myshp_checkout_login">
+                	
+					<table width="100%">
+						<tr class="myshp_checkout_login_row">
+							<td>
+								<label for="myshp_checkout_login_username"><span style="myshop-resource:login.email">Gebruikersnaam</span></label>								
+							</td>
+							<td>
+								<input id="myshp_checkout_login_username" type="text" style="myshop-control:username" onkeypress="return kf(event,'myshp_login',window,doLogin)"/>
+                        		<span class="myshp_required_label">*</span>		
+							</td>
+						</tr>
+						<tr class="myshp_checkout_login_row">
+							<td>
+								<label for="myshp_checkout_login_password"><span style="myshop-resource:login.password">Wachtwoord</span></label>		
+							</td>
+							<td>
+								<input id="myshp_checkout_login_password" type="password" style="myshop-control:password" onkeypress="return kf(event,'myshp_login',window,doLogin)"/>
+                        		<span class="myshp_required_label">*</span>		
+							</td>
+						</tr>
+						<tr class="myshp_checkout_login_row myshp_remember_login">
+							<td>
+								<label for="myshp_checkout_login_remember"><span style="myshop-resource:login.save">Bewaar de inloggegevens op deze computer.</span></label>
+							</td>
+							<td>
+								<input id="myshp_checkout_login_password" style="myshop-control:save-login-settings"/>
+							</td>
+						</tr>
+					</table>
+                    
+					
+                    <div class="myshp_control_buttons">
+                        <a id="myshp_login" href="#" class="myshp_button myshp_button_login" style="myshop-action:login" data-role="button">
+                            <span>
+								<span style="myshop-resource:login.header">
+	                            	Login
+	                            </span>
+							</span>
+                        </a>
+                        <a href="#" class="myshp_change_password" style="myshop-action:goto-change-password;">
+                            <span>
+								<span style="myshop-resource:changepassword">
+	                                wijzig wachtwoord
+	                            </span>
+							</span>
+                        </a>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+					
+                    <div class="myshp_checkout_info">
+                        <p style="myshop-resource:login.footer">
+                            Als u nog geen toegangscode heeft of als u uw wachtwoord vergeten bent kunt u contact opnemen
+                        </p>
+                        <p>
+                        	met <a href="mailto:email@mywebsite.nl?subject=geen toegang">
+                            <span style="myshop-value:company-email">email@mywebsite.nl</span>
+                        	</a>
+						</p>
+                    </div>
+					
+                </div>
+				<!-- End - My Checkout Login -->
+				
+				<!-- Begin - Change Password -->
+                <div id="myshp_checkout_login_change_password" class="myshp_checkout_login myshp_checkout_login_change_password" style="myshop-block:change-password">
+                    <h3>
+                        <span style="myshop-resource:changepassword">
+                            Wijzig wachtwoord
+                        </span>
+                    </h3>
+                    
+                    <p style="myshop-resource:change.intro">
+                        Hier kunt u uw wachtwoord wijzigen. Vul eerst de oude inloggegevens in en daarna twee maal een nieuw wachtwoord.
+                    </p>
+                    
+                    <div class="myshp_checkout_login_row">
+                        <label style="myshop-resource:login.email" for="myshp_checkout_login_username">
+                        	Gebruikersnaam
+                        </label>
+                        <input id="myshp_checkout_login_username" type="text" onkeypress="return kf(event,'myshp_change_password',window,doChange)" style="myshop-control:username"/>
+                        <span class="myshp_required_label">*</span>
+                    </div>
+					
+                    <div class="myshp_checkout_login_row">
+                        <label style="myshop-resource:login.password" for="myshp_checkout_login_password">
+                            Wachtwoord
+                        </label>
+                        <input id="myshp_checkout_login_password" type="password" onkeypress="return kf(event,'myshp_change_password',window,doChange)" style="myshop-control:password"/>
+                        <span class="myshp_required_label">*</span>
+                    </div>
+					
+                    <div class="myshp_checkout_login_row">
+                        <label style="myshop-resource:change.passwordnew" for="myshp_checkout_login_password_new_1">
+                       		Nieuw wachtwoord
+                        </label>
+                        <input id="myshp_checkout_login_password_new_1" type="password" onkeypress="return kf(event,'myshp_change_password',window,doChange)" style="myshop-control:password-new1"/>
+                        <span class="myshp_required_label">*</span>
+                    </div>
+					
+                    <div class="myshp_checkout_login_row">
+                        <label style="myshop-resource:change.passwordretry" for="myshp_checkout_login_password_new_2">
+                        	Nogmaals nieuw wachtwoord
+                        </label>
+                        <input id="myshp_checkout_login_password_new_2" type="password" onkeypress="return kf(event,'myshp_change_password',window,doChange)" style="myshop-control:password-new2"/>
+                        <span class="myshp_required_label">*</span>
+                    </div>
+					
+					<!-- Begin - Control Buttons -->
+                    <div class="myshp_control_buttons">
+                        <a href="#" class="myshp_button myshp_button_change_password" style="myshop-action:change-password" data-role="button">
+                            <span>
+								<span style="myshop-resource:changepassword">
+	                            	Wijzig wachtwoord
+	                            </span>
+							</span>
+                        </a>
+                        <a href="#" class="myshp_button myshp_button_back_to_login" style="myshop-action:goto-login" data-role="button">
+                            <span>
+								<span style="myshop-resource:button.back.login">
+	                                terug naar login
+	                            </span>
+							</span>
+                        </a>
+                        <div class="clear">&nbsp;</div>
+                    </div>
+					<!-- End - Control Buttons -->
+						
+                </div>
+				<!-- End - Change Password -->
+				
+            </div>
+			
+            <!-- Begin - MijnWinkel PoweredBy Block -->
+            <div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+                &nbsp;
+            </div>
+            <!-- End - MijnWinkel PoweredBy Block -->
+			
+        </div>
+    </body>
+</html>
