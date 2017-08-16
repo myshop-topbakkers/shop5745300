@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+    <title>PSP start</title>
+    <meta content="myshop-meta:keywords" name="keywords"/>
+    <meta content="myshop-meta:description" name="description"/>
+    <meta content="author" name="MijnWinkel, Checkout PSP start Thanks, $Revision: 2866 $, $Date: 2009-11-09 10:43:59 +0100 (Mon, 09 Nov 2009) $"/>
+</head>
+<body>
+<script type="text/javascript">
+    myshopEvent().onNext(function(){
+        var oke=true,c=document.getElementById("check");
+        var re = /^\d{2}\/\d{2}\/\d{4}$/;
+        if(document.getElementById("datepicker")){
+            if(!re.test(document.getElementById("datepicker").value)){
+                oke = false;
+                document.getElementById("datepicker").style.borderColor='red';
+                alert(document.getElementById('datefield_incorrect').innerHTML);
+            }
+        }
+        if(oke){
+            if (c) {
+                oke=c.checked;
+                if (!oke) {
+                    alert(document.getElementById('msg_klarna_confirm').innerHTML);
+                }
+            }
+        }
+        myshopEvent().clearLock();
+        return oke;
+    });
+</script>
+<div class="myshp_checkout myshp_checkout_psp_start">
+    <div class="myshp_checkout_container">
+        <span style="myshop-resource:klarna.confirm;display:none" id="msg_klarna_confirm">&nbsp;</span>
+        <span style="myshop-resource:datefield.incorrect;display:none" id="datefield_incorrect">&nbsp;</span>
+
+        <!-- Begin - Checkout Header -->
+        <div style="myshop-not-is-payment-method:klarna*">
+            <div style="myshop-not-is-payment-method:billink*">
+                <div style="myshop-not-is-payment-method:afterpay*">
+                    <h2>
+                        <span style="myshop-resource:bank.data">
+                            Betalings gegevens
+                        </span>
+                    </h2><br/>
+                    <p style="myshop-resource:bank.information">
+                        Vul uw geboorte datum in voor het afhandelen van de betaling, lees ook de voorwaarden.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="myshop-is-payment-method:klarna*">
+            <h2>
+                <span style="myshop-resource:klarna.title">
+                    Betalings gegevens
+                </span>
+            </h2><br/>
+            <p style="myshop-resource:klarna.information">
+                Vul uw geboorte datum in voor het afhandelen van de betaling, lees ook de voorwaarden.
+            </p>
+        </div>
+        <div style="myshop-is-payment-method:billink*">
+            <h2>
+                <span style="myshop-resource:billink.title">
+                    Betalings gegevens
+                </span>
+            </h2><br/>
+            <span style="myshop-test:{$Billink.workflow}=1">
+                <p style="myshop-resource:billink.information">Voor het afhandelen van de betaling hebben we uw geboortedatum en mobiele telefoon nummer nodig, vul deze hieronder a.u.b. in.
+                </p>
+            </span>
+            <span style="myshop-test:{$Billink.workflow}=2">
+                <p style="myshop-resource:billink.information2">Voor het afhandelen van de betaling hebben we uw bedrijfgegevens nodig, vul deze hieronder a.u.b. in.</p>
+            </span>
+
+        </div>
+        <div style="myshop-is-payment-method:afterpay be*">
+            <h2>
+                <span style="myshop-resource:bank.data">
+                    Betalings gegevens
+                </span>
+            </h2><br/>
+            <p>
+                <span style="myshop-resource:afterpay.b2c.information">
+                    Vul uw geboorte datum in voor het afhandelen van de betaling, lees ook de
+                </span>
+                &#160;
+                <a href="https://www.afterpay.be/nl/klantenservice/betalingsvoorwaarden" target="_blank">
+                    <span style="myshop-resource:afterpay.conditions">voorwaarden</span>
+                </a>.
+            </p>
+        </div>
+        <div style="myshop-is-payment-method:afterpay b2c*">
+            <h2>
+                <span style="myshop-resource:bank.data">
+                    Betalings gegevens
+                </span>
+            </h2><br/>
+            <p>
+                <span style="myshop-resource:afterpay.b2c.information">
+                    Vul uw geboorte datum in voor het afhandelen van de betaling, lees ook de
+                </span>
+                &#160;
+                <a href="https://www.afterpay.nl/nl/algemeen/betalen-met-afterpay/betalingsvoorwaarden" target="_blank">
+                    <span style="myshop-resource:afterpay.conditions">voorwaarden</span>
+                </a>.
+            </p>
+        </div>
+        <div style="myshop-is-payment-method:afterpay b2b*">
+            <p>
+                <span style="myshop-resource:afterpay.b2b.information">
+                    Voor het afhandelen van de betaling hebben we uw bedrijfsgegevens nodig, vul deze hieronder a.u.b. in. Door deze betaalmethode te gebruiken accepteert u ook de
+                </span>
+                &#160;
+                <a href="https://www.afterpay.nl/nl/algemeen/zakelijke-partners/betalingsvoorwaarden-zakelijk" target="_blank">
+                    <span style="myshop-resource:afterpay.conditions">voorwaarden</span>
+                </a>.
+            </p>
+        </div>
+        <!-- End - Checkout Header -->
+
+        <!-- Begin - Checkout Info -->
+        <div class="myshp_checkout_info myshp_checkout_customerdata_shipping myshp_block">
+
+            <br/><br/>
+            <!--
+            <h3>
+                <span style="myshop-resource:bank.data">
+                    Betalings gegevens
+                </span>
+            </h3>
+            <div style="myshop-not-is-payment-method:klarna*">
+                <div style="myshop-not-is-payment-method:billink">
+                    <div class="myshp_checkout_customerdata_row">
+                        <label style="myshop-resource:lbl34">Rekeningnummer</label>
+                        <input style="myshop-control: banknumber" name="local_psp_banknumber"/>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <div class="myshp_box">
+
+                <table width="100%">
+
+                    <tbody>
+
+
+                        <div style="myshop-not-is-payment-method:afterpay b2b*">
+                            <tr style="myshop-not-is-payment-method:billink*">
+
+                                <td width="150" rowspan="1" colspan="1">
+                                    <label>
+                                        <span style="myshop-resource:birth.date">
+                                            Geboortedatum
+                                        </span>
+                                        <span class="myshp_required_label">
+                                            *
+                                        </span>
+                                    </label>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    <span class="myshp_checkout_customerdata_field">
+                                        <input style="myshop-control: age" id="datepicker" name="local_psp_age" class="myshp_checkout_value"/>
+                                    </span>
+                                </td>
+
+                            </tr>
+                        </div>
+
+                        <div style="myshop-is-payment-method:afterpay b2b*">
+
+                            <tr>
+
+                                <td width="150" rowspan="1" colspan="1">
+                                    <label>
+                                        <span style="myshop-resource:company">
+                                            Bedrijfsnaam
+                                        </span>
+                                        <span class="myshp_required_label">
+                                            *
+                                        </span>
+                                    </label>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    <span class="myshp_checkout_customerdata_field">
+                                        <input style="myshop-control:companyname" size="20" class="myshp_checkout_value"/>
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td width="150" rowspan="1" colspan="1">
+                                    <label>
+                                        <span style="myshop-resource:cocnumber">
+                                            KvK nummer
+                                        </span>
+                                        <span class="myshp_required_label">
+                                            *
+                                        </span>
+                                    </label>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    <span class="myshp_checkout_customerdata_field">
+                                        <input style="myshop-control:cocnumber" size="20" class="myshp_checkout_value"/>
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td width="150" rowspan="1" colspan="1">
+                                    <label>
+                                        <span style="myshop-resource:vatnumber">
+                                            BTW nummer
+                                        </span>
+                                    </label>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    <span class="myshp_checkout_customerdata_field">
+                                        <input style="myshop-control:vatnumber" size="20" class="myshp_checkout_value"/>
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </div>
+
+                        <span style="myshop-is-payment-method:billink*">
+
+                            <span style="myshop-test:{$Billink.workflow}=1">
+
+                                <tr>
+
+                                    <td width="150" rowspan="1" colspan="1">
+                                        <label>
+                                            <span style="myshop-resource:birth.date">
+                                                Geboortedatum
+                                            </span>
+                                            <span class="myshp_required_label">
+                                                *
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td rowspan="1" colspan="1">
+                                        <span class="myshp_checkout_customerdata_field">
+                                            <input style="myshop-control: age" id="datepicker" name="local_psp_age" class="myshp_checkout_value"/>
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td width="150" rowspan="1" colspan="1">
+                                        <label>
+                                            <span style="myshop-resource:mobnumber">
+                                                Mobiel telefoonnummer
+                                            </span>
+                                            <span class="myshp_required_label">
+                                                *
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td rowspan="1" colspan="1">
+                                        <span class="myshp_checkout_customerdata_field">
+                                            <input style="myshop-control:mobnumber" name="local_psp_mobnumber" class="myshp_checkout_value"/>
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </span>
+
+                            <span style="myshop-test:{$Billink.workflow}=2">
+
+                                <tr>
+
+                                    <td width="150" rowspan="1" colspan="1">
+                                        <label>
+                                            <span style="myshop-resource:company-name">
+                                                Bedrijfsnaam
+                                            </span>
+                                            <span class="myshp_required_label">
+                                                *
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td rowspan="1" colspan="1">
+                                        <span class="myshp_checkout_customerdata_field">
+                                            <input style="myshop-control:companyname" class="myshp_checkout_value"/>
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td width="150" rowspan="1" colspan="1">
+                                        <label>
+                                            <span style="myshop-resource:cocnumber">
+                                                KvK Nummer
+                                            </span>
+                                            <span class="myshp_required_label">
+                                                *
+                                            </span>
+                                        </label>
+                                    </td>
+                                    <td rowspan="1" colspan="1">
+                                        <span class="myshp_checkout_customerdata_field">
+                                            <input style="myshop-control:cocnumber" class="myshp_checkout_value" maxlength="14"/>
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </span>
+
+                        </span>
+
+                        <span style="myshop-is-payment-method:klarna*">
+
+                            <tr style="myshop-is-payment-method:klarna account*">
+
+                                <td width="150" rowspan="1" colspan="1">
+                                    <label>
+                                        <span style="myshop-resource:klarna.account.conditions">
+                                            Factuurvoorwaarden
+                                        </span>
+                                        <span class="myshp_required_label">
+                                            *
+                                        </span>
+                                    </label>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    <span class="myshp_checkout_customerdata_field">
+                                        <input type="checkbox" name="check" id="check" />&#160;
+                                        <label style="myshop-resource:klarna.account.accept.1" for="check">Door gebruik te maken van Klarna Factuur stemt u in met de</label>&#160;<a style="myshop-action:klarna-terms-conditions"><span style="myshop-resource:klarna.account.accept.2">Klarna Factuurvoorwaarden</span></a>.
+                                        <label style="myshop-resource:klarna.invoice.accept.datenschutz.1" for="check">Ik ga akkoord met het gebruik van mijn Persoonsgegevens ter controle, en weet dat ik mijn </label>&#160;<a href="https://online.klarna.com/consent_de.yaws"><span style="myshop-resource:klarna.invoice.accept.datenschutz.2">inwilliging</span></a>&#160;<span style="myshop-resource:klarna.invoice.accept.datenschutz.3"> op ieder moment in de toekomst kan intrekken.</span>
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                            <tr style="myshop-not-is-payment-method:klarna account*">
+
+                                <td width="150" rowspan="1" colspan="1">
+                                    <label>
+                                        <span style="myshop-resource:klarna.invoice.conditions">
+                                            Factuurvoorwaarden
+                                        </span>
+                                        <span class="myshp_required_label">
+                                            *
+                                        </span>
+                                    </label>
+                                </td>
+                                <td rowspan="1" colspan="1">
+                                    <span class="myshp_checkout_customerdata_field">
+                                        <input type="checkbox" name="check" id="check" />&#160;
+                                        <label style="myshop-resource:klarna.invoice.accept.1" for="check">Door gebruik te maken van Klarna Factuur stemt u in met de</label>&#160;<a style="myshop-action:klarna-terms-conditions"><span style="myshop-resource:klarna.invoice.accept.2">Klarna Factuurvoorwaarden</span></a>.
+                                        <label style="myshop-resource:klarna.invoice.accept.datenschutz.1" for="check">Ik ga akkoord met het gebruik van mijn Persoonsgegevens ter controle, en weet dat ik mijn </label>&#160;<a href="https://online.klarna.com/consent_de.yaws"><span style="myshop-resource:klarna.invoice.accept.datenschutz.2">inwilliging</span></a>&#160;<span style="myshop-resource:klarna.invoice.accept.datenschutz.3"> op ieder moment in de toekomst kan intrekken.</span>
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </span>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+        <!-- End - Checkout Info -->
+
+        <!-- Begin - Control Buttons -->
+        <div class="myshp_control_buttons">
+            <a href="#" class="myshp_button myshp_button_nextstep" style="myshop-action: next-page;float:right" data-role="button" data-icon="arrow-r" data-iconpos="right">
+                <span>
+                    <span style="myshop-resource:paynow">
+                        Verder
+                    </span>
+                    <span class="myshp_button_icon">&raquo;</span>
+                </span>
+            </a>
+            <a href="#" class="myshp_button myshp_button_prev" style="myshop-action: to-basket" data-role="button" data-icon="arrow-l">
+                <span>
+                    <span class="myshp_button_icon">&laquo;</span>
+                    <span style="myshop-resource:button.cancel">
+                        Annuleren
+                    </span>
+                </span>
+            </a>
+            <div class="clear">&nbsp;</div>
+        </div>
+        <!-- End - Control Buttons -->
+
+    </div>
+
+    <!-- Begin - MijnWinkel PoweredBy Block -->
+    <div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+        &nbsp;
+    </div>
+    <!-- End - MijnWinkel PoweredBy Block -->
+
+    <style type="text/css">
+        .myshp_button_nextstep.disabled {
+            background-color: #dfdfdf !important;
+            color: #aaa !important;
+        }
+    </style>
+    <script type="text/javascript">
+        <![CDATA[
+            myshopEvent().onNext(function(){
+                $('.myshp_button_nextstep').addClass('disabled');
+                $('.myshp_button_nextstep').prop('onclick',null).off('click');
+                myshopEvent().clearLock();
+                return true;
+            });
+        ]]>
+    </script>
+
+</div>
+
+</body>
+</html>
