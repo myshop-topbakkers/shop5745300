@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title>Customer Data</title>
+        <meta content="myshop-meta:keywords" name="keywords"/>
+        <meta content="myshop-meta:description" name="description"/>
+        <meta content="author" name="MijnWinkel, Checkout Address, $Revision: 1 $, $Date: 2015-03-17 "/>
+    </head>
+
+	<body>
+
+		<div class="address_content_ms">
+		<!-- active and passed breadcrumbs -->
+		<div style="myshop-has:checkout-part-basket">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:basket">
+				Shopping cart
+			</p>
+		</div>
+		<div>
+			<p class="msresp_cobreadcrumb active" style="myshop-resource:title.address">
+				Address
+			</p>
+		</div>
+
+		<!-- Begin - Customerdata Shipping -->
+		<h3 class="title_adress_h3"><span style="myshop-resource:address.invoice">Factuuradres</span></h3>
+
+		<div class="msresp_address_form">
+			<span style="myshop-repeat:customer-fields" class="customer__fileds1"> <span style="myshop-is:checkout-address-field"> <span style="myshop-not-is:read-only-user-info"> <label> <span style="myshop-value:label">&nbsp;</span> <span class="" style="myshop-is:required-field">*</span> <span class="" style="myshop-not-is:required-field">&nbsp;</span> </label> </span> <span style="myshop-is:read-only-user-info">
+						<br />
+						<span class="msresp_address_form__label-noform" style="myshop-value:label"></span>:&nbsp; </span> <span class="msresp_address_form__control" style="myshop-value:control">&nbsp;</span> </span> </span>
+
+			<span style="myshop-is:register-new-user"> <label> <span style="myshop-resource:password1">Wachtwoord</span> <span class="">*</span> </label>
+				<input type="password" style="myshop-control:password-new1"/>
+			</span>
+			<span style="myshop-is:register-new-user"> <label> <span style="myshop-resource:password2">Wachtwoord</span> <span class="">*</span> </label>
+				<input type="password" style="myshop-control:password-new2"/>
+			</span>
+		</div>
+		<!-- End - Customerdata Shipping -->
+
+		<!-- End - Control Buttons -->
+		<!-- Begin - Customerdata Delivery -->
+		<div class="" style="myshop-has:delivery-fields">
+			<h3 class="title_adress_h3"><span style="myshop-resource:address.delivery">Afleveradres</span></h3>
+			<div class="" style="myshop-value:delivery-selection-control;"></div>
+			&nbsp;
+			<div class="msresp_address_form" style="myshop-block:delivery-selection;">
+				<span style="myshop-repeat:customer-fields-delivery" class="customer__fileds1"> <label> <span style="myshop-value:label">&nbsp;</span> <span class="" style="myshop-is:required-field">*</span> <span class="" style="myshop-not-is:required-field">&nbsp;&nbsp;</span> &nbsp; </label> <span class="msresp_address_form__control" style="myshop-value:control"></span> </span>
+				<div style="myshop-is:read-only-user-info">
+					&nbsp;
+				</div>
+			</div>
+		</div>
+		<!-- End - Customerdata Delivery -->
+
+		<!-- Begin - Checkout Info -->
+		<div class="required_terms" style="myshop-resource:required.fields">
+			De velden met een * zijn verplicht
+		</div>
+		<!-- End - Checkout Info -->
+
+
+		<!-- Begin - Control Buttons -->
+			<div style="myshop-is:read-only-user-info">
+				<div class="myshp_control_buttons">
+					<a href="#" class="myshp_button myshp_button_edit btn btn-default" style="myshop-action:update-user-info" data-role="button" data-icon="gear">
+						<span style="myshop-resource:button.edit">
+							aanpassen
+						</span>					
+					</a>
+				</div>
+			</div>
+			<div style="myshop-is:update-user-info">
+				<div class="myshp_control_buttons msresp_btns">
+					<a href="#" class="myshp_button myshp_button_cancel btn btn-default" style="myshop-action:cancel-user-info" data-role="button" data-icon="delete">
+						<span style="myshop-resource:cancel">
+							annuleren
+						</span>
+					</a>
+					<a href="#" class="myshp_button myshp_button_save btn btn-default" style="myshop-action:save-user-info" data-role="button" data-icon="check">
+						<span style="myshop-resource:button.save">
+							opslaan
+						</span>
+					</a>
+				</div>
+			</div>
+			<div class="clear">&nbsp;</div>
+		<!-- Begin - Control Buttons -->
+		
+		<div class="msresp_btns">
+
+			<a href="#" class="btn btn-default" style="myshop-action:previous-page">
+				<span style="myshop-resource:button.previous.step"> vorige stap </span>
+			</a>
+			<span style="myshop-not-is:register-new-user">
+				<a href="#" class="btn btn-primary" style="myshop-action:next-page"> 
+					<span style="myshop-resource:button.nextstep">naar betaalmethodes </span>
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</span>
+			<span style="myshop-is:register-new-user">
+				<a href="#" class="btn btn-primary" style="myshop-action:register-new-user">
+					<span style="myshop-resource:button.register"> naar betaalmethodes </span>
+					<span class="glyphicon glyphicon-chevron-right"></span> 
+				</a>
+			</span>
+			
+		</div>
+		<!-- End - Control Buttons -->
+
+		<!-- inactive breadcrumbs -->
+		<div style="myshop-has:checkout-part-shipping">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:button.deliverymethod">
+				Shipping
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-payment-method">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:button.paymentmethod">
+				betaalmethode
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-approval">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.approval">
+				Approval
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-approval">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.order">
+				bestelbevestiging
+			</p>
+		</div>
+		<!-- Begin - MijnWinkel PoweredBy Block -->
+		<div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+			&nbsp;
+		</div>
+		<!-- End - MijnWinkel PoweredBy Block -->		
+		<style>
+			.title_adress_h3 {
+				margin-top: 2%;
+			}
+			.customer__fileds1 {
+				width: 100%;
+				display: block;
+			}
+
+			.msresp_address_form label {
+				display: inline-block;
+			}
+
+			.msresp_address_form select {
+				display: inline-block;
+				margin-top: 10px;
+			}
+		</style>
+		</div>
+	</body>
+</html>
