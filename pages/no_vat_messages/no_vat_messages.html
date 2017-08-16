@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+		<title>No VAT Message</title>
+		<meta content="myshop-meta:keywords" name="keywords"/>
+		<meta content="myshop-meta:description" name="description"/>
+		<meta content="author" name="MijnWinkel"/>
+	</head>
+	<body>
+
+		<div class="myshp_checkout_container">
+
+			<!-- active and passed breadcrumbs -->
+			<div style="myshop-has:checkout-part-basket">
+				<p class="msresp_cobreadcrumb" style="myshop-resource:basket">
+					Shopping cart
+				</p>
+			</div>
+			<div>
+				<p class="msresp_cobreadcrumb active" style="myshop-resource:title.address">
+					Address
+				</p>
+			</div>
+
+			<!-- Begin - Control Buttons -->
+			<div class="msresp_btns">
+				<a class="btn btn-default" style="myshop-action:previous-page"><span style="myshop-resource:button.previous.step">verder winkelen</span></a>
+				<a class="btn btn-primary" style="myshop-action:next-page"><span style="myshop-resource:button.nextstep">volgende stap</span> <span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			<!-- End - Control Buttons -->
+
+			<!-- Begin - No Vat Message -->
+			<div class="">
+				<p>
+					<strong><span style="myshop-resource:label.novat">Geen BTW</span></strong>
+				</p>
+				<div style="myshop-is:no-vat-message-country">
+					<div style="myshop-has:missing-no-vat-fields">
+						<p style="myshop-value:no-vat-message">
+							Omdat niet beide velden bedrijfsnaam en/of BTW nummer zijn ingevuld moeten wij BTW berekenen. Klik op vorige als u dit wilt aanpassen.
+						</p>
+					</div>
+					<div style="myshop-not-has:missing-no-vat-fields">
+						<p style="myshop-value:no-vat-message">
+							Omdat het afleveradres buiten Europa ligt zal er geen BTW berekend worden.
+						</p>
+					</div>
+				</div>
+				<div style="myshop-is:no-vat-message-region">
+					<p style="myshop-value:no-vat-message">
+						Omdat het afleveradres buiten Europa ligt zal er geen BTW berekend worden.
+					</p>
+				</div>
+			</div>
+			<!-- End - No Vat Message -->
+
+			<!-- Begin - Control Buttons -->
+			<div class="msresp_btns">
+				<a class="btn btn-default" style="myshop-action:previous-page"><span style="myshop-resource:button.previous.step">verder winkelen</span></a>
+				<a class="btn btn-primary" style="myshop-action:next-page"><span style="myshop-resource:button.nextstep">volgende stap</span> <span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			<!-- End - Control Buttons -->
+
+			<!-- inactive breadcrumbs -->
+			<div style="myshop-has:checkout-part-shipping">
+				<p class="msresp_cobreadcrumb" style="myshop-resource:button.deliverymethod">
+					Shipping
+				</p>
+			</div>
+			<div style="myshop-has:checkout-part-payment-method">
+				<p class="msresp_cobreadcrumb" style="myshop-resource:button.paymentmethod">
+					Payment
+				</p>
+			</div>
+			<div style="myshop-has:checkout-part-approval">
+				<p class="msresp_cobreadcrumb" style="myshop-resource:title.approval">
+					Approval
+				</p>
+			</div>
+			<div>
+				<p class="msresp_cobreadcrumb" style="myshop-resource:button.placeorder">
+					Confirmation
+				</p>
+			</div>
+
+		</div>
+
+	</body>
+</html>
