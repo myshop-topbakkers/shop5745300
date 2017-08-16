@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- Release 3 productlist compact xhtml template -->
+
+		<link rel="stylesheet" href="/skins/templates/views/common/common.css"></link>
+		<link media="all" style="myshop-resource-ref:style-sheet-view" href="/skins/templates/views/default1/productlist.css" type="text/css" rel="stylesheet"></link>
+
+		<style type="text/css" style="myshop-block:style-productlist">
+		</style>
+
+	</head>
+	<body>
+
+		<!--
+		<span style="myshop-info-productlist:columns;display:none" id="myshp_list_columns"/>
+		-->
+	
+		<div style="myshop-has:results">
+			<div style="myshop-has:top-navigation;">
+				<div class="myshp_list_navigation myshp_list_navigation_top">
+					<div style="float: left; text-align: left; width: auto; myshop-default:powered-by"></div>
+					<div style="display:inline; float:right;">
+						<div style="myshop-has:previous-page">
+							<a style="myshop-action:previous-page" class="myshp_list_navigation_button_next">&lt;&lt; <span style="myshop-resource:prev">Vorige</span></a>
+							&nbsp;|&nbsp;
+						</div>
+						<span style="myshop-default:start-count"/>&nbsp;-&nbsp;<span style="myshop-default:end-count"/>
+						<div style="myshop-has:next-page">
+							&nbsp;|&nbsp;
+							<a style="myshop-action:next-page" class="myshp_list_navigation_button_prev"><span style="myshop-resource:next">Volgende</span> &gt;&gt;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+
+		<div style="myshop-has:searchblock;">
+
+			<div style="myshop-is:search-method-quick">
+				<div id="myshp_info_search_block" class="myshp_info_search_form">
+					<div style="float:left; margin-right: 10px; margin-top: 5px;">
+						<div class="myshp_info_search_field_label">				
+							<span style="myshop-resource:globalsearch">Alle producten</span>
+						</div>
+						<div class="myshp_info_search_field">
+							<span style="myshop-search-field:control-global; float: left;"/>
+						</div>
+					</div>
+					<div>
+						<div class="myshp_info_search_field" style="margin-top:19px; float: left;">
+							<a style="myshop-action:search;" class="myshp_button icon_align_left icon_image_search">
+								<span class="btn_bg_left">&nbsp;</span>
+								<span class="btn_bg_center">
+									<span class="btn_icon">&nbsp;</span>
+									<span class="btn_text" style="myshop-resource:search">Search</span>
+								</span>			
+								<span class="btn_bg_right">&nbsp;</span>
+							</a>						
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div style="myshop-is:search-method-category">
+				<!-- Not supported yet, use a 2.4 shop -->
+			</div>
+			<div style="myshop-is:search-method-column">
+				<!-- Not supported yet, use a 2.4 shop -->
+			</div>
+
+			<div style="myshop-is:search-method-extended">
+
+				<div id="myshp_info_search_block" class="myshp_info_search_form">
+					<span style="myshop-repeat:search-fields">
+						<div style="float:left; margin-right: 10px; margin-top:5px;">
+							<span style="myshop-not-has:search-field-max;">
+								<div class="myshp_info_search_field_label">
+									<span style="myshop-search-field:label"/>:
+								</div>
+								<div class="myshp_info_search_field">
+									<span style="myshop-search-field:control"/>
+								</div>
+							</span>
+							<span style="myshop-has:search-field-max;">
+								<div style="float:left; margin-right:10px;">
+									<div class="myshp_info_search_field_label">
+										<span style="myshop-search-field:label"/>&#160;<span style="myshop-resource:from;">van</span>:
+									</div>
+									<div class="myshp_info_search_field">
+										<input size="11" style="myshop-search-field:control"/>
+									</div>
+								</div>
+								<div style="float:left;">
+									<div class="myshp_info_search_field_label">
+										<span style="myshop-search-field:label"/>&#160;<span style="myshop-resource:to;">t/m</span>:
+									</div>
+									<div class="myshp_info_search_field">
+										<input size="11" style="myshop-search-field:control-max"/>
+									</div>
+								</div>
+							</span>
+						</div>
+					</span>
+					<span style="myshop-has:global-search">
+						<div style="float:left; margin-right: 10px; margin-top: 5px;">
+							<div class="myshp_info_search_field_label">				
+								<span style="myshop-resource:globalsearch">Alle producten</span>
+							</div>
+							<div class="myshp_info_search_field">
+								<span style="myshop-search-field:control-global; float: left;"/>
+							</div>
+						</div>
+					</span>
+					<div class="myshp_info_search_button">
+						<a style="myshop-action:search;" class="myshp_button icon_align_left icon_image_search">
+							<span class="btn_bg_left">&nbsp;</span>
+							<span class="btn_bg_center">
+								<span class="btn_icon">&nbsp;</span>
+								<span class="btn_text" style="myshop-resource:search">Search</span>
+							</span>			
+							<span class="btn_bg_right">&nbsp;</span>
+						</a>						
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="myshp_list_spacer"></div>
+
+
+		<div style="myshop-has:results">
+
+			<table id="myshp_list" cellspacing="0" cellpadding="0">
+
+				<thead style="myshop-block:productlist-info;">
+					<tr style="myshop-block:product;" class="myshp_list_top">
+						<td style="myshop-has:moreinfo;" class="myshp_list_product_label">&nbsp;</td>
+						<td style="myshop-has:order;" class="myshp_list_product_label">&nbsp;</td>
+						<td style="myshop-has:quantity-field" class="myshp_list_product_label">&nbsp;</td>
+						<td style="myshop-repeat:product-features;myshop-style-width:column-width %;" class="myshp_list_product_label">
+							<span style="myshop-feature:label;"></span>
+						</td>
+					</tr>
+				</thead>
+
+				<tbody>
+
+					<span style="myshop-block:productlist;">
+
+						<tr style="myshop-block:product;" class="myshp_list_product myshp_list_product_row">
+							<span style="myshop-has:moreinfo">
+								<td class="myshp_list_product_value">
+									<a style="myshop-action:moreinfo;" class="myshp_list_product_moreinfo_button">
+										<div style="myshop-resource:info">meerinfo</div>
+									</a>
+								</td>
+							</span>
+							<span style="myshop-is:in-stock">
+								<span style="myshop-has:order">
+									<td class="myshp_list_product_value">
+										<a style="myshop-action:order;" class="myshp_list_product_order_button">
+											<div style="myshop-resource:order">bestellen</div>
+										</a>
+									</td>
+									<span style="myshop-has:quantity-field">
+										<td class="myshp_list_product_value">
+											<input style="myshop-control:quantity;" class="myshp_list_product_quantity_field"/>
+										</td>
+									</span>
+								</span>
+							</span>
+							<span style="myshop-not-is:in-stock">
+								<span style="myshop-has:order">
+									<td class="myshp_list_product_value">&nbsp;</td>
+									<span style="myshop-has:quantity-field">
+										<td class="myshp_list_product_value">&nbsp;</td>
+									</span>
+								</span>
+							</span>
+							<span style="myshop-repeat:product-features">
+								<span style="myshop-not-is:feature-price">
+									<td style="myshop-feature:value;" class="myshp_list_product_value"></td>
+								</span>
+								<span style="myshop-is:feature-price">
+									<td class="myshp_list_product_value_price"><span style="myshop-feature:value;"/>&nbsp;</td>
+								</span>
+							</span>
+						</tr>
+					
+					</span>
+
+				</tbody>
+		
+			</table>
+			
+			<div class="myshp_list_spacer"></div>
+
+			<div class="myshp_list_navigation myshp_list_navigation_bottom">
+				<div style="float: left; text-align: left; width: auto; myshop-default:powered-by"></div>
+				<div style="display:inline; float:right;">
+					<div style="myshop-has:previous-page">
+						<a style="myshop-action:previous-page" class="myshp_list_navigation_button_next">&lt;&lt; <span style="myshop-resource:prev">Vorige</span></a>
+						&nbsp;|&nbsp;
+					</div>
+					<span style="myshop-default:start-count"/>&nbsp;-&nbsp;<span style="myshop-default:end-count"/>
+					<div style="myshop-has:next-page">
+						&nbsp;|&nbsp;
+						<a style="myshop-action:next-page" class="myshp_list_navigation_button_prev"><span style="myshop-resource:next">Volgende</span> &gt;&gt;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div style="myshop-not-has:results" class="myshp_list_no_results">
+			<br/><br/>
+			<span style="myshop-resource:noresult">Helaas, er zijn geen resultaten.</span>
+		</div>
+
+	</body>
+</html>
