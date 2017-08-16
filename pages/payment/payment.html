@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+        <title style="myshop-value:page-title">Payment Method Template</title>
+        <meta content="myshop-meta:keywords" name="keywords"/>
+        <meta content="myshop-meta:description" name="description"/>
+        <meta content="author" name="MijnWinkel, Checkout Payment, $Revision: 1 $, $Date: 2015-03-17 "/>
+    </head>
+
+	<body>
+
+		<!-- Begin - Pay with voucher -->
+		<style>
+			.dmr-voucher-input td {
+				vertical-align:middle !important;
+				padding: 10px;
+			}
+			.dmr-voucher-input .td1 {
+				width:150px !important;
+			}
+			.dmr-voucher-input .td2 {
+				width:20px !important;
+				text-align:right !important;
+			}
+			.dmr-voucher-total .td2 {
+				width:150px !important;
+				text-align:right !important;
+			}
+			.dmr-voucher-total .total {
+				font-weight: bold;
+			}
+		</style>
+		<div class="paymment_content_ms">
+		
+		<!-- active and passed breadcrumbs -->
+		<div style="myshop-has:checkout-part-basket">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:basket">
+				Shopping cart
+			</p>
+		</div>
+		<div>
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.address">
+				Address
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-shipping">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:button.deliverymethod">
+				Shipping
+			</p>
+		</div>
+		<div style="myshop-has:checkout-part-payment-method">
+			<p class="msresp_cobreadcrumb active" style="myshop-resource:button.paymentmethod">
+				betaalmethode
+			</p>
+		</div>
+
+		<div class="myshp_checkout_products">
+			<!-- Voucher input -->
+			<table class="dmr-voucher-input" border="0" cellspacing="0" cellpadding="0" width="100%">
+				<tr>
+					<td colspan="3">
+						Bij elke aankoop die u doet in deze webshop spaart u punten.<br />
+						Deze punten kunt u via dit scherm inwisselen voor korting op het totaalbedrag.<br />
+						Hiervoor vult u uw laatst toegestuurde kortingcode in en de waarde die u wilt verzilveren.<br />
+					</td>
+				</tr>
+				<tr>
+					<td class="td1"><span style="myshop-resource:discount-code">Kortingcode</span></td>
+					<td class="td2">&nbsp;</td>
+					<td class="td3"><input style="myshop-control:voucher-code" size="15" title="" /></td>
+				</tr>
+				<tr>
+					<td class="td1">Te verzilveren waarde</td>
+					<td class="td2">&euro;&nbsp;</td>
+					<td class="td3"><input style="myshop-control:voucher-max-amount" size="5" title="" /></td>
+				</tr>
+				<tr style="myshop-has:voucher-amount">
+					<td class="td1">&nbsp;</td>
+					<td class="td2">&nbsp;</td>
+					<td class="td3">
+						<span>
+							U kunt maximaal <span style="myshop-value:amount-voucher-formatted"/> verzilveren<br />
+							Wilt u het te verzilveren bedrag wijzigen?<br />
+							Ga dan eerst 1 stap terug en voer daarna de code en het bedrag opnieuw in.
+						</span>
+					</td>
+				</tr>
+			</table>
+			<br />
+			<!-- Voucher total -->
+			<div style="myshop-has:voucher-amount">
+
+				<table class="dmr-voucher-total" border="0" cellspacing="0" cellpadding="0" width="100%">
+					<tr>
+						<td class="td1"><span style="myshop-resource:total-basket">Totaal Winkelwagen</span></td>
+						<td class="td2"><span style="myshop-value:price-total-formatted"/></td>
+					</tr>
+					<tr>
+						<td class="td1"><span style="myshop-resource:redeemable">Verzilveren</span></td>
+						<td class="td2">- <span style="myshop-value:voucher-max-amount-formatted"/></td>
+					</tr>
+					<tr>
+						<td class="td1 total"><span style="myshop-resource:total-settle">Totaal af te rekenen</span></td>
+						<td class="td2 total"><span style="myshop-value:price-gross-payment-total-formatted"/></td>
+					</tr>
+				
+				</table> 
+
+			</div>
+			<!-- Non-voucher total -->
+			<div style="myshop-not-has:voucher-amount">
+				<table class="dmr-voucher-total" border="0" cellspacing="0" cellpadding="0" width="50%">
+					<tr>
+						<td class="td1 total"><span style="myshop-resource:total-settle">Totaal af te rekenen</span></td>
+						<td class="td2 total"><span style="myshop-value:price-total-formatted"/></td>
+					</tr>
+				
+				</table> 
+			</div>
+			
+			
+		</div>
+		<!-- Begin - Checkout Payment Data -->
+		<div class="msresp_payment">
+			<div class="msresp_payment__choose" style="margin-top:2%;">
+				<strong><span style="myshop-resource:paymentselect">Kies hieronder uw betaalwijze</span></strong>
+			</div>
+			<div class="msresp_payment__cost hidden-xs" style="margin-top:2%;">
+				<strong><span style="myshop-resource:paymentcost">Betaalkosten</span></strong>
+			</div>
+		</div>
+
+		<div style="myshop-repeat:payment-method-list" class="msresp_payment well well-sm">
+			<div class="msresp_payment__control">
+				<span style="myshop-value:control">o</span>
+			</div>
+			<div class="msresp_payment__description">
+				<span style="myshop-value:label;font-weight: bold;"></span>
+				<br/>
+				<span style="myshop-value:description;font-weight: normal;"></span>
+				<p class="visible-xs">
+					<span style="myshop-resource:paymentcost">Betaalkosten</span>: <span style="myshop-value:inc-vat-price-formatted"></span>
+				</p>
+				<span style="myshop-has:issuer-list;"> <span style="myshop-control:issuer-list"></span> </span>
+			</div>
+			<div class="msresp_payment__cost hidden-xs">
+				<span style="myshop-has:payment-method-costs;"> <span style="myshop-value:inc-vat-price-formatted">&nbsp;</span> </span>
+			</div>
+		</div>
+		<!-- End - Checkout Payment Data -->
+
+		<!-- Begin - Process Order Popup Message-->
+		<div class="" style="myshop-block:process-order-popup-message">
+			<span style="myshop-resource:remark.newpaymentwindow">Opmerking:</span>
+			<p>
+				Vervolg de afhandeling van de betaling in het nieuw geopend venster.
+			</p>
+			<p>
+				Is er geen nieuwe venster geopend, <a style="myshop-action:process-order-popup-retry">klik dan hier</a>
+			</p>
+		</div>
+		<!-- End - Process Order Popup Message-->
+
+		<!-- Begin - Control Buttons -->
+		<div class="msresp_btns">
+			<a class="btn btn-default" style="myshop-action:previous-page"><span style="myshop-resource:button.previous.step">vorige stap</span></a>
+			<a class="btn btn-primary" style="myshop-action:next-page"><span style="myshop-resource:button.nextstep">naar besteloverzicht</span><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+		<!-- End - Control Buttons -->
+
+		<!-- inactive breadcrumbs -->
+		<div style="myshop-has:checkout-part-approval">
+			<p class="msresp_cobreadcrumb" style="myshop-resource:title.approval">
+				Approval
+			</p>
+		</div>
+		<div>
+			<p class="msresp_cobreadcrumb">
+				bestelbevestiging
+			</p>
+		</div>
+		<!-- Begin - MijnWinkel PoweredBy Block -->
+		<div id="myshp_checkout_powered-by" style="myshop-default:powered-by">
+			&nbsp;
+		</div>
+		<!-- End - MijnWinkel PoweredBy Block -->
+		</div>
+	</body>
+</html>
