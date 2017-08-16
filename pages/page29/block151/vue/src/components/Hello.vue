@@ -57,7 +57,7 @@
             </tr>
           </table>
         </div>
-        <button v-on:click="reloadList">Reload list</button>
+        <button id="reload-order-list" v-on:click="reloadList">Reload list</button>
   </div>
 </template>
 
