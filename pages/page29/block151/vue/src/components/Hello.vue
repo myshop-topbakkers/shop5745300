@@ -5,6 +5,7 @@
     <ul>
     <li>item</li>
     </ul>
+Added a local test set for the Order List component
   </div>
 </template>
 
