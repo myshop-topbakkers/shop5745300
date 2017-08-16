@@ -5,21 +5,19 @@
         <table class="myshp_checkout_products_table" cellpadding="0" cellspacing="0" width="100%">
             <tr class="myshp_basket_products_header">
                 <th class="myshp_basket_product_name">
-                  <resource></resource>
-                    <span style="myshop-resource:article">Artikel</span>
+                  <resource name="article"></resource>
                 </th>
                 <th class="myshp_basket_product_description" colspan="2">
-                    <resource name="desc"></resource>
-                    Omschrijving!
+                    <resource name="desc" filter="lower"></resource>
                 </th>
                 <th class="myshp_basket_product_quantity">
-                    <span style="myshop-resource:nr">Aantal</span>
+                    <resource name="nr" filter="upper"></resource>
                 </th>
                 <th class="myshp_basket_product_unitprice">
-                    <span style="myshop-resource:price">Prijs</span>
+                    <resource name="price"></resource>
                 </th>
                 <th class="myshp_basket_product_totalprice">
-                    <span style="myshop-resource:total">Totaal</span>
+                  <resource name="total"></resource>
                 </th>
                 <th class="myshp_basket_product_controls">
                     <span>&nbsp;</span>
@@ -46,18 +44,17 @@
                 </td>
                 <td class="myshp_basket_product_controls" width="70">
                     <a style="myshop-action:update-product" href="javascript:void(0);" class="myshp_button_update" data-role="button" data-icon="refresh" data-iconpos="notext" data-inline="true">
-                        <span style="myshop-resource:change">update</span>
+                        <resource name="change"></resource>
                     </a>&nbsp;
     <a style="myshop-action:remove-product" href="javascript:void(0);" class="myshp_button_delete" data-role="button" data-icon="delete" data-iconpos="notext" data-inline="true">
-                        <span style="myshop-resource:remove">
-                            verwijder
-                        </span>
+                  <resource name="remove"></resource>
+
                     </a>
                 </td>
             </tr>
           </table>
         </div>
-        <button id="reload-order-list" v-on:click="reloadList">Reload list</button>
+        <button id="reload-order-list" style="display:none" v-on:click="reloadList">Reload list</button>
   </div>
 </template>
 
