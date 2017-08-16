@@ -9,8 +9,8 @@
                     <span style="myshop-resource:article">Artikel</span>
                 </th>
                 <th class="myshp_basket_product_description" colspan="2">
-                    <resource></resource>
-                    <span style="myshop-resource:desc">Omschrijving</span>
+                    <resource name="desc"></resource>
+                    Omschrijving!
                 </th>
                 <th class="myshp_basket_product_quantity">
                     <span style="myshop-resource:nr">Aantal</span>
