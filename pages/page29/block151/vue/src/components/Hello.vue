@@ -4,7 +4,7 @@
   <div class="myshp_checkout_container">
     <div class="myshp_block myshp_checkout_products">
         <table class="myshp_checkout_products_table" cellpadding="0" cellspacing="0" width="100%">
-            <tr class="myshp_basket_products_header">
+            <tr class="cos-yellow-titles myshp_basket_products_header">
                 <th class="myshp_basket_product_name">
                   <resource name="article"></resource>
                 </th>
