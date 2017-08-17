@@ -5,12 +5,12 @@
     <div class="myshp_block myshp_checkout_products">
         <table class="myshp_checkout_products_table" cellpadding="0" cellspacing="0" width="100%">
             <tr class="cos-yellow-titles myshp_basket_products_header">
-                <th class="myshp_basket_product_name">
+                <td class="myshp_basket_product_name">
                   <resource name="article"></resource>
-                </th>
-                <th class="myshp_basket_product_description" colspan="2">
+                </td>
+                <td class="myshp_basket_product_description" colspan="2">
                     <resource name="desc" filter="lower"></resource>
-                </th>
+                </td>
                 <th class="myshp_basket_product_quantity">
                     <resource name="nr" filter="upper"></resource>
                 </th>
