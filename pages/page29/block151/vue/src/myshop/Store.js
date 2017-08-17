@@ -12,13 +12,10 @@ const mutations = {
   FETCH_RESOURCES: function(state, list) {
       if(!state.resource){
         Vue.http.get("http://edit2.mijnwinkel.nl/resourceloader.json")
-           .then((response) => {
+           .then(function (response)  {
                state.list = response.body;
                state.resource=true;
            })
-           .catch((error => {
-               console.log(error.statusText)
-           }))
 
       }
     }
