@@ -8,9 +8,6 @@
 
 //Vue.use(VueResource);
 
-const load = {
-  done: false,
-}
 
 export default {
   name: 'resource',
@@ -25,8 +22,7 @@ export default {
     }
   },
   created: function () {
-    if(false==load.done)this.$store.dispatch("fetchResources");
-    load.done=true;
+    this.$store.commit('FETCH_RESOURCES');
    }
 }
 
