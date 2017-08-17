@@ -3,14 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import VueResource from 'vue-resource'
+import store from './myshop/Store'
 
- Vue.use(VueResource);
- 
+Vue.use(VueResource);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   template: '<App/>',
   components: { App }
 })

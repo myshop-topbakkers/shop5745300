@@ -8,32 +8,28 @@
 
 //Vue.use(VueResource);
 
+const load = {
+  done: false,
+}
+
 export default {
   name: 'resource',
   props: ['name','filter'],
   data: function () {
     return {
-      done:false,
-      list:{
-      
-    }
     }
   },
   computed: {
-  label: function () {
-    return 'upper'==this.filter?(""+this.list[this.name]).toUpperCase():'lower'==this.filter?(""+this.list[this.name]).toLowerCase():this.list[this.name];
-  }
+    label: function () {
+      return 'upper'==this.filter?(""+this.$store.state.list[this.name]).toUpperCase():'lower'==this.filter?(""+this.$store.state.list[this.name]).toLowerCase():this.$store.state.list[this.name];
+    }
   },
   created: function () {
-    if(!this.done){
-      this.done=true;
-     this.$http.get('http://edit2.mijnwinkel1.nl/resourceloader.json').then(function (response) {
-       this.list = response.data
-     });
+    if(false==load.done)this.$store.dispatch("fetchResources", { self: this });
+    load.done=true;
    }
-   }
-
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

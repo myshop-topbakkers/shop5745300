@@ -1,6 +1,7 @@
 <template>
   <div class="myshp-version">
   Version: {{ version }}
+  Store: {{ $store.state.resource }} {{ $store.state.version }}
 	</div>
 </template>
 
