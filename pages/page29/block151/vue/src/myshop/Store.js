@@ -14,7 +14,7 @@ const mutations = {
 }
 
 const actions = {
-  fetchResources: function ({ commit }, { self })  {
+  fetchResources: function ({ commit })  {
     Vue.http.get("http://edit2.mijnwinkel.nl/resourceloader.json")
        .then((response) => {
            commit("FETCH_RESOURCES", response.body);

@@ -25,7 +25,7 @@ export default {
     }
   },
   created: function () {
-    if(false==load.done)this.$store.dispatch("fetchResources", { self: this });
+    if(false==load.done)this.$store.dispatch("fetchResources");
     load.done=true;
    }
 }
