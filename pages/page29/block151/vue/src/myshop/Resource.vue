@@ -5,25 +5,34 @@
 </template>
 
 <script>
+
+//Vue.use(VueResource);
+
 export default {
   name: 'resource',
   props: ['name','filter'],
   data: function () {
     return {
-      desc: 'Omschrijving',
-      article: 'Artikel',
-      nr: 'Aantal',
-      price: 'Prijs',
-      total: 'Totaal',
-      remove: 'verwijder',
-      change: 'update'
+      done:false,
+      list:{
+      
+    }
     }
   },
   computed: {
   label: function () {
-    return 'upper'==this.filter?this[this.name].toUpperCase():'lower'==this.filter?this[this.name].toLowerCase():this[this.name];
+    return 'upper'==this.filter?(""+this.list[this.name]).toUpperCase():'lower'==this.filter?(""+this.list[this.name]).toLowerCase():this.list[this.name];
   }
-}
+  },
+  created: function () {
+    if(!this.done){
+      this.done=true;
+     this.$http.get('http://edit2.mijnwinkel1.nl/resourceloader.json').then(function (response) {
+       this.list = response.data
+     });
+   }
+   }
+
 }
 </script>
 

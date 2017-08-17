@@ -26,7 +26,7 @@
             <tr class="myshp_basket_product" style="myshop-repeat:basket;">
                 <td class="myshp_basket_product_name">
                     <div style="myshop-has-value:product-image">
-            <img src="myshop-value:product-image"/><br/>
+            <!--<img src="myshop-value:product-image"/><br/>-->
     </div>
                     <span style="myshop-value:product-id"></span>
                 </td>
@@ -34,7 +34,7 @@
                   <p style="myshop-value:description;"></p>
                 </td>
                 <td class="myshp_basket_product_quantity">
-                    <input style="myshop-control:quantity-update" value="myshop-value:quantity;"/>
+                    <input style="myshop-control:quantity-update" /><!-- value="myshop-value:quantity;" -->
                 </td>
                 <td class="myshp_basket_product_unitprice">
                     <span style="myshop-value:inc-vat-price-formatted;white-space:nowrap;"></span>
