@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css" style="myshop-block:style-productlist">
+			
+			.myshp_list_product_features, .myshp_list_product_image, .myshp_list_product_box, .myshp_list_product_box h3{ 
+				-moz-transition: all 0.2s;
+	            -webkit-transition: all 0.2s;
+	            transition: all 0.2s ease;
+			}
+			
+			.myshp_list_row{
+				width:102%;
+			}
+			
+			.myshp_list_product {
+				myshop-width:productlist-column-width % !important;
+				/*myshop-padding-right:product-margin-width %;*/
+				padding-right:2%;
+				myshop-border-color:product-color-border-normal;
+			}
+			.myshp_list_product td{
+				vertical-align:top;
+				padding:5px;
+			}
+			td.myshp_list_product_image_td{
+				padding-left:0px;
+				padding-right:0px;
+			}
+			.myshp_list_product_image{
+				/*float:left;*/
+				position:relative;
+				margin:0;
+			}
+			.myshp_list_product_image img{
+				margin:5px 10px 10px 0;
+				width:20%;
+				position:absolute;
+				left:0;
+			}
+			.myshp_list_product_image a{
+				display:inline-block !important;
+				max-width:100%;
+			}
+			.myshp_list_product{
+				float:none;
+				width:auto;
+			}
+			.myshp_list_product:hover {
+				myshop-border-color:product-color-border-active;
+			}
+
+			.myshp_list_product_image img {
+				/*myshop-width:product-image-width px;
+				myshop-height:product-image-height px;*/
+			}
+
+			.myshp_list_product_features { 
+				myshop-text-align:product-text-alignment;
+			}
+
+        	#myshp_content_frame {
+           		myshop-width:content-width px;
+           	}
+			td.myshp_control_buttons_moreinfo{
+				padding-right:0px;
+			}
+        </style>
+        
+        <!-- Begin -  Pagination Mode -->
+		<style type="text/css">
+        	.myshp_list_pagination ul{
+        		float:left;
+        	}
+			.myshp_list_pagination,
+			.myshp_list_pagination li,
+        	.myshp_list_navigation_button_next{
+        		float: left;	
+        	}
+        	.myshp_list_navigation_button_prev{
+        		float:right;
+        	}
+        	.myshp_list_pagination li a,
+        	.myshp_list_pagination li span.myshp_list_pagination_item_separator,
+        	.myshp_list_navigation_button_next,
+        	.myshp_list_navigation_button_prev{
+				padding: 5px 10px;
+				margin-left: 5px;
+				display: inline-block;
+				line-height: 12px;
+				font-size: 12px;
+			}
+			.myshp_list_pagination li a,
+        	.myshp_list_navigation_button_next,
+        	.myshp_list_navigation_button_prev{
+				border: 1px solid #ccc;
+			}
+        	.myshp_list_pagination_item_active{
+        		font-weight:bold;
+        	}
+        	.myshp_poweredby {
+			    text-align: center;
+			    width: 100%;
+			    margin-bottom: 1.45em;
+			}
+			.myshp_list_navigation_button_next {
+				margin-right:0;
+			}
+			.myshp_list_navigation{
+				float:none;
+				 clear: both;
+				 min-height: 11px;
+				 height:auto;
+				 padding: 9px 0 9px;
+
+			}
+			#myshp_info_footer{ 
+				line-height: 24px;
+			}
+			.myshp_list_navigation.myshp_list_navigation_bottom {
+				margin-bottom: 0px;
+			}
+		</style>
+		<!-- End -  Pagination Mode -->
+        
+		<!--<meta name="myshop-macro-start" content="if lte IE 7"/>
+			<script type="text/javascript" src="/views/library/lib_productlist/js/IE_compact.js"></script>
+		<meta name="myshop-macro-end" content="endif"/>-->
+    </head>
+    <body>
+    	
+		<!-- Begin - Product list navigation top -->
+        <div style="myshop-has:results">
+            <div style="myshop-has:top-navigation;">
+                <div class="myshp_list_navigation myshp_list_navigation_top">
+                	<div class="myshp_list_navigation_buttons">
+	                    <!-- Begin -  Pagination Mode -->
+	                    
+		                    <!-- Advanced -->
+		                    <span style="myshop-has:pagina">
+			                    <div style="myshop-has:previous-page">
+									<a style="myshop-action:previous-page" class="myshp_list_navigation_button_next">&lt;</a>
+								</div>
+								
+								<div class="myshp_list_pagination">
+									<ul>
+										<li style="myshop-repeat:page-links">
+											<span style="myshop-is:page-link-separator"> <span class="myshp_list_pagination_item_separator">...</span> </span>
+											<span style="myshop-not-is:page-link-separator">
+											    <span style="myshop-is:page-link-active">
+											      	<a style="myshop-action:page-link" class="myshp_list_pagination_item_active">
+											      		<span>
+											      			<span style="myshop-label:page-link-number"></span>
+											      		</span>
+											      	</a>
+											    </span>
+												<span style="myshop-not-is:page-link-active">
+											      	<a style="myshop-action:page-link" >	
+											      		<span style="myshop-label:page-link-number"></span>
+											      	</a>
+											    </span>
+											</span>
+										</li>
+									</ul>
+								</div>
+	
+								<div style="myshop-has:next-page">
+									<a style="myshop-action:next-page" class="myshp_list_navigation_button_prev">&gt;</a>
+								</div>
+							</span>
+	
+							<!-- End - Advanced -->
+	
+							<!-- Simplified -->
+							<span style="myshop-not-has:pagina">
+								<div style="myshop-has:previous-page">
+									<a style="myshop-action:previous-page" class="myshp_list_navigation_button_next">&lt;&lt; <span style="myshop-resource:prev">Vorige</span></a>
+									&nbsp;|&nbsp;
+								</div>
+								<span style="myshop-default:start-count"/>&nbsp;-&nbsp;<span style="myshop-default:end-count"/>
+								<div style="myshop-has:next-page">
+									&nbsp;|&nbsp;
+									<a style="myshop-action:next-page" class="myshp_list_navigation_button_prev"><span style="myshop-resource:next">Volgende</span> &gt;&gt;</a>
+								</div>
+							</span>
+							<!-- End - Simplified -->
+	
+						<!-- End - Pagination -->
+					</div>
+					<div class="clear"></div>
+                </div>
+            </div>
+        </div>
+		<!-- End - Product list navigation top -->
+
+		<!-- Begin - Product list Search block -->
+		<table width="100%"><tr><td>
+        <div style="myshop-has:searchblock;">
+            <div style="myshop-is:search-method-quick">
+                <div class="myshp_info_search_block myshp_info_search_quick">
+                    <fieldset>
+                    	<table width="100%">
+                    		<tr>
+                    			<td>
+                    				<label><span style="myshop-resource:allproducts">Alle producten</span></label>			
+                    			</td>
+								<td>
+									<span style="myshop-search-field:control-global;"/>			
+								</td>
+								<td>
+									<a style="myshop-action:search;" class="myshp_button myshp_button_search" data-role="button" data-mini="true" data-icon="search" data-iconpos="right">
+				                        <span>
+											<span style="myshop-resource:search">
+					                            Search
+					                        </span>
+										</span>
+				                    </a>			
+								</td>
+                    		</tr>
+                    	</table>
+                    </fieldset>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div style="myshop-is:search-method-extended">
+                <div class="myshp_info_search_block myshp_info_search_extended">
+                    <div style="myshop-repeat:search-fields;">
+                        <fieldset>
+							<table style="myshop-not-has:search-field-max;" width="100%">
+	                            <tr>
+	                            	<td>
+	                            		<label><span style="myshop-search-field:label"></span>:</label>	
+	                            	</td>
+	                                <td>
+	                            		<span style="myshop-search-field:control"></span>    	
+	                                </td>
+	                            </tr>
+	                        </table>
+						</fieldset>
+                        <span style="myshop-has:search-field-max;">
+							<fieldset class="myshp_info_search_extended_min_max">
+	                            <table width="100%">
+	                                <tr>
+	                                	<td>
+	                                		<label>
+												<span style="myshop-search-field:label"></span>&#160;
+			                                    <span style="myshop-resource:from;">
+			                                        van
+			                                    </span>:
+											</label>	
+	                                	</td>
+	                                    <td>
+	                                    	<input size="8" style="myshop-search-field:control"/>
+	                                    </td>
+	                                	<td>
+	                                		<label>
+												<span style="myshop-search-field:label"></span>&#160;
+			                                    <span style="myshop-resource:to;">
+			                                        t/m
+			                                    </span>:
+											</label>	
+	                                	</td>
+	                                    <td>
+	                                    	<input size="8" style="myshop-search-field:control-max"/>
+	                                    </td>
+									</tr>
+	                            </table>
+							</fieldset>
+                        </span>
+                    </div>
+                    <div style="myshop-has:global-search">
+						<fieldset>
+							<table width="100%">
+								<tr>
+									<td>	
+										<label>
+					                        <span style="myshop-resource:allproducts">
+					                            Alle producten
+					                        </span>
+					                    </label>
+									</td>
+		                    		<td>
+		                    			<span style="myshop-search-field:control-global;"></span>
+									</td>
+									<td>
+										<a style="myshop-action:search;" class="myshp_button myshp_button_search" data-role="button" data-mini="true" data-icon="search" data-iconpos="right">
+					                        <span>
+												<span style="myshop-resource:search">
+						                            Search
+						                        </span>
+											</span>
+					                    </a>		
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+		</td></tr></table>
+		<!-- End - Product list Search block -->
+		
+        <div class="clear">&nbsp;</div>
+		
+        <div style="myshop-has:results">
+            <table style="myshop-block:productlist;" cellpadding="0" cellspacing="0" width="100%">
+				<div style="myshop-is:product-group-start;">
+					<tr class="myshp_list_product_title">
+						<td colspan="99">
+							<h3 style="myshop-value:product-group-title">&nbsp;</h3>
+							<div class="myshp_list_product_image_box myshp_list_product_image">
+								<img style="myshop-value:product-group-image;"></img>
+							</div>
+						</td>
+					</tr>
+				</div>
+				<tr class="myshp_list_product" style="myshop-block:product;">
+					<td width="22%" class="myshp_list_product_image_td"></td>
+					<span style="myshop-repeat:product-features">
+						<div style="myshop-not-is:feature-price">
+							<td class="myshp_list_product_value" align="left">
+								<span style="myshop-feature:value;"/>
+							</td>
+						</div>
+					</span>
+					<span style="myshop-is-product-visible:price">
+						<td class="myshp_list_product_value_price" align="center">
+							<span style="myshop-product:price;" class="myshp_list_product_price_value" itemprop="price"></span>
+						</td>
+					</span>
+					<span style="myshop-has:moreinfo-link">
+						<td align="right" class="myshp_control_buttons_moreinfo">
+							<a style="myshop-action:moreinfo;" class="myshp_button myshp_button_moreinfo">
+								<span>
+									<span style="myshop-resource:moreinfo">
+                                        meerinfo
+                                    </span>
+								</span>
+							</a>
+						</td>
+					</span>
+					<span style="myshop-is:in-stock">
+						<span style="myshop-has:order">
+							<span style="myshop-has:quantity-field">
+								<td class="myshp_list_product_value" align="right">
+									<input style="myshop-control:quantity;" class="myshp_list_product_quantity_field"/>
+								</td>
+							</span>
+							<td align="right" class="myshp_control_buttons_moreinfo">
+								<a style="myshop-action:order;" class="myshp_button myshp_button_order">
+									<span>
+                                    	<span style="myshop-resource:order.lowercase">
+                                            bestellen
+                                        </span>
+									</span>
+								</a>
+							</td>
+						</span>
+					</span>
+				</tr>
+				<tr style="myshop-is:product-group-end;" class="myshp_list_spacer">
+					<td colspan="99" rowspan="1"><div class="myshp_list_spacer_div">&nbsp;</div></td>
+				</tr>
+			</table>
+        </div>
+		
+		<!-- Begin - Product list navigation bottom -->
+        <div style="myshop-has:results">
+			<div class="myshp_list_navigation myshp_list_navigation_bottom">
+				<div class="myshp_list_navigation_buttons">
+	                <!-- Begin -  Pagination Mode -->
+	                    
+	                    <!-- Advanced -->
+	                    <span style="myshop-has:pagina">
+		                    <div style="myshop-has:previous-page">
+								<a style="myshop-action:previous-page" class="myshp_list_navigation_button_next">&lt;</a>
+							</div>
+							
+							<div class="myshp_list_pagination">
+								<ul>
+									<li style="myshop-repeat:page-links">
+										<span style="myshop-is:page-link-separator"> <span class="myshp_list_pagination_item_separator">...</span> </span>
+										<span style="myshop-not-is:page-link-separator">
+										    <span style="myshop-is:page-link-active">
+										      	<a style="myshop-action:page-link" class="myshp_list_pagination_item_active">
+										      		<span>
+										      			<span style="myshop-label:page-link-number"></span>
+										      		</span>
+										      	</a>
+										    </span>
+											<span style="myshop-not-is:page-link-active">
+										      	<a style="myshop-action:page-link" >	
+										      		<span style="myshop-label:page-link-number"></span>
+										      	</a>
+										    </span>
+										</span>
+									</li>
+								</ul>
+							</div>
+	
+							<div style="myshop-has:next-page">
+								<a style="myshop-action:next-page" class="myshp_list_navigation_button_prev">&gt;</a>
+							</div>
+						</span>
+	
+						<!-- End - Advanced -->
+	
+						<!-- Simplified -->
+						<span style="myshop-not-has:pagina">
+							<div style="myshop-has:previous-page">
+								<a style="myshop-action:previous-page" class="myshp_list_navigation_button_next">&lt;&lt; <span style="myshop-resource:prev">Vorige</span></a>
+								&nbsp;|&nbsp;
+							</div>
+							<span style="myshop-default:start-count"/>&nbsp;-&nbsp;<span style="myshop-default:end-count"/>
+							<div style="myshop-has:next-page">
+								&nbsp;|&nbsp;
+								<a style="myshop-action:next-page" class="myshp_list_navigation_button_prev"><span style="myshop-resource:next">Volgende</span> &gt;&gt;</a>
+							</div>
+						</span>
+						<!-- End - Simplified -->
+	
+					<!-- End - Pagination -->
+            	</div>
+            	<div class="clear"></div>
+            </div>
+		</div>
+		<!-- End - Product list navigation bottom -->
+			
+        <div class="clear"></div>
+        
+        <div style="myshop-default:powered-by" class="myshp_poweredby"></div>
+		
+		<!-- Begin - No Results -->
+        <div style="myshop-not-has:results" class="myshp_list_no_results">
+            <p style="myshop-resource:noresult">
+                Helaas, er zijn geen resultaten.
+            </p>
+        </div>
+		<!-- End - No Results -->
+		
+		<script type="text/javascript">
+		
+			function fixProductBlock(me){
+				var group_height = 0;
+				
+				/* Calculate and set correct spacer height */
+				$(me).closest('.myshp_list_product_title').nextUntil('.myshp_list_spacer').each(function(index, el){
+					group_height += $(el).outerHeight();
+				});
+				$(me).closest('.myshp_list_product_title').nextAll('.myshp_list_spacer:first').find('div').height($(me).height()-group_height+20);
+			}
+			
+			function fixGroupedLayout(){
+				if(typeof jQuery != 'undefined'){
+					/* Setting onload function for productimages to correct height */
+					$('.myshp_list_product_image img').each(function(){
+						if(this.complete){
+							fixProductBlock(this);
+						}else{
+							$(this).load(function(){fixProductBlock(this);});
+						}
+					});
+				}else{
+					/* JQuery not present yet, trying again in 100 miliseconds */
+					setTimeout(fixGroupedLayout, 100);
+				}
+			}
+			
+			fixGroupedLayout();
+			
+		</script>
+		
+    </body>
+</html>
