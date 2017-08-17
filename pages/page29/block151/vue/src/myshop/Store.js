@@ -11,7 +11,7 @@ const state = {
 const mutations = {
   FETCH_RESOURCES: function(state, list) {
       if(!state.resource){
-        Vue.http.get("http://edit2.mijnwinkel.nl/resourceloader.json")
+        Vue.http.get("https://edit.myshop.com/resourceloader.json")
            .then(function (response)  {
                state.list = response.body;
                state.resource=true;
