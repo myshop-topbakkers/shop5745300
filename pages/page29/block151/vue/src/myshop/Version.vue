@@ -1,7 +1,6 @@
 <template>
   <div class="myshp-version">
   Version: {{ version }}
-  Store: {{ $store.state.resource }} {{ $store.state.version }}
 	</div>
 </template>
 
@@ -10,7 +9,7 @@ export default {
   name: 'version',
   data: function () {
     return {
-      version: '0.0.1'
+      version: '0.1.0'
     }
   }
 }

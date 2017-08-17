@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+    <div class="myshp_checkout myshp_checkout_basket">
+
+  <div class="myshp_checkout_container">
     <div class="myshp_block myshp_checkout_products">
         <table class="myshp_checkout_products_table" cellpadding="0" cellspacing="0" width="100%">
             <tr class="myshp_basket_products_header">
@@ -55,7 +56,9 @@
           </table>
         </div>
         <button id="reload-order-list" style="display:none" v-on:click="reloadList">Reload list</button>
-  </div>
+      </div>
+    </div>
+
 </template>
 
 <script>
