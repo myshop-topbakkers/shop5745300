@@ -11,18 +11,18 @@
                 <td class="myshp_basket_product_description" colspan="2">
                     <resource name="desc" filter="lower"></resource>
                 </td>
-                <th class="myshp_basket_product_quantity">
+                <td class="myshp_basket_product_quantity">
                     <resource name="nr" filter="upper"></resource>
-                </th>
-                <th class="myshp_basket_product_unitprice">
+                </td>
+                <td class="myshp_basket_product_unitprice">
                     <resource name="price"></resource>
-                </th>
-                <th class="myshp_basket_product_totalprice">
+                </td>
+                <td class="myshp_basket_product_totalprice">
                   <resource name="total"></resource>
-                </th>
-                <th class="myshp_basket_product_controls">
+                </td>
+                <td class="myshp_basket_product_controls">
                     <span>&nbsp;</span>
-                </th>
+                </td>
             </tr>
             <tr class="myshp_basket_product" style="myshop-repeat:basket;">
                 <td class="myshp_basket_product_name">
