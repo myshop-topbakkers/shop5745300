@@ -23,7 +23,7 @@ const mutations = {
       }
     },
   FETCH_BASKET: function(state) {
-      let loc = document.getElementsByName("url_rpc");
+      var loc = document.getElementsByName("url_rpc");
       console.log("loading shoppingcart: "+loc[0].value);
       Vue.http.get((state.debug?state.debugLocation:"")+loc[0].value+"?type=shoppingcart_json")
          .then(function (response)  {
@@ -33,7 +33,7 @@ const mutations = {
              console.log("Body "+response.bodyText);
            }
            if(null != response.body){
-            Vue.set(state, "basket",response.json());
+            Vue.set(state, "basket",response.body);
             if(state.logme)console.log("Basket set");
             if(state.debug){
               Vue.set(state, "basket", {
