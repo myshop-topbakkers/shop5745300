@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 const state = {
   debug:false,
-  logme:false,
+  logme:true,
   resource: false,
   debugLocation:"http://www2.mijnwinkel.nl",
   list:{},
