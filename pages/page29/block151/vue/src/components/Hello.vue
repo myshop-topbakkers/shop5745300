@@ -72,11 +72,13 @@ export default {
     Resource
   },
   data: function () {
+    console.log("Get the hello data");
     return {
       msg: 'Order List',
     }
   },
-  created: function () {
+  beforeCreate: function () {
+    console.log("------------ before create");
     this.$store.commit('FETCH_BASKET');
   },
   methods: {
