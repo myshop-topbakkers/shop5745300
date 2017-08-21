@@ -31,13 +31,13 @@
                     <p>{{row.quantity}}</p>
                 </td>
                 <td class="myshp_basket_product_controls" width="70px">
-                <remove :index="index" ></remove>
+                <remove :index="index" myclass="myshp_button_delete"></remove>
                 </td>
             </tr>
           </table>
         </div>
       </div>
-        <button id="reload-order-list" style="display:none" v-on:click="reloadList">Reload list</button>
+        <button id="reload-order-list" style="display:none" v-on:click="reload"/>
       </div>
     </div>
 
@@ -63,9 +63,8 @@ export default {
     this.$store.commit('FETCH_BASKET');
   },
   methods: {
-    reloadList: function(){
-        if(-1 == this.msg.indexOf("reload"))
-        this.msg = this.msg + " reload"
+    reload: function(){
+        this.$store.commit('FETCH_BASKET');
       }
     }
   }

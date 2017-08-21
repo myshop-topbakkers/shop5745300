@@ -1,9 +1,8 @@
 <template>
-
- <div>NEW <a data-inline="true" data-iconpos="notext" data-icon="delete" data-role="button" class="myshp_button_delete" v-on:click="doRemove">{{line}} {{this.$store.state.list['remove']}}</a>
-</div>
+<a data-inline="true" data-iconpos="notext" data-icon="delete" data-role="button" v-bind:class="attrClass" v-bind:title="attrTitle" v-on:click="doRemove">{{this.$store.state.list['remove']}}</a>
 </template>
 
+<!-- class="myshp_button_delete" -->
 <script>
 import Vue from 'vue'
 import VueResource from 'vue-resource';
@@ -13,7 +12,7 @@ Vue.use(VueResource);
 
 export default {
   name: 'remove',
-  props: ['name','index'],
+  props: ['index','myclass','mytitle'],
   data: function () {
     return {
     }
@@ -22,16 +21,24 @@ export default {
     doRemove: function (event){
       console.log("Remove line "+ this.line);
       var self=this;
+      if(Vue.config.devtools){
+
+      }
+      else{
       Vue.http.get("/checkout/basket?a=remove&id="+this.line)
          .then(function (response)  {
             console.log("Reload the basket");
             self.$store.commit('FETCH_BASKET');
          })
+      }   
     }
   },
   computed: {
-    label: function () {
-      return "";
+    attrTitle: function () {
+      return null==this.mytitle?this.$store.state.list['remove']:this.mytitle;
+    },
+    attrClass: function () {
+      return this.myclass;
     },
     line: function (){
       return this.index+1;

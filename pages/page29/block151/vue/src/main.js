@@ -16,3 +16,10 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+
+    if(self.myshopEvent)myshopEvent().onOrder(function(){
+        myshopEvent().clearLock();
+        alert("add:");
+        $("#reload-order-list").click();
+    });
