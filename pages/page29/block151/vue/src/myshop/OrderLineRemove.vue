@@ -15,10 +15,11 @@ export default {
   },
   methods:  {
     doRemove: function (event){
-      alert("remove " + this.line);
+      console.log("Remove line "+ this.line);
       Vue.http.get("/checkout/basket?a=remove&i="+this.line)
          .then(function (response)  {
-             state.list = response.body;
+            console.log("Reload the basket");
+            this.$store.commit('FETCH_BASKET');
          })
     }
   },
