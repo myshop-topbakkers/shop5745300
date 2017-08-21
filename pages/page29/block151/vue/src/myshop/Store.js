@@ -21,7 +21,7 @@ const state = {
         "inc_vat_price_formatted":"EURO 12,00"},
       {
         "id":"ABC",
-        "image":"https://vuejs.org/images/logo.png",
+        "image":"",
         "quantity":"2",
         description:"dit is a test",
         "inc_vat_price_formatted":"EURO 12,00"}
