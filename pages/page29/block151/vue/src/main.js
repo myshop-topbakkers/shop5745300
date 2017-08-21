@@ -20,5 +20,5 @@ new Vue({
 /* Update the order list after adding the product to the shopping cart. */
 if(self.myshopEvent)myshopEvent().onOrder(function(){
     myshopEvent().clearLock();
-    $("#reload-order-list").click();
+    $("#action-reload-order-list").click();
 });

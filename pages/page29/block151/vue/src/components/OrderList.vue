@@ -7,22 +7,22 @@
         <table class="myshp_checkout_products_table" cellpadding="0" cellspacing="0" width="100%">
             <tr class="cos-yellow-titles myshp_basket_products_header">
                 <td class="myshp_basket_product_name">
-                  <resource name="article"></resource>
+                  <resource mykey="article"></resource>
                 </td>
                 <td class="myshp_basket_product_description" colspan="2">
-                    <resource name="desc" filter="lower"></resource>
+                    <resource mykey="desc"></resource>
                 </td>
                 <td class="myshp_basket_product_quantity">
-                    <resource name="nr" filter="upper"></resource>
+                    <resource mykey="nr"></resource>
                 </td>
                 <td class="myshp_basket_product_controls">
                     <span>&nbsp;</span>
                 </td>
             </tr>
             <tr class="myshp_basket_product" v-for="(row, index) in this.$store.state.basket.rows">
-                <td class="myshp_basket_product_name"><div v-if="''!=row.image">
+                <td class="myshp_basket_product_name"><span v-if="''!=row.image">
                       <img :src="row.image"/><br/>
-                    </div>{{row.id}}
+                    </span>{{row.id}}
                 </td>
                 <td class="myshp_basket_product_description" colspan="2">
                   <p>{{row.description}}</p>
@@ -31,13 +31,14 @@
                     <p>{{row.quantity}}</p>
                 </td>
                 <td class="myshp_basket_product_controls" width="70px">
-                <remove :index="index" myclass="myshp_button_delete"></remove>
+                <remove :myindex="index" myclass="myshp_button_delete"></remove>
                 </td>
             </tr>
           </table>
         </div>
       </div>
-        <button id="reload-order-list" style="display:none" v-on:click="reload"/>
+      <!-- Public action -->
+      <button id="action-reload-order-list" style="display:none" v-on:click="reload"/>
       </div>
     </div>
 
@@ -53,13 +54,10 @@ export default {
     Resource, Remove
   },
   data: function () {
-    console.log("Get the hello data");
     return {
-      msg: 'Order List',
     }
   },
   beforeCreate: function () {
-    console.log("------------ before create");
     this.$store.commit('FETCH_BASKET');
   },
   methods: {
@@ -71,21 +69,5 @@ export default {
 </script>
 
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>

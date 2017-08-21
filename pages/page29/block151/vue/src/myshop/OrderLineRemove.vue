@@ -12,25 +12,24 @@ Vue.use(VueResource);
 
 export default {
   name: 'remove',
-  props: ['index','myclass','mytitle'],
+  props: ['myindex','myclass','mytitle'],
   data: function () {
     return {
     }
   },
   methods:  {
     doRemove: function (event){
-      console.log("Remove line "+ this.line);
       var self=this;
       if(Vue.config.devtools){
-
+        /* Reload the basket */
+        self.$store.commit('FETCH_BASKET');
       }
       else{
       Vue.http.get("/checkout/basket?a=remove&id="+this.line)
          .then(function (response)  {
-            console.log("Reload the basket");
             self.$store.commit('FETCH_BASKET');
          })
-      }   
+      }
     }
   },
   computed: {
@@ -41,7 +40,7 @@ export default {
       return this.myclass;
     },
     line: function (){
-      return this.index+1;
+      return this.myindex+1;
     }
   },
   created: function () {
@@ -51,9 +50,5 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.myshp-resource {
-  color: #42b983;
-}
 </style>

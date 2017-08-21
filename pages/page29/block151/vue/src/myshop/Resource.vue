@@ -1,24 +1,19 @@
 <template>
-  <span class="myshp-resource">
-   {{ label }}
- </span>
+  <span class="myshp-resource">{{ label }}</span>
 </template>
 
 <script>
 
-//Vue.use(VueResource);
-
-
 export default {
   name: 'resource',
-  props: ['name','filter'],
+  props: ['mykey','mytransform'],
   data: function () {
     return {
     }
   },
   computed: {
     label: function () {
-      return 'upper'==this.filter?(""+this.$store.state.list[this.name]).toUpperCase():'lower'==this.filter?(""+this.$store.state.list[this.name]).toLowerCase():this.$store.state.list[this.name];
+      return 'upper'==this.mytransform?(""+this.$store.state.list[this.mykey]).toUpperCase():'lower'==this.mytransform?(""+this.$store.state.list[this.mykey]).toLowerCase():this.$store.state.list[this.mykey];
     }
   },
   created: function () {
@@ -30,7 +25,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.myshp-resource {
-  color: #42b983;
-}
 </style>
