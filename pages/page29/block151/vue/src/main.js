@@ -17,7 +17,7 @@ new Vue({
   components: { App }
 })
 
-<!-- Update the order list after adding the product to the shopping cart. -->
+/* Update the order list after adding the product to the shopping cart. */
 if(self.myshopEvent)myshopEvent().onOrder(function(){
     myshopEvent().clearLock();
     $("#reload-order-list").click();
