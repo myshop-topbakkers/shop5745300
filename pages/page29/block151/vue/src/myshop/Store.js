@@ -40,6 +40,17 @@ const mutations = {
            })
 
       }
+    },
+  FETCH_BASKET: function(state) {
+      let loc = document.getElementsByName("url_rpc");
+      console.log("loading shoppingcart: "+loc[0].value);
+      Vue.http.get(loc[0].value+"&type=shoppingcart_json")
+         .then(function (response)  {
+           if(null != response.body){
+            state.basket = response.body;
+             console.log(response.body);
+           }
+         })
     }
 }
 
