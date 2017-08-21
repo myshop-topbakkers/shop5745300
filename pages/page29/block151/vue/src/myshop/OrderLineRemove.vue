@@ -1,5 +1,7 @@
 <template>
- <div v-html="label"></div>
+
+ <a data-inline="true" data-iconpos="notext" data-icon="delete" data-role="button" class="myshp_button_delete" v-on:click="doRemove" href="#">{{line}} {{this.$store.state.list['remove']}}</a>
+
 </template>
 
 <script>
@@ -11,9 +13,21 @@ export default {
     return {
     }
   },
+  methods:  {
+    doRemove: function (event){
+      alert("remove " + this.line);
+      Vue.http.get("/checkout/basket?a=remove&i="+this.line)
+         .then(function (response)  {
+             state.list = response.body;
+         })
+    }
+  },
   computed: {
     label: function () {
-      return "<a data-inline='true' data-iconpos='notext' data-icon='delete' data-role='button' class='myshp_button_delete' href=''#'' onclick=\"return myshop().a('remove'," + (this.index + 1)+ "),false;\">"+this.$store.state.list['remove']+"</a>"
+      return "onclick=return myshop().a('remove'," + (this.index + 1)+ "),false;"
+    },
+    line: function (){
+      return this.index+1;
     }
   },
   created: function () {
