@@ -5,9 +5,10 @@ Vue.use(Vuex);
 
 const state = {
   debug:false,
+  logme:false,
+  resource: false,
   debugLocation:"http://www2.mijnwinkel.nl",
   list:{},
-  resource: false,
   basket:{  }
 }
 
@@ -26,10 +27,12 @@ const mutations = {
       console.log("loading shoppingcart: "+loc[0].value);
       Vue.http.get((state.debug?state.debugLocation:"")+loc[0].value+"?type=shoppingcart_json")
          .then(function (response)  {
-           console.log("Status "+response.statusText);
-           console.log("Status code"+response.status);
-          console.log("Body "+response.bodyText);
-           //if(null != response.body){
+           if(state.logme){
+             console.log("Status "+response.statusText);
+             console.log("Status code"+response.status);
+             console.log("Body "+response.bodyText);
+           }
+           if(null != response.body){
             state.basket = response.json();
 /*
             state.basket = {
@@ -54,8 +57,7 @@ const mutations = {
               ],
               "storage": [{"key":"value"}]
             };*/
-             console.log("date set");
-           //}
+           }
          })
     }
 }
