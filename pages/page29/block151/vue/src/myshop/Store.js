@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 
 const state = {
-  debug:Vue.config.devtools,
+  debug:false,
   logme:true,
   resource: false,
   debugLocation:"http://www2.mijnwinkel.nl",
@@ -25,7 +25,7 @@ const mutations = {
   FETCH_BASKET: function(state) {
       var loc = document.getElementsByName("url_rpc");
       console.log("loading shoppingcart: "+loc[0].value);
-      Vue.http.get((state.debug?state.debugLocation:"")+loc[0].value+"?type=shoppingcart_json")
+      Vue.http.get((Vue.config.devtools?state.debugLocation:"")+loc[0].value+"?type=shoppingcart_json")
          .then(function (response)  {
            if(state.logme){
              console.log("Status "+response.statusText);
@@ -35,7 +35,7 @@ const mutations = {
            if(null != response.body){
             Vue.set(state, "basket",response.body);
             if(state.logme)console.log("Basket set");
-            if(state.debug){
+            if(Vue.config.devtools){
               Vue.set(state, "basket", {
                 "inc_vat_price_subtotal_formatted":"12",
                 "price_subtotal_formatted":"12",
