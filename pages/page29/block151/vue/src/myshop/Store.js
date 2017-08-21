@@ -33,12 +33,11 @@ const state = {
 const mutations = {
   FETCH_RESOURCES: function(state, list) {
       if(!state.resource){
+        state.resource=true;
         Vue.http.get("https://edit.myshop.com/resourceloader.json")
            .then(function (response)  {
                state.list = response.body;
-               state.resource=true;
            })
-
       }
     },
   FETCH_BASKET: function(state) {
@@ -48,7 +47,7 @@ const mutations = {
          .then(function (response)  {
            if(null != response.body){
             state.basket = response.body;
-             console.log(response.body);
+             console.log(response.text());
            }
          })
     }
