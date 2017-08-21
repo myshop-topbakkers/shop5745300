@@ -26,10 +26,10 @@ const mutations = {
       console.log("loading shoppingcart: "+loc[0].value);
       Vue.http.get((state.debug?state.debugLocation:"")+loc[0].value+"?type=shoppingcart_json")
          .then(function (response)  {
-           console.log("set the data "+response.body);
-
+           console.log("Status "+response.statusText);
+          console.log("Status "+response.json());
            //if(null != response.body){
-            state.basket = response.body;
+            state.basket = response.json();
 /*
             state.basket = {
               "inc_vat_price_subtotal_formatted":"12",
