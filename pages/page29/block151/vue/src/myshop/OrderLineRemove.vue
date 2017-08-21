@@ -1,7 +1,7 @@
 <template>
 
- <a data-inline="true" data-iconpos="notext" data-icon="delete" data-role="button" class="myshp_button_delete" v-on:click="doRemove">{{line}} {{this.$store.state.list['remove']}}</a>
-
+ <div>NEW <a data-inline="true" data-iconpos="notext" data-icon="delete" data-role="button" class="myshp_button_delete" v-on:click="doRemove">{{line}} {{this.$store.state.list['remove']}}</a>
+</div>
 </template>
 
 <script>
