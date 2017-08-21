@@ -7,7 +7,7 @@ import store from './myshop/Store'
 
 Vue.use(VueResource);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 new Vue({

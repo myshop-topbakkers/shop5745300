@@ -21,16 +21,17 @@ export default {
   methods:  {
     doRemove: function (event){
       console.log("Remove line "+ this.line);
-      Vue.http.get("/checkout/basket?a=remove&i="+this.line)
+      var self=this;
+      Vue.http.get("/checkout/basket?a=remove&id="+this.line)
          .then(function (response)  {
             console.log("Reload the basket");
-            this.$store.commit('FETCH_BASKET');
+            self.$store.commit('FETCH_BASKET');
          })
     }
   },
   computed: {
     label: function () {
-      return "onclick=return myshop().a('remove'," + (this.index + 1)+ "),false;"
+      return "";
     },
     line: function (){
       return this.index+1;
