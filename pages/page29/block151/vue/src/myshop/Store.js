@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 
 const state = {
-  debug:false,
+  debug:true,
   logme:true,
   resource: false,
   debugLocation:"http://www2.mijnwinkel.nl",
@@ -33,31 +33,32 @@ const mutations = {
              console.log("Body "+response.bodyText);
            }
            if(null != response.body){
-            state.basket = response.json();
+            Vue.set(state, "basket",response.json());
             if(state.logme)console.log("Basket set");
-/*
-            state.basket = {
-              "inc_vat_price_subtotal_formatted":"12",
-              "price_subtotal_formatted":"12",
-              "count_number":"1",
-              "product_count_number_unique":"1",
-              "count":"bevat&#160;1&#160;product",
-              "rows":[
-                {
-                  "id":"XYZ",
-                  "image":"",
-                  "quantity":"2",
-                  description:"dit is a test",
-                  "inc_vat_price_formatted":"EURO 12,00"},
-                {
-                  "id":"ABC",
-                  "image":"",
-                  "quantity":"2",
-                  description:"dit is a test",
-                  "inc_vat_price_formatted":"EURO 12,00"}
-              ],
-              "storage": [{"key":"value"}]
-            };*/
+            if(state.debug){
+              Vue.set(state, "basket", {
+                "inc_vat_price_subtotal_formatted":"12",
+                "price_subtotal_formatted":"12",
+                "count_number":"1",
+                "product_count_number_unique":"1",
+                "count":"bevat&#160;1&#160;product",
+                "rows":[
+                  {
+                    "id":"XYZ",
+                    "image":"",
+                    "quantity":"2",
+                    description:"dit is a test",
+                    "inc_vat_price_formatted":"EURO 12,00"},
+                  {
+                    "id":"ABC",
+                    "image":"",
+                    "quantity":"2",
+                    description:"dit is a test",
+                    "inc_vat_price_formatted":"EURO 12,00"}
+                ],
+                "storage": [{"key":"value"}]
+              });
+            }
            }
          })
     }
