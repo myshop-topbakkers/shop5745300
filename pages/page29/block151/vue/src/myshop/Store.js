@@ -26,7 +26,7 @@ const mutations = {
       console.log("loading shoppingcart: "+loc[0].value);
       Vue.http.get((state.debug?state.debugLocation:"")+loc[0].value+"?type=shoppingcart_json")
          .then(function (response)  {
-           console.log("set the data");
+           console.log("set the data "+response.body);
 
            //if(null != response.body){
             state.basket = response.body;
