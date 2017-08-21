@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 
 const state = {
-  debug:false,
+  debug:Vue.config.devtools,
   logme:true,
   resource: false,
   debugLocation:"http://www2.mijnwinkel.nl",
