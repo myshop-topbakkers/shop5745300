@@ -24,24 +24,24 @@
                     <span>&nbsp;</span>
                 </td>
             </tr>
-            <tr class="myshp_basket_product" style="myshop-repeat:basket;">
+            <tr class="myshp_basket_product" v-for="row in this.$store.state.basket.rows">
                 <td class="myshp_basket_product_name">
-                    <div style="myshop-has-value:product-image">
-            <!--<img src="myshop-value:product-image"/><br/>-->
-    </div>
-                    <span style="myshop-value:product-id"></span>
+                    <div v-if="''!=row.image">
+                      <img :src="row.image"/><br/>
+                    </div>
+                    {{row.id}}
                 </td>
                 <td class="myshp_basket_product_description" colspan="2">
-                  <p style="myshop-value:description;"></p>
+                  <p>{{row.description}}</p>
                 </td>
                 <td class="myshp_basket_product_quantity">
                     <input style="myshop-control:quantity-update" /><!-- value="myshop-value:quantity;" -->
                 </td>
                 <td class="myshp_basket_product_unitprice">
-                    <span style="myshop-value:inc-vat-price-formatted;white-space:nowrap;"></span>
+                    {{row.inc_vat_price_formatted}}
                 </td>
                 <td class="myshp_basket_product_totalprice">
-                    <span style="myshop-value:inc-vat-price-line-total-formatted;white-space:nowrap;"></span>
+                    {{row.inc_vat_price_formatted}}
                 </td>
                 <td class="myshp_basket_product_controls" width="70">
                     <a style="myshop-action:update-product" href="javascript:void(0);" class="myshp_button_update" data-role="button" data-icon="refresh" data-iconpos="notext" data-inline="true">
@@ -71,7 +71,7 @@ export default {
   },
   data: function () {
     return {
-      msg: 'Order List'
+      msg: 'Order List',
     }
   },
   methods: {
