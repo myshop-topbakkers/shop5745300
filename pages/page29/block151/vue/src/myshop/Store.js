@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 const state = {
   debug:false,
-  debugLoction:"http:/www2.mijnwinkel.nl",
+  debugLocation:"http://www2.mijnwinkel.nl",
   list:{},
   resource: false,
   basket:{  }
@@ -27,7 +27,8 @@ const mutations = {
       Vue.http.get((state.debug?state.debugLocation:"")+loc[0].value+"?type=shoppingcart_json")
          .then(function (response)  {
            console.log("Status "+response.statusText);
-          console.log("Status "+response.json());
+           console.log("Status code"+response.status);
+          console.log("Body "+response.bodyText);
            //if(null != response.body){
             state.basket = response.json();
 /*
