@@ -34,6 +34,7 @@ const mutations = {
            }
            if(null != response.body){
             state.basket = response.json();
+            if(state.logme)console.log("Basket set");
 /*
             state.basket = {
               "inc_vat_price_subtotal_formatted":"12",
