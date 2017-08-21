@@ -45,6 +45,6 @@ const mutations = {
 
 
 export default new Vuex.Store({
-  state ,
+  state,
   mutations
 })
