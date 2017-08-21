@@ -77,7 +77,7 @@ export default {
       msg: 'Order List',
     }
   },
-  beforeMount: function () {
+  beforeCreate: function () {
     console.log("------------ before create");
     this.$store.commit('FETCH_BASKET');
   },
