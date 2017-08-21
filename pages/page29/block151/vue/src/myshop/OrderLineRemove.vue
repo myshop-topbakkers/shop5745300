@@ -1,10 +1,15 @@
 <template>
 
- <a data-inline="true" data-iconpos="notext" data-icon="delete" data-role="button" class="myshp_button_delete" v-on:click="doRemove" href="#">{{line}} {{this.$store.state.list['remove']}}</a>
+ <a data-inline="true" data-iconpos="notext" data-icon="delete" data-role="button" class="myshp_button_delete" v-on:click="doRemove">{{line}} {{this.$store.state.list['remove']}}</a>
 
 </template>
 
 <script>
+import Vue from 'vue'
+import VueResource from 'vue-resource';
+
+Vue.use(VueResource);
+
 
 export default {
   name: 'remove',
