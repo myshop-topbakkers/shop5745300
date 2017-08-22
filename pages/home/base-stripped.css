@@ -873,11 +873,11 @@ body.cos-product-details-container .myshp_info_features td:last-child {
 	margin-top: 0;
 }
 
-.cos-cart .myshp_checkout_products .myshp_basket_spacer,
-.cos-cart .myshp_checkout_products .myshp_basket_total,
-.cos-cart .myshp_checkout_products .myshp_basket_vat {
-	display: none;
-}
+/* .cos-cart .myshp_checkout_products .myshp_basket_spacer, */
+/* .cos-cart .myshp_checkout_products .myshp_basket_total, */
+/* .cos-cart .myshp_checkout_products .myshp_basket_vat { */
+	/* display: none; */
+/* } */
 
 
 @media (max-width: 1200px) {
