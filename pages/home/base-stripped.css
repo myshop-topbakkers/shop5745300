@@ -610,12 +610,14 @@ body.cos-product-details-container .cos-header-container {
 	border-left: 1px solid #EBEBEB;
 }
 #myshp-body .cos-yellow-titles td:first-child,
+#myshp-body .cos-yellow-titles th:first-child,
 #myshp-body .myshp_list_product td:first-child,
 #myshp-body .cos-favorites td:first-child,
 #myshp-body .cos-cart .cos-cart-left .myshp_checkout_products td:first-child {
 	padding-left: 28px;
 }
 #myshp-body .cos-yellow-titles td:last-child,
+#myshp-body .cos-yellow-titles th:last-child,
 #myshp-body .myshp_list_product td:last-child,
 #myshp-body .cos-favorites td:last-child,
 #myshp-body .cos-cart .cos-cart-left .myshp_checkout_products td:last-child {
@@ -629,23 +631,27 @@ body.cos-product-details-container .cos-header-container {
 }
 #myshp-body .myshp_list_product td,
 #myshp-body .cos-yellow-titles td,
+#myshp-body .cos-yellow-titles th,
 #myshp-body .cos-favorites td,
 #myshp-body .cos-productlist .cos-td-showonmobile td,
 #myshp-body .cos-cart .cos-cart-left .myshp_checkout_products td {
 	padding: 12px 8px;
 	text-align: left;
 }
-#myshp-body .cos-yellow-titles td {
+#myshp-body .cos-yellow-titles td,
+#myshp-body .cos-yellow-titles th {
 	background: #F9B600 !important;
 	font-size: 13px !important;
 	color: #fff !important;
 }
-#myshp-body .cos-yellow-titles td:first-child {
+#myshp-body .cos-yellow-titles td:first-child,
+#myshp-body .cos-yellow-titles th:first-child {
 	-webkit-border-top-left-radius: 4px;
 	-moz-border-radius-topleft: 4px;
 	border-top-left-radius: 4px;
 }
-#myshp-body .cos-yellow-titles td:last-child {
+#myshp-body .cos-yellow-titles td:last-child,
+#myshp-body .cos-yellow-titles th:last-child {
 	-webkit-border-top-right-radius: 4px;
 	-moz-border-radius-topright: 4px;
 	border-top-right-radius: 4px;
@@ -1041,12 +1047,14 @@ body.cos-product-details-container .myshp_info_features td:last-child {
     right: 0;
 	}
 	#myshp-body .cos-yellow-titles td:first-child,
+	#myshp-body .cos-yellow-titles th:first-child,
 	#myshp-body .myshp_list_product td:first-child,
 	#myshp-body .cos-favorites td:first-child,
 	#myshp-body .cos-cart .cos-cart-left .myshp_checkout_products td:first-child {
 		padding-left: 8px;
 	}
 	#myshp-body .cos-yellow-titles td:last-child,
+	#myshp-body .cos-yellow-titles th:last-child,
 	#myshp-body .myshp_list_product td:last-child,
 	#myshp-body .cos-favorites td:last-child,
 	#myshp-body .cos-cart .cos-cart-left .myshp_checkout_products td:last-child {
