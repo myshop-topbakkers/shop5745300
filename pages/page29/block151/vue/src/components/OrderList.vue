@@ -2,6 +2,9 @@
     <div class="myshp_checkout myshp_checkout_basket">
 
   <div class="myshp_checkout_container">
+    <div class="cos-cart group">
+      <div class="cos-cart-left">
+
     <div v-if="null!=this.$store.state.basket.rows">
     <div class="myshp_block myshp_checkout_products">
         <table class="myshp_checkout_products_table" cellpadding="0" cellspacing="0" width="100%">
@@ -55,6 +58,8 @@
       <button id="action-reload-order-list" style="display:none" v-on:click="reload"/>
       </div>
     </div>
+  </div>
+  </div>
 
 </template>
 
