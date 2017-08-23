@@ -2,13 +2,12 @@
 <a data-inline="true" data-iconpos="notext" data-icon="delete" data-role="button" v-bind:class="attrClass" v-bind:title="attrTitle" v-on:click="doRemove">{{this.$store.state.list['remove']}}</a>
 </template>
 
-<!-- class="myshp_button_delete" -->
+
 <script>
 import Vue from 'vue'
 import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
-
 
 export default {
   name: 'remove',
@@ -25,8 +24,8 @@ export default {
         self.$store.commit('FETCH_BASKET');
       }
       else{
-      Vue.http.get("/checkout/basket?a=remove&id="+this.line)
-         .then(function (response)  {
+        Vue.http.get("/checkout/basket?a=remove&id="+this.line)
+         .then(function (response) {
             self.$store.commit('FETCH_BASKET');
          })
       }
