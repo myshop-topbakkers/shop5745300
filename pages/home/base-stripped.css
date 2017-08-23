@@ -591,6 +591,7 @@ body.cos-product-details-container .cos-header-container {
 }
 #myshp-body .cos-last-table-row td,
 #myshp-body .cos-favorites tr:last-child td,
+#myshp-body .myshp_checkout_products tr:last-child td,
 #myshp-body .cos-productlist .cos-last-table-row-mobile td,
 #myshp-body .cos-cart .cos-cart-left .myshp_checkout_products tr:last-child td {
 	border-bottom: 1px solid #EBEBEB;
