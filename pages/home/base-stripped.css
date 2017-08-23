@@ -643,6 +643,7 @@ body.cos-product-details-container .cos-header-container {
 	background: #F9B600 !important;
 	font-size: 13px !important;
 	color: #fff !important;
+	font-weight: normal
 }
 #myshp-body .cos-yellow-titles td:first-child,
 #myshp-body .cos-yellow-titles th:first-child {
