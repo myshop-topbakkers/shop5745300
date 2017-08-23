@@ -590,10 +590,9 @@ body.cos-product-details-container .cos-header-container {
 	font-size: 13px;
 }
 #myshp-body .cos-last-table-row td,
-#myshp-body .cos_cart_end td,
+#myshp-body .cos-cart .cos-cart-left .myshp_checkout_products .cos_cart_end td,
 #myshp-body .cos-favorites tr:last-child td,
-#myshp-body .cos-productlist .cos-last-table-row-mobile td,
-#myshp-body .cos-cart .cos-cart-left .myshp_checkout_products tr:last-child td {
+#myshp-body .cos-productlist .cos-last-table-row-mobile td {
 	border-bottom: 1px solid #EBEBEB;
 }
 #myshp-body .myshp_list_product .myshp_button,
