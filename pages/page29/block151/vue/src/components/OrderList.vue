@@ -37,20 +37,22 @@
                 <remove :myindex="index" myclass="myshp_button_delete"></remove>
                 </td>
             </tr>
+
             <tr>
-              <td class="myshp_basket_total_label" colspan="5">
+              <td class="myshp_basket_total_label" style="display:none" colspan="5">
                 <table><tbody><tr><td>Bereken bruto totaalbedrag<br>(indicatief)</td><td><span style="white-space:nowrap;">€ 0,00</span></td></tr></tbody></table>
               </td>
             </tr>
-            <tr>
-              <td colspan="5" class="cos-favorites-text">De berekende prijzen zijn indicatief en kunnen afwijken van de gefactureerde prijzen. Aan deze berekende prijzen kunnen geen rechten worden ontleend.</td>
+
+            <tr class="cos_hide_on_checkout">
+              <td colspan="99" class="cos-favorites-text">De berekende prijzen zijn indicatief en kunnen afwijken van de gefactureerde prijzen. Aan deze berekende prijzen kunnen geen rechten worden ontleend.</td>
             </tr>
-            <tr>
-              <td colspan="5" class="cos-favorites-big-btn"><a href="/checkout/basket1" class="myshp_button">Verstuur uw bestelling</a></td>
-            </tr>
-            <tr>
-              <td colspan="5"><a href="#">Opslaan als Favoriet</a></td>
-            </tr>
+
+            <tr class="cos_hide_on_checkout"><td colspan="99" class="cos-favorites-big-btn"><a href="#" class="myshp_button">Verstuur uw bestelling</a></td></tr>
+            <tr class="cos_hide_on_checkout"><td colspan="99"><a href="#">Opslaan als Favoriet</a></td></tr>
+
+
+
           </table>
         </div>
       </div>
