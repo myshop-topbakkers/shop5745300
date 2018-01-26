@@ -19,9 +19,9 @@
 			<span style="myshop-value:customer-field-billing-gender">aanhef</span>&nbsp;
 			</span-->
 			<span style="myshop-value:customer-field-billing-firstname">naam</span><span> </span>
-			<span style="myshop-value:customer-field-billing-surnameprefix">naam</span><span> </span> 
+			<span style="myshop-value:customer-field-billing-surnameprefix">naam</span><span> </span>
 			<span style="myshop-value:customer-field-billing-name">naam</span>
-			
+
 		</p>
 		<p>
 			<span style="myshop-has-value:company-name"><span style="myshop-value:company-name">winkelnaam</span>&#160;</span>
@@ -83,7 +83,7 @@
 				<span style="myshop-value:inc-vat-price-shipping-formatted"></span>
 			</div>
 		</div>
-
+<!--
 		<div class="msresp_payment" style="myshop-has:payment-method-costs">
 			<div class="msresp_payment__label">
 				<span style="myshop-resource:paymethod">Betaalmethode</span> (<span style="myshop-value:payment-method">&nbsp;</span>)
@@ -92,7 +92,7 @@
 				<span style="myshop-value:inc-vat-price-payment-method-formatted">&nbsp;</span>
 			</div>
 		</div>
-
+-->
 		<div class="msresp_total">
 			<div class="msresp_total__label">
 				<strong><span style="myshop-resource:table.total"></span></strong>
@@ -160,7 +160,7 @@
 					</p>
 					<p style="myshop-has:shipping-confirmation-description">
 						<span style="myshop-value:shipping-confirmation-description" class="">extra text</span>
-					</p>                             
+					</p>
                     <div style="myshop-has-plugin:mypacel">
                         <p style="myshop-has:mypacel">
                             <span style="myshop-value:shipping-myparcel-description" class="myshp_checkout_customerdata_field">
@@ -207,7 +207,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<span style="myshop-has:terms-conditions">
 			<p style="width:100%;float:left;text-align:center;">
 				<a style="myshop-action:terms-conditions" class=""><span style="myshop-resource:terms.delivery">Klik hier voor de leveringsvoorwaarden</span></a>
@@ -221,7 +221,7 @@
 			&nbsp;
 		</div>
 		</div>
-		<!-- End - MijnWinkel PoweredBy Block -->		
+		<!-- End - MijnWinkel PoweredBy Block -->
 		<style>
 		p {
 			margin: 0 0 10px;
@@ -230,38 +230,38 @@
 		}
 		</style>
 		<script>
-			
+
 		$(function() {
 			var currentTallest = 0;
 			$(".msresp_customer_data1 .panel-default").each(function(){
 				if ($(this).height() > currentTallest) {
 					currentTallest = $(this).height();
-				}	
+				}
 			});
 			$(".msresp_customer_data1 .panel-default").css({
 				'min-height' : currentTallest
-			});	
+			});
 			var currentTallest2 = 0;
 			$(".msresp_customer_data2 .panel-default").each(function(){
 				if ($(this).height() > currentTallest2) {
 					currentTallest2 = $(this).height();
-				}	
+				}
 			});
 			$(".msresp_customer_data2 .panel-default").css({
 				'min-height' : currentTallest2
-			});	
+			});
 			var currentTallest3 = 0;
 			$(".msresp_customer_data3 .panel-default").each(function(){
 				if ($(this).height() > currentTallest3) {
 					currentTallest3 = $(this).height();
-				}	
+				}
 			});
 			$(".msresp_customer_data3 .panel-default").css({
 				'min-height' : currentTallest3
-			});	
-				
+			});
+
 		});
-		
+
 		</script>
 
 	</body>
